@@ -1,0 +1,4 @@
+//Box 1
+@mixin box-emboss( $opacity, $opacity2) {
+    box-shadow:rgba(255,255,255, $opacity) 0 1px 0, inset rbga(0,0,0, $opacity2) 0 1px 0;
+}

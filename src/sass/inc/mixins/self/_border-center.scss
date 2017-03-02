@@ -1,0 +1,33 @@
+// 
+// CENTER BODER FULL HEIGHT
+// 
+@mixin center-border-before(){
+    
+    &:before{
+        content: ' ';
+        display: block;
+        position: absolute;
+        z-index: $z1;
+        width:1px;
+        background-color: $third-color;
+        height: 100%;
+        left: 50%;
+        top:0;
+        margin-left: -0.5px;
+    }
+}
+
+@mixin center-border-after(){
+    
+    &:after{
+        content: ' ';
+        display: block;
+        position: absolute;
+        width:1px;
+        background-color: $third-color;
+        height: 100%;
+        left: 50%;
+        bottom:0;
+        margin-left: -0.5px;
+    }
+}

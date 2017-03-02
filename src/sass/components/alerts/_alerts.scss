@@ -1,0 +1,18 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Alert Messages
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$alert-class   : "c-alert";
+
+.#{$alert-class},
+[role="alert"]{
+	padding: $padding-lg $padding-md;
+	margin: $space-md 0;
+	background-color: $grey7;
+	@include border-radius(4px);
+}
+
+// TODO: colors

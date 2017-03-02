@@ -1,0 +1,27 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Component Fixed heights
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$height-rem-class : "c-h";
+
+//
+// Create height classes
+//
+
+[class*="#{$height-rem-class}"]{
+	display: block;
+}
+
+@each $size, $value in $rem-sizes {
+    .#{$height-rem-class}-#{$size} { 
+        height: $value;
+    }
+
+    // Create simetric top padding
+    .#{$height-rem-class}-p-#{$size} { 
+        padding-top: $value;
+    }
+}

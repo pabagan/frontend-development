@@ -1,0 +1,129 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Forms fields with backgrounds
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$form-ln-class              : "c-form-ln";
+$form-ln-font-size          : $p-sm;
+$form-ln-border             : 1px;
+$form-ln-color              : $grey7;
+
+// labels
+$form-ln-label-fs           : $p-sm;
+$form-ln-label-color        : $colorf;
+$form-ln-label-margin       : 0;
+
+// inputs
+$form-ln-input-bg           : transparent;
+$form-ln-input-height       : $size-rem-sm;
+$form-ln-input-padding      : .66rem 0;
+$form-ln-placeholder-color  : $grey6;
+
+// 
+// Specials styles
+// 
+.#{$form-ln-class}{
+  
+  label {
+    color: $form-ln-label-color;
+    font-size: $form-ln-label-fs;
+    display: block;
+    margin: $form-ln-label-margin;
+    vertical-align: middle;
+
+    // Hide jQuery validation text errors
+    &.error { display:none !important }
+  }
+
+  .form-group{
+    position: relative;
+    padding-bottom: $size-rem-1;
+  }
+  
+  /*
+  
+  .android-fx{
+    //@include translate(0, 100%);
+    position: absolute;
+    top: 0;
+    line-height: $form-ln-input-height;
+
+    &.is_on{
+      line-height: 1;
+      top: -$space-sm;
+      opacity: .5;
+      text-transform: lowercase;
+      font-size: 80%;
+    }
+
+    &:checked,
+    + :focus{
+    }
+
+  }
+   */
+
+  textarea,
+  input{
+    border: 0;
+    font-size: $form-ln-font-size;
+    color: $form-ln-color;
+    //background-color: $form-ln-input-bg;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0 0 $form-ln-border;
+    border-color: $form-ln-color;
+    @include placeholder($form-ln-placeholder-color);
+  }
+
+
+  &.color-1 {
+    textarea,
+    input{
+      color: $color1;
+      border-color: $color1;
+      @include placeholder($color1);
+    }
+  }
+
+  &.color-f {
+    textarea,
+    input{
+      color: $grey12;
+      border-color: $colorf;
+      @include placeholder($colorf);
+    }
+  }
+
+  // 100% width fields
+  %input-full, // clase para comportamiento por defecto input 100% + padding
+  input[type="date"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+      width: 100%;
+      display: block;
+      padding: $form-ln-input-padding;
+      height: $form-ln-input-height;
+      
+      //&:focus {}
+  }
+  input[type="checkbox"]{
+    border: none;
+    background-color: transparent;
+  }
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    margin-top: 1.2em;
+    margin-bottom:0.5em;
+  }
+}

@@ -1,0 +1,44 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// WP images
+//
+// ---------------------------------------
+// ---------------------------------------
+img[class*="attachment-"],
+img[class*=" wp-image-"] {
+    display: block;
+}
+// Captions
+// ---------------------------
+.wp-caption {
+    margin-bottom: $space-md;
+    max-width: 100%;
+    img{
+        margin: 0 !important;
+    }
+}
+
+.wp-caption-text {
+    font-size: $p-xs;
+    padding: 8px 0;
+    font-style: italic;
+}
+
+// featured
+.wp-post-image{
+    display: block;
+    max-width: 100% !important;
+}
+
+.entry-content{
+    // images
+    img{
+        display: block;
+        max-width: 100% !important;
+    }
+    figure{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

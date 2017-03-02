@@ -1,0 +1,261 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Comments
+//
+// ---------------------------------------
+// ---------------------------------------
+// Comments
+$color-blog1: $color4;
+$comments-bg-color: $grey12;
+$comments-children-bg-color: $grey12;
+
+
+#comments{
+    @include clearfix();
+}
+
+// Título de sección
+.comments-title{
+    color: $color-blog1;
+    //margin-top: $space-sm;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+// Título de antes del formulario
+#reply-title {
+    margin-bottom: 0;
+    color: $color-blog1;
+}
+
+// comments notes
+// ---------------------------
+.comment-notes,
+.logged-in-as {
+    font-size: $p-sm;
+    margin-bottom: $space-md;
+
+    &, a{
+        color: $grey4;
+    }
+
+    .required{
+    }
+}
+
+// comment form
+// ---------------------------
+.comment-respond{
+    @include clearfix();
+    margin: $space-xl 0;
+    label{
+        @extend .screen-reader-text;
+    }
+
+    .comment & {
+    }    
+}
+
+// form fields
+$form-gutter: 3.125;
+$item_per_row: 3;
+$item_pecentage: 100 / $item_per_row - ( $form-gutter ) + ( $form-gutter / $item_per_row);
+
+.comment-form-author,
+.comment-form-email,
+//.comment-form-url,
+{
+    @include clearfix();
+    //margin: 0;
+    //padding:0;
+    //display: inline;
+    @include media-query ('sm')  {
+        width: 50%;
+        display: inline-block;
+        float: left;
+    }
+}
+.comment-form-url{
+    @include clearfix();
+}
+
+.comment-form-author {
+    padding-right: $space-sm;
+}
+.comment-form-email {
+    padding-left: $space-sm;
+}
+
+#author, #email,#url{   
+    //margin-bottom: $space-lg;
+    // Responsive fields
+    // ---------------------------
+    //@include media-query ('sm')  {
+    //    @include columns(3,2.5);
+    //}
+}
+
+// Comment form: no logged
+// ---------------------------
+#commentform{
+    margin: 0;
+    label{
+        color: $color-blog1;
+    }
+}
+
+// submit
+.form-submit{
+    @include clearfix();
+    #submit{
+        color: #ffffff;
+        background-color: $color-blog1;
+        @extend %button;
+    }
+}
+
+// allowed tags
+.form-allowed-tags{
+}
+//.comment-reply-title{}
+
+// ---------------------------
+// ---------------------------
+// 
+// Comentarios / respuestas
+// 
+// ---------------------------
+// ---------------------------
+.comments-list{ // cambiar gutter-sm por gutter-xs
+    @include clearfix();
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+    .children{
+        list-style: none;
+        padding-left: 0;
+        margin-left: $space-md;
+    }
+}
+
+// Comment Wrap
+.comment-body{
+    @include clearfix();
+    font-size: $p-sm;
+    background-color: $comments-bg-color;
+    padding: $padding-md;
+    margin-bottom: $space-lg;
+    position: relative;
+    @include border-radius(6px);
+    //@extend %salto-lg-bottom;
+
+    .children & {
+        background-color: $comments-children-bg-color;
+        margin-left: $space-md;
+        &:before{
+        }
+    }
+
+    a{
+        color: $color-blog1;
+    }
+}
+
+// Comment Header Wrap
+.comment-meta{
+    @extend .c-row;
+    margin-bottom: $space-sm;
+}
+
+// Comment author
+.comment-author{
+    font-size: $h5-fs;
+    font-family: $main-font;
+    b{
+        font-weight: 600;
+    }
+    
+    a{
+        color: $color-blog1;
+    }
+    
+    .fn{
+        color: $color-blog1;
+    }
+
+
+    .avatar{
+        @include square-make($size-rem-md);
+        margin: 0 $space-xs 0 0;
+        float: left;
+        position: relative;
+        top: 0;
+        transform: translate(0, -10%);
+        @include border-radius(50%);
+        display: block;
+    }
+}   
+
+// Comment Meta
+.comment-metadata{
+    font-size: $p-sm;
+
+    time{
+        color: $grey6;
+    }
+}
+
+// Comment content
+.comment-content{
+    margin-bottom: $space-lg;   
+    font-size: $p-sm;
+    a{
+        color: $color-blog1;
+    }
+}
+
+// Comment awaiting moderation alert
+.comment-awaiting-moderation{
+}
+
+// Comment edit/respond/cancel buttons
+.comment-reply-link,
+#cancel-comment-reply-link,
+.comment-edit-link{
+    @extend %button;
+    color: #ffffff !important;
+    background-color: $color-blog1;
+    font-size: $p-sm;
+    //@extend %blog-bg-color;
+    //@extend %gx-btn;
+    //@extend %gx-btn-sm;
+    //&:active{}
+}
+.reply{
+    text-align: right;
+}
+
+.comment-edit-link{
+    position: absolute;
+    top: $space-lg;
+    right: $space-lg;
+}
+#cancel-comment-reply-link{
+    font-family: $main-font;
+    margin-left: $space-md;
+}
+
+// Comments Pagination
+.comments-pagination{
+    ul.page-numbers {
+        
+        .page-numbers{
+            &.current{
+            }
+            
+            &.prev, &.next{
+            }
+        }
+    }
+}

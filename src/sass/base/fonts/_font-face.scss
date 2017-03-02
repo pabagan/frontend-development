@@ -1,0 +1,16 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   @font-face load
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+
+$font-name          : 'firasans';
+$font-nice-name     : 'Fira Sans';
+$path-to-font-root  : 'assets/fonts/' + $font-name;
+$font-file-name     : $font-name + '-thin-webfont';
+$font-weight        : normal;
+$font-unique-id     : 'xrywa0';
+
+@include font-face( $font-name, $font-weight, $path-to-font-root , $font-unique-id, $font-nice-name, $font-file-name);

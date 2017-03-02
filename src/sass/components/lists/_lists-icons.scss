@@ -1,0 +1,41 @@
+/**--------------------------------------
+ *
+ * Lists icons
+ *
+ * -------------------------------------- */	
+ $list-icons-class: '#{$list-class}-icons';
+.#{$list-icons-class} { 
+	@include l-reset();
+	//@include l-block();
+}
+
+$list-icons-sizes: (
+    'xs': (font-size: $h5-fs, padding: .6em),
+    'sm': (font-size: $h3-fs, padding: .6em),
+    'md': (font-size: $h2-fs, padding: .6em),
+    'lg': (font-size: $h1-fs, padding: .3em),
+);
+
+// 
+// Create font-sizes and line-height
+// 
+.#{$list-icons-class}{
+   	.#{$icons-class}{ 
+   		//float:left;
+   	}
+
+   	li{
+   		//@include clearfix();
+   	}
+}
+@each $size, $icon-config in $list-icons-sizes {
+    .#{$list-icons-class}{
+	    &.is_#{$size} { 
+    	    .#{$icons-class}{ 
+		        padding: map-get($icon-config, 'padding');
+		        font-size: map-get($icon-config, 'font-size');
+		    }
+	    }
+    }
+
+}

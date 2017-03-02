@@ -1,0 +1,35 @@
+/**--------------------------------------
+ * --------------------------------------
+ * 
+ * Screen Readers
+ *
+ * a credit to amazing bootstrap!
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+$screen-reader-class: 'sr-only';
+.screen-reader-text,
+.#{$screen-reader-class} {
+  // Screen reader content: http://a11yproject.com/posts/how-to-hide-content// 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.screen-reader-text-focus,
+.#{$screen-reader-class}-focus {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}

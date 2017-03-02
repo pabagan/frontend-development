@@ -1,0 +1,27 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Lists
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// inline
+$list-class: 'c-l';
+
+	
+.#{$list-class}-reset,
+.#{$list-class}-block,
+.#{$list-class}{
+	@include l-reset();
+}
+
+// Icons and inline aplies 
+// inline list styling
+.#{$list-class}-inline{ 
+	@include l-inline();
+}
+
+// Float list items
+.#{$list-class}-float{ 
+	@include l-float();
+}

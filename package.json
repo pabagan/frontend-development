@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "description": "Frontend toolbelt",
+  "niceName": "Frontend",
+  "url": "http://grouco.com/",
+  "author": "@pabagan",
+  "author_uri": "*",
+  "copyright": "2016",
+  "version": "1.0.0",
+  "license": "MIT",
+  "license_uri": "http://www.gnu.org/licenses/gpl-3.0.html",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/pabagan/shine_theme"
+  },
+  "devDependencies": {
+    "bower": "*",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-cached": "^1.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-deploy-git": "^0.5.3",
+    "gulp-filesize": "0.0.6",
+    "gulp-header": "^1.8.8",
+    "gulp-htmlhint": "*",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "jshint": "*",
+    "jshint-stylish": "^2.2.1",
+    "normalize.css": "^5.0.0",
+    "rsync": "^0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "start": "gulp"
+  }
+}

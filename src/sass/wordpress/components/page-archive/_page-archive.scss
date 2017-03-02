@@ -1,0 +1,49 @@
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Archives 
+//
+// ---------------------------------------
+// ---------------------------------------
+.archive{}
+
+.archive-title{
+    text-align: center;
+    //margin: 0;
+    //padding: $padding-md;
+    //font-size: $h4-fs;
+    //color: $grey5;
+    .coloured{
+        color: $color-blog1;
+    }
+}
+
+
+// Quote post loop
+// ---------------------------
+.post-loop.format-quote{
+    blockquote{
+    }
+}
+
+.quote-thumb{
+}
+
+.quote-labels{
+    .entry-author{
+    }
+    
+    // thumb
+    .quote-thumb{
+    }
+
+    &.entry-meta{
+        .entry-author{
+        }
+        
+        // thumb
+        .quote-thumb{
+        }
+    }
+}
+

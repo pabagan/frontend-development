@@ -1,0 +1,43 @@
+
+
+// ---------------------------------------
+// ---------------------------------------
+//
+// Galleries
+//
+// ---------------------------------------
+// ---------------------------------------
+.gallery {
+	margin-bottom: $space-lg;
+	@include clearfix();
+    figure{
+    	margin: 0;
+    }
+}
+
+// Caption text
+.gallery-caption {
+    display: block;
+}
+
+.gallery-item {
+	float: left;
+	.gallery-columns-1 &{
+		float: none;
+	}
+	text-align: center;
+    img[class*="attachment-"]{
+        margin: 0 auto $space-lg;
+        height: $size-rem-md;
+        width: auto;
+    }
+	// hide caption
+	.gallery-caption {
+	    display: none;
+	}
+}
+
+
+// inlcude 9 colums grid
+// ---------------------------
+@include wp-gallery-grid;

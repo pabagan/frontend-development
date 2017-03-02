@@ -1,0 +1,155 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Font sizes REM
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+
+//
+// Ajuste de html para trabajar con rem/em/px en
+// proporción 1:1
+// 
+html{
+    font-size: $fs-mobile + px; 
+}
+
+body{
+    font-size: 100%;
+    // font-size: 13.333px; // mobile
+    //font-size: 16.66px; /* Tablet */
+    font-family: $main-font;
+    line-height: $lh-lg;
+    font-weight: $fw400;
+}
+
+//
+// Asignar familias
+//
+%main-font{ font-family: $main-font }
+%second-font{ font-family: $second-font }
+
+// 
+// Create font-sizes and line-height
+// 
+@each $name, $sizes in $theme-sizes {
+    
+    $selector : ".#{$name}";
+    
+    // If is html element includes selector
+    @if (index($html_elements, $name ) != null ){
+        $selector : "#{$name}, .#{$name}";
+    }
+
+    #{$selector} {
+        font-size: map-get($sizes, font-size);
+        line-height: map-get($sizes, line-height);
+        // Utilizar si cada una tiene diferentes
+        // pesos
+        //font-weight: map-get($sizes, font-weight);
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+{
+    
+    text-rendering: optimizeLegibility;
+    font-weight: $fw700;
+    font-style: normal;
+    @extend %second-font;
+}
+
+input,
+textarea,
+label,
+button {
+  font-family: inherit;
+}
+
+// Blockquote
+blockquote{
+    font-weight: 100;
+    margin: 0 0 0.8em;
+    padding-left: 1em;
+    //font-style: italic;
+    line-height: $lh-md;
+    font-style: normal;
+    font-family: $main-font;
+    font-size: $h3-fs;
+    
+    @include media-query('md'){
+        font-size: $h2-fs;
+    }
+}
+
+
+cite{
+    //@extend %h6;
+    font-weight: 600;
+    font-size: $p-sm;
+    margin-top: 0.75em;
+    //text-transform: uppercase;
+    font-style: normal;
+    @extend %main-font;
+
+    blockquote & {
+        margin-bottom: 0;
+    }
+}
+
+.jumbo{
+    font-size: $h1-fs;
+}
+/*
+
+// Aplica corrección solo para mobile de 
+// h1 a h3. Se sobre-escribe el $base-font-size
+// por $base-font-size-especial para cambiar
+// tamaños de h1 a h3.
+@media screen and (max-width: $screen-sm-min) { // 639px
+    // Cuanto mayor número más pequeño!
+    $base-font-size-special: 24;
+
+    .jumbo { @include rem-font($base-font-size-special - 2, $jumbo-px) }
+    h1, .h1 { @include rem-font($base-font-size-special, $h1-px) }
+    h2, .h2 { @include rem-font($base-font-size-special, $h2-px) }
+    blockquote,
+    h3, .h3 { @include rem-font($base-font-size-special, $h3-px) }
+}
+ */
+
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// SM
+// 
+// ---------------------------------------
+// ---------------------------------------
+@include media-query($font-changeat_1) {
+    html{
+        font-size: $fs-tablet + px;
+    }
+
+    .jumbo{
+        font-size: $jumbo-fs;
+    }
+}
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// XL
+// 
+// ---------------------------------------
+// ---------------------------------------
+@include media-query($font-changeat_2) {
+    html{
+        font-size: $fs-desktop + px;
+    }
+}

@@ -1,0 +1,16 @@
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Translate
+// http://www.w3schools.com/css/css3_2dtransforms.asp
+// 
+// ---------------------------------------
+// ---------------------------------------
+// @param (xUnits, yUnits)
+@mixin translate($x, $y) {
+    -webkit-transition:1s;
+    -webkit-transform: perspective(1px) translate($x, $y);
+    -moz-transform: perspective(1px)    translate($x, $y);
+    -ms-transform: translate($x, $y);
+    transform: perspective(1px) translate($x, $y);
+}

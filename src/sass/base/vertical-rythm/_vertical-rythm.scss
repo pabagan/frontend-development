@@ -1,0 +1,45 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Vertical Rythm
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// Salto MD
+// ---------------------------
+form,
+//blockquote,
+img,
+> ol,
+> ul,
+> dl,
+h5, .h5,
+h6, .h6,
+.salto,
+cite,
+{
+    margin-bottom: $space-md;
+}
+
+// avoid margin issue
+p, .p {
+    padding-bottom: $space-md;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+{
+    margin-bottom: $space-sm;
+}
+
+
+// Salto LG
+// ---------------------------
+.c-embeds,
+table,
+pre,
+{
+    margin-bottom: $space-lg;
+}

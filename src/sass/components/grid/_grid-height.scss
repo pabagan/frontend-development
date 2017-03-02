@@ -1,0 +1,56 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Grid Height System (@pabagan)
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$grid_height_class: 'c-row';
+$total_height_colums: 12;
+
+html,body{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+[class*="#{$grid_height_class}-xs"],
+[class*="#{$grid_height_class}-sm"],
+[class*="#{$grid_height_class}-md"],
+[class*="#{$grid_height_class}-lg"]{
+  position: relative;
+  display: block;
+  //overflow-y: auto;
+}
+
+
+// Adjust mobile min-height 
+[class*="#{$grid_height_class}-xs-6"],
+[class*="#{$grid_height_class}-xs-7"],
+[class*="#{$grid_height_class}-xs-8"],
+[class*="#{$grid_height_class}-xs-9"],
+[class*="#{$grid_height_class}-xs-10"],
+[class*="#{$grid_height_class}-xs-11"],
+[class*="#{$grid_height_class}-xs-12"]{
+	min-height: $size-rem-xl;
+}
+//
+
+/* Screen XS */
+@include height-grid($grid_height_class, 'xs', $total_height_colums);
+
+
+/* Screen SM */
+@media screen and (min-width: $screen-sm-min) { // 639px
+  @include height-grid($grid_height_class, 'sm', $total_height_colums);
+}
+
+/* Screen MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+  @include height-grid($grid_height_class, 'md', $total_height_colums);
+}
+
+/* Screen LG*/
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+  @include height-grid($grid_height_class, 'lg', $total_height_colums);
+}

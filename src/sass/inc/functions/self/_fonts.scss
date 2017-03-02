@@ -1,0 +1,14 @@
+// Devuelve tamaño en % respecto de un tamaño 
+// base.
+@function font_proportion($font-size, $base-size){
+    //@return $base-size * ( $font-size / $base-size );
+    @return percentage( $font-size / $base-size );
+}
+
+
+@function font_rem($font-size, $base-size){
+    //@return $base-size * ( $font-size / $base-size );
+    $computed-size : $font-size / $base-size;
+
+    @return decimal-round( $computed-size, 3 ) + rem;
+}

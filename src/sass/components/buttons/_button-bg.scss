@@ -1,0 +1,131 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Buttons
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$button-class : "c-btn";
+
+$button-bg-default              : $color1;
+$button-color-default           : $colorf;
+$button-bg-default-hover        : $button-color-default;
+$button-color-default-hover     : $button-bg-default;
+$button-opacity                 : 0.80;
+$button-border-radius           : 6px;
+$button-font-weigth             : 600;
+$button-font-style              : uppercase;
+$btn-padding                    : .66em 1.2em; // all buttons has same padding
+
+$button-styles: (
+    "1" : ( bg: $button-bg-default, bg-hover: $button-bg-default-hover, color: $button-color-default, color-hover: $button-color-default-hover),
+    "2" : ( bg: $color1, bg-hover: $color1, color: $colorf, color-hover: $color2),
+    "3" : ( bg: $color3, bg-hover: $colorf, color: $colorf, color-hover: $color3),
+);
+
+// TODO: remove padding element if same value...
+$button-sizes: (
+    "sm" : ( padding: $btn-padding, font-size: $p-sm ),
+    "md" : ( padding: $btn-padding, font-size: $p ),
+    "lg" : ( padding: $btn-padding, font-size: $p-lg ),
+);
+
+
+// 
+// Default properties
+// 
+%button,
+.#{$button-class} { 
+    //padding: $btn-padding;
+    box-shadow: none !important;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    //background: transparent;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    white-space: nowrap;
+    box-shadow: none !important;
+    padding: $btn-padding;    
+
+    // 
+    // Button Style
+    // 
+    border: 0;
+    @include border-radius($button-border-radius);
+    opacity: $button-opacity;
+    font-weight: $button-font-weigth;
+    background-color: $button-bg-default;
+    color: $button-color-default;
+
+    &:active,
+    //&:focus,
+    {
+        opacity: 1;
+        background-image: none;
+        //@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    // 
+    // Init hovers in LG screens
+    // 
+    @include media-query('lg') {
+        &:hover {
+            opacity: 1;
+        }    
+    }
+}
+
+
+// 
+/* Button sizes */
+// 
+@each $size, $value-list in $button-sizes {
+    // Set class sizes
+    $size-filter: '';
+    @if $size != 'md' {
+        $size-filter: '-#{$size}';
+    }
+    .#{$button-class}#{$size-filter} { 
+        // Build properties
+        @each $property, $value in $value-list {
+            #{$property}: #{$value}; 
+        }
+    }
+}
+
+
+// 
+/* Button styles */
+// 
+@each $style, $style-properties in $button-styles {
+    // Set class sizes
+    .#{$button-class}-#{$style} { 
+        color: map-get($style-properties, "color");
+        background-color: map-get($style-properties, "bg");
+
+        &:active,
+        //&:focus,
+        {
+            color: map-get($style-properties, "color-hover");
+            background-color: map-get($style-properties, "bg-hover");
+        }
+    }
+}
+
+// 
+/* Active hover on large screens */
+// 
+@include media-query('lg') {
+    @each $style, $style-properties in $button-styles {
+        // Set class sizes
+        .#{$button-class}-#{$style} {
+            &:hover {
+                color: map-get($style-properties, "color-hover");
+                background-color: map-get($style-properties, "bg-hover");
+            }
+        }
+    }    
+}

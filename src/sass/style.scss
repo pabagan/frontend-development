@@ -1,0 +1,33 @@
+// Includes
+@import "inc/mixins/mixins";
+@import "inc/functions/functions";
+
+// Config vars
+@import "config";
+
+// Shine overwrites
+//@import "sites-extras/shine-coaching/config";
+
+// SMACSS parts
+@import "base/base";
+@import "layout/layout";
+@import "components/components";
+@import "states/states";
+
+// Vendor Sass
+//@import "vendor/animate-sass/animate";
+
+
+// tests
+//@import "tests";
+
+// WordPress Components
+// @import "wordpress/wordpress";
+
+// shine
+//@import "extras-shine-coaching/styles";
+
+// Extras shine
+
+// Dev UI
+@import "../unitTest/unitTest";

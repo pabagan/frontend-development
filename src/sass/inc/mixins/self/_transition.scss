@@ -1,0 +1,14 @@
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Transform
+// http://www.w3schools.com/cssref/css3_pr_transform.asp
+// 
+// ---------------------------------------
+// ---------------------------------------
+@mixin transition($transition){ 
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}

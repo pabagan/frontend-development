@@ -1,0 +1,17 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Component Fixed widths
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$height-rem-class : "c-w";
+
+//
+// Create height classes
+//
+@each $size, $value in $rem-sizes {
+    .#{$height-rem-class}-#{$size} { 
+        width: $value;
+    }
+}

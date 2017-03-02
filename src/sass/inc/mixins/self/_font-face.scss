@@ -1,0 +1,27 @@
+// 
+// @font-face load
+// 
+@mixin font-face( $font-name, $font-weight, $path-to-font-root , $font-unique-id, $font-nice-name: '', $font-file-name: '') {
+
+    // default nice-name to font name
+    @if ($font-nice-name == '') {
+        $font-nice-name: $font-name;
+    }
+
+    // default file name to font name
+    @if ($font-file-name == '') {
+        $font-file-name: $font-name;
+    }   
+    
+    // @font-face
+    @font-face {
+        font-family: '#{$font-nice-name}';
+        src: url('#{$path-to-font-root}/#{$font-file-name}.eot?#{$font-unique-id}');
+        src: url('#{$path-to-font-root}/#{$font-file-name}.eot?#{$font-unique-id}#iefix') format('embedded-opentype'),
+             url('#{$path-to-font-root}/#{$font-file-name}.woff?#{$font-unique-id}') format('woff'),
+             url('#{$path-to-font-root}/#{$font-file-name}.ttf?#{$font-unique-id}') format('truetype'),
+             url('#{$path-to-font-root}/#{$font-file-name}.svg?#{$font-unique-id}##{$font-nice-name}') format('svg');
+        font-weight: $font-weight;
+        font-style: normal;
+    }
+}

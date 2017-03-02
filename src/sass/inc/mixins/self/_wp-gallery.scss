@@ -1,0 +1,10 @@
+// 
+// WP-GALLERY GRID (9 cols)
+// 
+@mixin wp-gallery-grid(){   
+    @for $i from 2 through 9 {
+        .gallery-columns-#{$i} .gallery-item {
+            width: 100 / $i * 1%;
+        }
+    }
+}

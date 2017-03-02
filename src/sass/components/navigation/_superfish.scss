@@ -1,0 +1,13 @@
+/* Superfish style arrow*/
+.sf-with-ul:after {
+    font-family: $icon-font;
+    //font-size: 91%;
+    //content: "\e874"; // linearicons chevron-down
+    // Bonicons
+    content: $i-arrow-down;
+    display: inline-block;
+    @include transform(translate(0, 2px));
+    //position: absolute;
+    margin-left: 0.333em;
+    margin-right: -7px;
+}

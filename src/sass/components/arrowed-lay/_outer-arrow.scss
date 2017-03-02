@@ -1,0 +1,80 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Make arrow/triangles lays
+ *
+ * credit: https://css-tricks.com/snippets/css/css-triangle/
+ * --------------------------------------
+ * -------------------------------------- */
+$arrow-class   : "c-arrow";
+$arrow-size    : 1.333em;
+$arrow-color   : $grey12;
+$arrow-change  : 'md';
+
+/**
+ * On mobile left shows up and 
+ * right as bottom.
+ */
+.#{$arrow-class}-top,
+.#{$arrow-class}-right,
+.#{$arrow-class}-bottom,
+.#{$arrow-class}-left {
+  &:before{
+    display: block;
+    width: 0; 
+    height: 0;
+    content: ' ';
+    position: absolute;
+    z-index: $z1;
+    border-style: solid;
+    border-width: 0;
+    border-color: transparent;
+    border-left-width: $arrow-size;
+    border-right-width: $arrow-size;
+    left: 50%;
+  }
+}
+
+.#{$arrow-class}-left:before,
+.#{$arrow-class}-top:before {
+  top: 0;
+  border-bottom-width: $arrow-size;
+  border-bottom-color: inherit;
+  @include transform(translate(-$arrow-size, -100% ));
+}
+
+.#{$arrow-class}-right:before,
+.#{$arrow-class}-bottom:before {
+  @include transform(translate(-$arrow-size, 100% ));
+  bottom: 0;
+  border-top-width: $arrow-size;
+  border-top-color: inherit;
+}
+
+
+//@media screen and (min-width: $arrow-change) {
+@include media-query($arrow-change){
+  .#{$arrow-class}-left:before,
+  .#{$arrow-class}-right:before {
+    top: 50%;
+    border-top-width: $arrow-size;
+    border-top-color: transparent;
+    border-bottom-width: $arrow-size;
+    border-bottom-color: transparent;
+    left: auto;
+  }
+
+  .#{$arrow-class}-right:before {
+    right: 0;
+    border-left-width: $arrow-size;
+    border-left-color: inherit;
+    @include transform(translate(100%, -$arrow-size));
+  }
+
+  .#{$arrow-class}-left:before {
+    @include transform(translate(-100%, -$arrow-size));
+    left: 0;
+    border-right-width: $arrow-size;
+    border-right-color: inherit;
+  }
+}

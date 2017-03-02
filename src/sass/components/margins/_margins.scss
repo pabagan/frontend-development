@@ -1,0 +1,47 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Margins
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$margin-class: "c-m";
+
+// iterate throw $spaces to 
+// create margin sizes
+@each $size, $value in $spaces {
+    // Default salto
+    .#{$margin-class}-#{$size} { 
+        margin: $value;
+    }
+    
+    // lateral
+    .#{$margin-class}-#{$size}-lat{
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    // vertical
+    .#{$margin-class}-#{$size}-vert{
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+} 
+
+
+/**
+ * Margin reset
+ */
+.#{$margin-class}-0 { 
+    margin: 0 !important;
+}
+
+.#{$margin-class}-vert-0 { 
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.#{$margin-class}-lat-0 { 
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}

@@ -1,0 +1,61 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Post Loops
+//
+// ---------------------------------------
+// ---------------------------------------
+
+.c-masonry,
+.c-entry{
+    padding: $padding-sm;
+    // font size
+    //margin-bottom: $space-md;
+    .entry-featured-content{
+        display: block;
+        iframe,
+        img{
+            margin: 0;
+        }
+        + .entry-title{
+            margin-top: 0.8em;
+        }
+    }
+
+    // title
+    .entry-title{
+        margin: 0;
+    }
+
+    .meta-item{
+        &.meta-comments a:before, // hacer icono comentarios clicable
+        &:before{
+            //float: left;
+            //@include transform(translate(0, 0));
+        }
+    }
+
+    // labels
+    .entry-meta{
+        //margin: $space-xs 0 0 0;
+        margin: $space-xs 0 0 0;
+        padding: 0;
+        //margin: -1.2em 0 0 0;
+        //border: 4px solid green !important;
+        //margin: 0;
+        ///border: 4px solid green !important;
+        .post-edit-link{
+            margin-left: 0.5em;
+        }
+    }
+
+    //.heading-meta{  }
+    .entry-content{
+        //margin: $space-xs 0 0;
+        margin: 1em 0 0;
+    }
+
+    // REad more link
+    // .view-article{}
+    .view-article-wrap{}
+}

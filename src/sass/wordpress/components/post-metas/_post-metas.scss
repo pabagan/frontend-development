@@ -1,0 +1,25 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Post Metas
+//
+// ---------------------------------------
+// ---------------------------------------
+.meta-item { 
+    // Icons
+    &.meta-comments a:before, // hacer icono comentarios clicable
+    &:before{
+        //float: left;
+        @include transform(translate(0, 2px));
+        //display: block;
+        margin-right: map-get($spaces, 'xxs');
+        color: $blog-labels-color;
+        background: transparent;
+        //@extend %c-i;
+        //@extend %i-xs;
+
+    }
+    &, a{
+        color: $blog-labels-color;
+    }
+}

@@ -1,0 +1,99 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Site's navigation
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+//
+// Nav Main
+//
+$main-nav-padding       : $size-rem-xs;
+$main-nav-font          : $main-font;
+$main-nav-fs            : $h3-fs;
+$main-nav-weight        : 300;
+$main-nav-lh            : $lh-sm;
+$main-nav-position-top  : $size-rem-md;
+$main-nav-padding-item  : .3em 0;
+
+// Color
+$main-nav-color         : $colorf;
+$main-nav-active-bg     : $color3;
+$main-nav-active-color  : $colorf;
+$main-nav-bg            : $color1;
+$main-nav-child-bg      : $color3;
+$main-nav-child-color   : $color1;
+
+
+.site-navigation{
+    top: $main-nav-position-top;
+    padding: $main-nav-padding;
+
+    li{
+        font-family: $main-nav-font;
+        font-size: $main-nav-fs;
+        line-height: $main-nav-lh !important;
+        font-weight: $main-nav-weight;
+        letter-spacing: -.5px;
+    }
+
+    a{
+        color: $main-nav-color;
+        display: inline-block;
+        padding: $main-nav-padding-item;
+        &:after{
+            opacity: 0;
+            @include transition(250ms cubic-bezier(0,0.7,0.5,1) 250ms);
+            content: ' ';
+            @include size(5px, 5px);
+            background-color: #ffffff;
+            @include border-radius(50%);
+            position: absolute;
+            display: inline-block;
+            font-size: 90%;
+            @include translate(5px, 7px);
+        }
+
+        &:hover{
+            &:after{
+                @include transition(500ms cubic-bezier(0,0.7,0.5,1) 250ms);
+                opacity: 1;
+                //background-color: #ffffff;
+                //@include size(.333rem, .333rem );
+                //@include
+            }
+        }
+    }
+
+    // submenu
+    .sub-menu,
+    .children {
+        li{
+            background-color: $main-nav-child-bg;
+            //font-size: 90%;
+        }
+
+        a{
+            color: $main-nav-child-color;
+        }
+    }
+
+    // Active with WP classes (TODO: separate WP classes).
+    .current-menu-item,
+    .current-menu-ancestor,
+    .current_page_item,
+    .current_page_ancestor,
+    .current_page_item,
+    .current_page_ancestor,
+    .active,
+    .is_active{
+        //background-color: $main-nav-active-bg;
+        > a{
+            color: $main-nav-active-color;
+            font-weight: 400;
+            //border-bottom: 2px solid #fff;
+            //margin-bottom: 0.33em;
+        }
+
+    }
+}

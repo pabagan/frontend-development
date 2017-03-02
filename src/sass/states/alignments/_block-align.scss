@@ -1,0 +1,16 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Block Alignment
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.is_left{ float: left !important }
+.is_right{ float: right !important }
+.is_none{ float: none  !important}
+
+.aligncenter,
+.is_center {
+	margin-right: auto !important;
+	margin-left: auto !important;
+}

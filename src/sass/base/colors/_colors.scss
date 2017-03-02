@@ -1,0 +1,39 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Colors
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+
+// Add basic fonts
+body{
+  background-color: $bodyBgColor;
+  color: $bodyFontColor;
+}
+
+a{
+  color: $linksColor;
+}
+
+//
+// Create greys: color & bg classes
+//
+@each $color, $value in $colors {
+  .color-#{$color} { color: $value }
+  .bg-#{$color} { background-color: $value }
+  .border-#{$color} { border-color: $value }
+}
+
+.bg-transparent { background-color: transparent }
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Box inner colors
+// 
+// ---------------------------------------
+// ---------------------------------------
+.ct-light{ @include colorElements(#ffffff); }
+.ct-1{ @include colorElements($color1); }
+

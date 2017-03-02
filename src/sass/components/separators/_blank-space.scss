@@ -1,0 +1,21 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Blank spaces
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$blank-space-class : "c-space";
+
+//
+// Create height classes
+//
+
+[class*="#{$blank-space-class}"]{
+    display: block;
+}
+
+@each $size, $value in $rem-sizes {
+    .#{$blank-space-class}-#{$size} { height: $value }
+    .#{$blank-space-class}-#{$size}-lat { width: $value }
+}

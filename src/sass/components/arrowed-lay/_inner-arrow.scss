@@ -1,0 +1,80 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Make arrow/triangles lays
+ *
+ * credit: https://css-tricks.com/snippets/css/css-triangle/
+ * --------------------------------------
+ * -------------------------------------- */
+$inner-arrow-class   : "c-inner-arrow";
+$inner-arrow-size    : 1.333em;
+$inner-arrow-color   : $grey12;
+$inner-arrow-change  : 'md';
+
+/**
+ * On mobile left shows top and 
+ * right as bottom.
+ */
+.#{$inner-arrow-class}-top,
+.#{$inner-arrow-class}-right,
+.#{$inner-arrow-class}-bottom,
+.#{$inner-arrow-class}-left {
+  &:before{
+    display: block;
+    width: 0; 
+    height: 0;
+    content: ' ';
+    position: absolute;
+    z-index: $z1;
+    border-style: solid;
+    border-width: 0;
+    border-color: transparent;
+    border-left-width: $inner-arrow-size;
+    border-right-width: $inner-arrow-size;
+    left: 50%;
+    @include transform(translate(-$inner-arrow-size, 0 ));
+  }
+}
+
+.#{$inner-arrow-class}-left:before,
+.#{$inner-arrow-class}-top:before {
+  border-top-width: $inner-arrow-size;
+  border-top-color: inherit;
+  top: 0;
+}
+
+.#{$inner-arrow-class}-right:before,
+.#{$inner-arrow-class}-bottom:before {
+  border-bottom-width: $inner-arrow-size;
+  border-bottom-color: inherit;
+  bottom: 0;
+  
+}
+
+
+//@media screen and (min-width: $inner-arrow-change) {
+@include media-query($inner-arrow-change){
+  .#{$inner-arrow-class}-left:before,
+  .#{$inner-arrow-class}-right:before {
+    border-top-width: $inner-arrow-size;
+    border-top-color: transparent;
+    border-bottom-width: $inner-arrow-size;
+    border-bottom-color: transparent;
+    
+    left: auto;
+    top: 50%;
+    @include transform(translate(0, -$inner-arrow-size));
+  }
+
+  .#{$inner-arrow-class}-right:before {
+    right: 0;
+    border-right-width: $inner-arrow-size;
+    border-right-color: inherit;
+  }
+
+  .#{$inner-arrow-class}-left:before {
+    left: 0;
+    border-left-width: $inner-arrow-size;
+    border-left-color: inherit;
+  }
+}

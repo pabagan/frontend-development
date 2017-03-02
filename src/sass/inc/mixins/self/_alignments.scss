@@ -1,0 +1,164 @@
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Centrando con Translate
+// 
+// Translate 2D tiene buen soporte. Transform
+// 3D chnguísimo para ie.
+// http://caniuse.com/#search=translate
+// 
+// ---------------------------------------
+// ---------------------------------------
+
+// Centrado horizontal
+// ---------------------------
+@mixin v-center {
+    position: relative; // ojo!! Mantener en relative, así no hay desbordamientos.
+    height: auto;
+    top: 50%;
+    right: 0;
+    @include transform(translate(0, -50%));
+}
+
+// top align
+// ---------------------------
+
+// left
+@mixin top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include transform(translate(0, 0));
+}
+
+// top
+@mixin top-center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include transform(translate(-50%, 0));
+}
+
+// right
+@mixin top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include transform(translate(0, 0));
+}
+
+
+
+// center align
+// ---------------------------
+
+// left
+@mixin mid-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include transform(translate(0, -50%));
+}
+
+// center
+@mixin mid-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}
+
+// right
+@mixin mid-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    @include transform(translate(0, -50%));
+}
+
+
+
+// bottom align
+// ---------------------------
+
+// left
+@mixin bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+// bottom
+@mixin bottom-center {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include transform(translate(-50%, 0));
+}
+
+// right
+@mixin bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Centrado -px
+// 
+// Centrando con margenes negativos
+// Alineación de elemento respecto 
+// de su capa padre.
+// 
+// ---------------------------------------
+// ---------------------------------------
+// ---------------------------------------
+@mixin transform($transform){ 
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    -o-transform: $transform;
+    -moz-transform: $transform;
+    transform: $transform;
+}
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Centrando con margenes negativos
+// 
+// ---------------------------------------
+// ---------------------------------------
+@mixin m-center($width,$height: '') {                
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: ( -$width / 2 )+px;
+    @if ($height == '') {
+            margin-top: ( -$width / 2 )+px;
+    } @else {
+            margin-top: ( -$height / 2 )+px;
+    }
+}
+
+// 
+// CENTRAL ALIGNMENT
+// ---------------------------
+@mixin m-left-center($height) {
+                
+        position: absolute;
+        top: 50%;
+        margin-top: -( $height / 2 )+px;
+}
+
+// 
+// HORIZONTAL ALIGNMENT
+// ---------------------------
+@mixin m-top-center($width) {             
+        position: absolute;
+        left: 50%;
+        margin-left: ( -$width / 2 )+px;
+}
+
+

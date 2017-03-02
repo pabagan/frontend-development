@@ -1,0 +1,20 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - Base rules
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+@import "resets/normalize";
+@import "resets/normalize-extended";
+//@import "fonts/fonts-percentage"; // declares percengage font
+@import "fonts/fonts-rem";
+//@import "fonts/font-face";
+//@import "colors/colors-shine";
+@import "colors/colors";
+// Default vertical rythm.
+// Is complemented via classes living in 
+// component/margins and component/paddings.
+@import "vertical-rythm/vertical-rythm";     

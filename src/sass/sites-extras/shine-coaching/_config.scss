@@ -1,0 +1,71 @@
+// ---------------------------------------
+// ---------------------------------------
+// 
+// Colors Shine
+// 
+// ---------------------------------------
+// ---------------------------------------
+
+//Special names by theme
+$rojo           : #e4032e;
+$morado         : #831f82;
+$cyan           : #169fdb;
+$magenta        : #e6007e;
+$magenta1       : #EE6781;
+$magenta2       : #FBE0E6;
+$naranja        : #f39200;
+$lima           : #c8d300;
+$verde          : #009640;
+$azul           : #3363ac;
+
+$colors-shine: (
+    // Color personas
+    "pax1": $naranja,
+    "pax2": $magenta,
+
+    "pax3":   #ed5933,
+    "pax4":   #ef7519,
+    "pax5":   #ea3a49,
+    "pax6":   #e81c63,
+ 
+    // Color empresas
+    "emp1": $azul,
+    "emp2":  #0A8C56,
+    "emp3":   #286d96,
+    "emp4":   #1e7782,
+    "emp5":   #14826b,
+    "emp6":   #0a8c56,
+
+    // Color about
+    "about1": $morado,
+    "about2": $rojo,
+    "about3":   #961970,
+    "about4":   #aa1460,
+    "about5":   #bc0c4f,
+    "about6":   #d10a3f,
+
+    // Color blog
+    "blog1": $cyan,
+    "blog2": $cyan,
+    "blog3": #3aa8af,
+    "blog4": #5bb582,
+    "blog5": #82bf59,
+    "blog6": #a3c92b,    
+);
+// Contacto
+$color-contacto: $rojo;
+// degradados
+$gradient1 : 80deg, $naranja 10%, $magenta;
+$gradient2 : 80deg, $azul 10%, $verde;
+$gradient3 : 80deg, $rojo 10%, $morado;
+$gradient4 : 80deg, $cyan 10%, $lima;
+$gradient-header : 80deg, $rojo 10%, $azul 50%, $verde;
+
+// Sections ID
+$personas-id : 38;
+$empresas-id : 40;
+$about-id : 52;
+
+// WP font path
+$path-to-icon-font-root : 'assets/fonts/' + $icon-font;
+

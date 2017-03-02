@@ -1,0 +1,36 @@
+// Post pagination
+// ---------------------------
+$comments-pagination-size: $size-rem-sm;
+
+.comments-pagination {
+    margin: $space-lg 0;
+	@include clearfix();
+	
+	.page-numbers{
+        background-color: $grey11;
+        @include square-make($comments-pagination-size);
+        display: inline-block;
+        line-height: $comments-pagination-size;
+        float: left;
+        margin-right: $space-xs;
+        text-align: center;
+        color: $color-blog1;
+        
+        &.current{
+            font-weight: bold;
+    	    background-color: transparent;
+        }
+
+        &.prev, &.next{
+            @extend %icon;
+        	line-height: $comments-pagination-size;
+        }
+        &.prev:before{
+            content: $i-db-arrow-left;
+        }
+        &.next:before{
+            content: $i-db-arrow-right;
+        }        
+	}
+}
+

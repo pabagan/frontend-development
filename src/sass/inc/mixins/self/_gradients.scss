@@ -1,0 +1,22 @@
+//
+// Gradients
+//
+@mixin gradient( $type, $gradient ) {
+    background: -webkit-#{$type}-gradient($gradient);
+    background:    -moz-#{$type}-gradient($gradient);
+    background:     -ms-#{$type}-gradient($gradient);
+    background:      -o-#{$type}-gradient($gradient);
+    background:         #{$type}-gradient($gradient);
+}
+
+
+//
+// Border con gradients
+//
+@mixin gradient-border( $type, $gradient ) {
+    -webkit-border-image: -webkit-#{$type}-gradient($gradient);
+    -moz-border-image:    -moz-#{$type}-gradient($gradient);
+    -ms-border-image:     -ms-#{$type}-gradient($gradient);
+    -o-border-image:      -o-#{$type}-gradient($gradient);
+    border-image:         #{$type}-gradient($gradient);
+}

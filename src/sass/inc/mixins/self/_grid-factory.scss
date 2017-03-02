@@ -1,0 +1,100 @@
+// 
+// Width grid
+// 
+@mixin grid-width( $grid_class, $size,$total_cols ){
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-#{$i} {
+            width: percentage(($i) / $total_cols) ; 
+        }
+    }
+    
+    .#{$grid_class}-#{$size}-1-5 {
+        width: 20%;
+    }
+
+    // Pull
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-pull-#{$i} {
+            right: percentage(($i) / $total_cols) ; 
+        }
+    }
+    // Push
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-push-#{$i} {
+            left: percentage(($i) / $total_cols) ; 
+        }
+    }
+
+    // Offset
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-offset-#{$i} {
+            margin-left: percentage(($i) / $total_cols) ; 
+        }
+    }
+    
+}
+
+// 
+// Height Grid
+// 
+@mixin height-grid( $grid_class, $size, $total_cols ){
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-#{$i} {
+            // % units fallback
+            height: percentage(($i) / $total_cols) ; 
+            // vh units
+            height: #{ceil(($i / $total_cols) * 100)}vh; 
+        }
+    }
+}
+
+
+// 
+// Fit percentage colums
+// 
+@mixin columns($item_per_row,$item-gutter: '') {  
+    
+    $item_pecentage: (100% / $item_per_row);
+    float: left;
+    // width
+    
+    // margin
+    @if ($item-gutter != '') {
+        $item_pecentage: $item_pecentage - ( $item-gutter ) + ( $item-gutter / $item_per_row);
+        $item-gutter: ( 1% * $item-gutter  );
+        margin: 0 $item-gutter $item-gutter 0;
+    }
+    
+    width: $item_pecentage; 
+}
+
+
+
+// 
+// MAKE MASONRY GRIG
+// 
+@mixin masonry-grid( $size ){
+
+    @for $i from 1 through 12 {
+        .masonry-#{$size}-#{$i} {
+            @include masonry-box($i);
+        }
+    }
+}
+
+// 
+// MASONRY BOX
+// 
+@mixin masonry-box($number, $column-gap: ''){
+    
+    -moz-column-count: 12 / $number;
+    -webkit-column-count: 12 / $number;
+    column-count: 12 / $number;
+    
+    @if ($column-gap != '') {
+        -moz-column-gap: $column-gap;
+        -webkit-column-gap: $column-gap;
+        column-gap: $column-gap;
+    }
+
+}

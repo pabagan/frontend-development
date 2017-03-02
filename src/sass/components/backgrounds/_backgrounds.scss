@@ -1,0 +1,30 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * CSS Cover Background
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.c-img-bg{
+    //background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+	//background-size: 100%;
+	background-size: cover;
+}	
+
+
+.c-img-bg-fix{
+    background-position: center center;
+    background-repeat: no-repeat;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    background-size: cover;
+    
+    // background fixed not working in 
+    // mobile devices.
+    @include media-query('lg'){
+        background-attachment: fixed;
+    }
+}

@@ -1,0 +1,76 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Curtains
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$curtain-class: 'c-curtain';
+
+// Curtain wrappert
+.#{$curtain-class}-ct{
+    overflow: hidden;
+    //height: 100%;
+    
+    &:hover {
+        .#{$curtain-class},
+        .#{$curtain-class}-top,
+        .#{$curtain-class}-right,
+        .#{$curtain-class}-bottom,
+        .#{$curtain-class}-left {
+            //opacity: 1;
+            //visibility: visible;
+            @include translate(0,0);
+        }
+        
+    }
+}
+
+.#{$curtain-class},
+.#{$curtain-class}-top,
+.#{$curtain-class}-right,
+.#{$curtain-class}-bottom,
+.#{$curtain-class}-left,
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    @include transition(450ms cubic-bezier(0,0.7,0.5,1));
+    
+    &.is_on{
+        //opacity: 1;
+        //visibility: visible;
+        @include translate(0,0);
+    }
+}
+.#{$curtain-class} {
+    opacity: 0;
+    visibility: hidden;
+    &.is_on{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// Curtain default and from Top
+.#{$curtain-class}-top {
+    @include translate(0, -100%);
+}
+
+// Curtain from right
+.#{$curtain-class}-right {
+    @include translate(100%,0);
+}
+
+// Curtain from bottom
+.#{$curtain-class}-bottom {
+    @include translate(0, 100%);
+}
+
+// Curtain from left
+.#{$curtain-class}-left {
+    @include translate(-100%,0);
+}

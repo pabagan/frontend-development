@@ -1,0 +1,165 @@
+// Elementos
+// ---------------------------
+//.entry-page,
+.entry-single{
+}
+.entry-header {
+    .c-curtain{
+        background-color: rgba(22,159,219,.75);
+        //background-color: rgba(228,3,46,.95);
+    }
+}
+
+// Single tiene comportamiento diferente. Añaden
+// margenes por arriba.
+.c-entry,
+.entry-content {
+    //h1, .h1,
+    h2, .h2,
+    h3, .h3
+    {
+        margin-top: $space-xs;
+    }
+    
+    h4, .h4,
+    h5, .h5,
+    h6, .h6,
+    {
+        margin-top: $space-xs;
+    } 
+
+    > ol,
+    > ul,
+    > dl,
+    p{
+        padding-bottom: $space-lg;
+    }
+
+}
+.entry-content {
+    h1, h2,h3,h4,h5,h6,
+    a { color: $color-blog1; }
+}
+
+.entry-page {
+    //h1, h2,h3,h4,h5,h6{}
+    // 
+    // Title
+    // 
+    .entry-title{
+        margin-bottom: .6em;
+    }
+}
+
+.entry-content {
+    .entry-title{
+        margin-bottom: $space-xs;
+    }  
+    .entry-meta{
+        font-size: $p-sm;
+        padding:0;
+        margin-bottom: $space-xl;
+    }
+}
+
+.entry-page,
+.entry-content {
+
+    h1,h2,h3,h4,h5,h6{
+        //color: $color4;
+    }
+    img{
+        display: block;
+        height: auto;
+        height: auto;
+    }
+    // 
+    // Blockquote
+    // 
+    blockquote{
+        // bordes verticales
+        //border-width: 1px 0;
+        //@extend %c-p-sm;
+        // bordes laterales
+        border-width: 0 0 0 3px;
+        border-style: solid;
+        border-color: $color-blog1;
+        color: $color-blog1;
+        margin: 1em 0 1.3em;
+        font-size: $h3-fs;
+
+        p{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    }
+    // 
+    // Meta tags
+    // 
+    .entry-meta{
+        //margin-top: .25em;
+        font-size: $p-sm;
+     }
+    .meta-item{
+        margin-right: 1em;
+        &:before{
+            //float: left;
+            display: inline-block;
+            margin-right: .35em;
+            //@extend .c-i;
+        }
+    }
+    .entry-author-avatar{
+
+    }
+    .posted-on{
+        &:before{
+           //@extend .i-clock;
+        }
+    }
+    .byline{
+        //.author{}
+    }
+    .entry-cats,
+    .entry-tags{
+
+    }
+    // Comments 
+    //.entry-comments{}
+    // Reading time
+    .meta-read-time{
+        &:before{
+        }
+    }
+}
+
+// Post / page / comment content
+.entry-content{
+    .type-page & {
+    }
+}
+
+.post-password-form{
+    @include clearfix;
+    padding: $padding-lg;
+    background-color: $grey2;
+    color: #ffffff;
+    @include border-radius(4px);
+    &, label{
+        margin-bottom: $space-md; 
+        width: 100%;
+    }
+
+    input[type="submit"],
+    input[type="password"]{
+        font-size: $p-lg;
+    }
+
+    input[type="password"]{
+        margin-top: $space-sm;
+    }
+
+    input[type="submit"]{
+        @extend %button;
+    }
+}

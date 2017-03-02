@@ -1,0 +1,51 @@
+// display
+.is_hide-xs,
+.is_hide {
+  opacity: 0;
+  display: none;
+}
+
+.is_show-xs,
+.is_show {
+  opacity: 1;
+  display: block;
+}
+
+// show/hide per size
+@media screen and (min-width: $screen-sm-min) { // 639px
+  .is_hide-sm,{
+    opacity: 0;
+    display: none;
+  }
+
+  .is_show-sm{
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Screen MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+  .is_hide-md,{
+    opacity: 0;
+    display: none;
+  }
+
+  .is_show-md{
+    opacity: 1;
+    display: block;
+  }
+}
+
+/* Screen LG*/
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+  .is_hide-lg,{
+    opacity: 0;
+    display: none;
+  }
+
+  .is_show-lg{
+    opacity: 1;
+    display: block;
+  }  
+}

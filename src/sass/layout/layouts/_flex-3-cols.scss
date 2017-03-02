@@ -1,0 +1,46 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Flex Layouts
+ *
+ * TODO: flex grid system
+ * --------------------------------------
+ * -------------------------------------- */
+body{
+    position: relative;
+}
+.l-flex-3-cols {
+    display: block;
+    min-height: 100%;
+    align-items: stretch;
+    border: 4px solid green !important;
+
+    // Content
+    .l-flex-ct {
+        display: flex;
+        position: absolute;
+        background: green;
+        order: 1;
+        width: 60%;
+        left: 20%;
+    }
+    
+    // Colums
+    .flex-column {
+        display: flex;
+        position: fixed;
+        width: 20%;
+        top: 0;
+        overflow-y: scroll;
+        border: 4px solid green !important;
+        height: 100%;
+        &.left{
+            order: -1;
+            left: 0px;
+        }
+        &.right{
+            right: 0px;
+            order: 2;
+        }
+    }
+}

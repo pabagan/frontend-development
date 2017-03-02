@@ -1,0 +1,74 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Bars
+ *
+ * Fixed colums with toggle in/off 
+ * functionallity.
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$bars-class: 'c-bar';
+
+// Default
+.#{$bars-class}-right,
+.#{$bars-class}-left,
+.#{$bars-class}-top,
+.#{$bars-class}-bottom{
+    position:fixed !important;
+    z-index: $z2;
+    outline: 1px solid transparent; // avoid black spaces when reloading
+    &.is_on{
+        @include translate(0,0);
+    }
+}
+
+// top
+.#{$bars-class}-top{
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    &.is_off {
+        @include translate(0, -100%);
+    }
+}
+// right
+.#{$bars-class}-right{
+    overflow-y: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    &.is_off {
+        @include translate(100%,0);
+    }
+}
+
+// bottom
+.#{$bars-class}-bottom{
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    // Curtain from bottom
+    &.is_off {
+        @include translate(0, 100%);
+    }
+
+}
+
+// left
+.#{$bars-class}-left{
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    // Curtain from left
+    &.is_off {
+        @include translate(-100%,0);
+    }
+}
+
+.animate{
+    @include transition(450ms cubic-bezier(0,0.7,0.5,1));
+}

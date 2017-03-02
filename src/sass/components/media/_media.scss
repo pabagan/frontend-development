@@ -1,0 +1,27 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Media elements
+ *
+ * a credit to amazing bootstrap!
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// cols: thumb / content
+.media-thumb, .media-ct{
+    display: table-cell;
+    vertical-align: top;
+    zoom: 1;
+  	overflow: hidden;
+}
+.media-thumb {
+    a{
+        display: block;
+    }
+    img {
+        display: block;
+    }
+}
+.media-ct{
+    padding: 0 $space-xs;
+}

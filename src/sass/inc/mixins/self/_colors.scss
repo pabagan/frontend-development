@@ -1,0 +1,8 @@
+// 
+// Add color to all elements in a lay
+// 
+@mixin colorElements( $color ){
+    &, > *, a {
+        color: $color;
+    }
+}

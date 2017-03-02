@@ -1,0 +1,196 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * 02. header fixed with left 
+ * navigation sidebar. Toggle button 
+ * appears from defined breakpoint.
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+//
+// Header
+//
+
+// heights
+$appHeader-mobile-ends      : 'md';
+$appHeader-height           : $size-rem-md;
+
+//
+// Logo
+// 
+// Select using <img> or CSS background 
+// at logo. Leave this blank '' to use <img>.
+$appLogo-margin             : 0 $space-sm; 
+$appLogo-img                : 'assets/img/shine-coaching-logo.svg'; 
+$appLogo-img                : ''; 
+$appLogo-img-no-svg         : 'assets/img/shine-coaching-logo.png'; 
+
+//
+// Nav Toggle
+//
+$appToggle-fs               : $h3-fs;
+$appToggle-position         : left;
+$appToggle-color            : $color1;
+$appToggle-bg               : transparent;
+$appToggle-bt-color         : $color1;
+$appToggle-bt-color_active  : $color1;
+
+//
+// App Sidebar
+//
+$appCol-width       : $size-rem-xl;
+$appCol-padding     : $space-sm;
+
+//
+// Nav Main
+//
+$appNav-font            : $main-font;
+$appNav-fs              : $p-sm;
+$appNav-lh              : $lh-xs;
+$appNav-color           : $colorf;
+$appNav-bg              : $color1;
+$appNav-child-bg        : $color3;
+$appNav-child-color     : $color1;
+$appNav-item-padding    : 12px 16px;
+
+
+//
+// App Content
+//
+$app-content-padding    : $padding-md;
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Header Fixed
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.is_lay02{
+    padding-top: $appHeader-height;
+
+    // Add extra paddings to fit with
+    // to elements with fixed header.
+    .hd-space{
+        padding-top: $appHeader-height;
+    }
+
+    // 
+    // Branding area
+    // 
+    #app-topbar{
+        height: $appHeader-height; 
+        //z-index: $z3;
+        //
+        .logo{
+            display: inline-block;
+            width: auto;
+            margin: $appLogo-margin;
+            line-height: $appHeader-height;
+        }
+    }
+
+
+    // 
+    // Menu toggle
+    //         
+    #nav-toggle{
+
+        &[aria-expanded="true"] {
+            [class*="#{$icons-class}"]:before {
+                // I cross 4 linearicons
+                //content:"\e870";
+                // I cross bonicons
+                content: $i-cross;
+            }
+        }
+    }
+
+
+    // 
+    // Sidebar
+    // 
+    #app-sidebar{
+        width: $appCol-width;
+        padding: $appCol-padding;
+        top: $appHeader-height !important;
+    }
+
+
+    // 
+    // Main Navigation
+    // 
+    #app-navigation{
+        margin-top: $space-lg;
+        li{
+            font-family: $appNav-font;
+            font-size: $appNav-fs;
+            font-weight: 600;
+        }
+
+        a{
+            line-height: $appNav-lh !important;
+            color: $appNav-color;
+            padding: $appNav-item-padding;
+
+            &:hover{
+                background-color: $grey1;
+            }
+
+        }
+
+        // submenu
+        .sub-menu,
+        .children {
+            li{
+                background-color: $appNav-child-bg;
+                //font-size: 90%;
+            }
+            a{
+                color: $appNav-child-color;
+            }
+        }
+
+        // Active
+        .current-menu-item,
+        .current-menu-ancestor,
+        .current_page_item,
+        .current_page_ancestor,
+        .current_page_item,
+        .current_page_ancestor,
+        .active,
+        .is_active{
+            background-color: $color3;
+            > a{
+                color: $colorf;
+            }
+        }
+    }
+
+    // 
+    // App Content
+    // 
+    #app-content{
+        padding: $app-content-padding;
+    }
+
+    // Hide/show adjust responsive
+    @include media-query($appHeader-mobile-ends){
+        
+        #nav-toggle{
+            display: none;
+        }
+
+        #app-sidebar {
+            // display classes
+            &.is_off {
+                @include translate(0,0);
+            }
+        }   
+
+        #app-content{
+            width: calc(100% - #{$appCol-width}) !important;
+            float: right; 
+        }
+    }
+} // ends is_lay02

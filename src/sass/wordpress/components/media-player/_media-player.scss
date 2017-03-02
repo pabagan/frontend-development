@@ -1,0 +1,70 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Media & Players
+//
+// ---------------------------------------
+// ---------------------------------------
+
+// Music and Video players
+// ---------------------------
+ .wp-playlist{
+    padding: 0 !important;
+    border: 0 !important;
+    //margin-bottom: $gutter-lg !important;
+ }
+ // background
+.mejs-container{
+    //margin-bottom: $gutter-lg !important;
+    .wp-playlist & {
+        //margin: 0 !important;
+    }
+}
+.mejs-mediaelement,
+.mejs-container{
+    //background-color: $third-color !important;
+}
+
+.mejs-controls {
+    //@extend %i-main-bg-color;
+}
+
+// player letters
+.mejs-currenttime,
+.mejs-duration {
+    //color: #fff !important;
+    //line-height: 15px !important;
+    //display: inline-block;
+}
+ 
+
+// Texto de al lado de la catátula en playlist de música
+.wp-playlist-item-meta {
+    //color: $paragraph-color !important;
+}
+// playlist titles
+.wp-playlist-item{
+    //border-bottom: 1px solid $third-color !important;
+    //padding: 5px 0 !important;
+}
+
+// tracks
+//.wp-playlist-tracks{}
+// acceder al número de canción
+
+.wp-playlist-item-length,
+.wp-playlist-caption{
+    //@extend %i-second-color;
+    //font-weight: normal !important;
+}
+
+//
+.wp-playlist-item-length{
+    //top: 5px !important;
+}
+
+.wp-playlist-playing{
+    .wp-playlist-item-title{
+        //@extend %i-main-color;
+    }
+}

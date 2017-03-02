@@ -1,0 +1,28 @@
+
+// Post Author box
+// ---------------------------
+.gx-author-box{
+    text-align: center;
+    padding: $padding-sm;
+    // avatar
+    .avatar{
+        @extend .c-sq-lg;
+        @extend .circled;
+    }
+    // author name
+    .author-name{
+        margin-bottom: $space-md;
+    }
+    
+    // author bio
+    .author-info{
+    }
+    
+    // author links
+    .c-l-inline{
+        a{
+            margin: .3em;
+            color: inherit;
+        }
+    }
+}

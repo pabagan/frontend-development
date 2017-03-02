@@ -1,0 +1,25 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Boxes reseting firt/last element 
+ * spacing to keep just parent's box
+ * inner spacing.
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// Reset last child spacing
+.c-box {
+	// top margin reset
+	:first-child{
+		margin-top: 0 !important;
+	}
+	
+	// bottom margin reset
+	:last-child{
+		margin-bottom: 0 !important;
+	}
+	
+	p:last-child{
+		padding-bottom: 0 !important;
+	}
+}

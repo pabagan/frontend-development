@@ -1,0 +1,19 @@
+// 
+// Include responsive
+// @arg string [xs,sm,md,lg]
+@mixin media-query($screen_size, $size_arg: ''){	
+
+	// if no arg passed ad default
+	@if $size_arg == '' {
+		$size_arg: 'min-width';
+	}
+
+	// check key
+    @if map-has-key($screen-sizes, $screen_size) {
+	    @media screen and (#{$size_arg}: map-get($screen-sizes, $screen_size)) {
+	        @content;
+	    }
+    } @else {
+    	@error "media-query mixin with out of range arg '#{$size}'";
+    }
+}

@@ -1,0 +1,8 @@
+// 
+// BORDER RADIOUS
+// 
+@mixin border-radius($radious) {
+    -webkit-border-radius: $radious; 
+    -moz-border-radius: $radious; 
+    border-radius: $radious;
+}

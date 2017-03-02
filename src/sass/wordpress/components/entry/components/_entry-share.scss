@@ -1,0 +1,15 @@
+// Sharing links
+// ---------------------------
+.entry-share{
+	text-align: center;
+    a{     
+        color: $color4;
+        font-size: $h4-fs;
+        margin: 0 $space-sm;
+        .c-icon{
+            color: inherit;
+        }
+        &:active{
+        }
+    }
+}

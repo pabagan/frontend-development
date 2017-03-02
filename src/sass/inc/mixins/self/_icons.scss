@@ -1,0 +1,28 @@
+// 
+// Add icon to element
+// 
+@mixin c-icon($font, $icon){
+    @include icon-resets();
+    &:before {
+        content: $icon;
+    }
+}
+
+// 
+// Hide Text
+// 
+@mixin icon-resets{
+  font-family: $icon-font;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

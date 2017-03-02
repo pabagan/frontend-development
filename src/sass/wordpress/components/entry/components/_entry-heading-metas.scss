@@ -1,0 +1,60 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Post Metas
+//
+// ---------------------------------------
+// ---------------------------------------
+.entry-header {
+    .meta-item { 
+        margin-right: $space-sm;
+        // Icons
+        &.meta-comments a:before, // hacer icono comentarios clicable
+        &:before{
+            //float: left;
+            //@include transform(translate(0, 2px));
+            display: inline-block;
+            margin-right: 3px;
+            color: $blog-labels-color;
+            background: transparent;
+            @extend %icon;
+
+        }
+        &, a{
+            color: $blog-labels-color;
+        }
+    }
+    
+    .meta-date { 
+        &:before{
+            @extend .i-clock;
+        }
+    }
+    .meta-author {
+        &:before{
+            @extend .i-user;
+        }
+    }
+
+    .meta-cats {
+        &:before{
+           @extend .i-flag;
+        }
+    }
+
+    .meta-comments {
+        a{
+            &:before{
+                //@extend .i-dialog-bold;
+            }
+        }
+    }
+        
+    .meta-read-time {
+        &:before{
+            //@extend .i-eye-bold;
+        }
+    }     
+}
+
+

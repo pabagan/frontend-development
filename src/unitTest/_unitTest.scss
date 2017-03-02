@@ -1,0 +1,175 @@
+$ut-bar-toggler-size:50px;
+$ut-bar-width:260px;
+
+/**--------------------------------------
+*
+*   Test Unit Navigation
+*
+* -------------------------------------- */
+#unitTestBar{
+  //position: relative;
+  z-index: $z4;
+}
+
+
+#utNavWrap{
+  &.c-bar-right {
+    width: $ut-bar-width;
+    top: $size-rem-sm !important;
+  }
+}
+
+.utSectionTitle{
+  padding: $padding-lg;
+  font-size: $h2-fs;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $grey12;
+  background-color: $color4;
+  margin-bottom: 0;
+  text-align: center;
+  //font-weight: 400;
+  
+  // Hide titles class added by 
+  // UI controller bt.
+  .is_hide-titles & {
+    display: none;
+  }
+}
+
+
+#utNavToggler{
+  //@extend %gx-btn-reset;
+  position: fixed;
+  @include size($ut-bar-toggler-size, $ut-bar-toggler-size);
+  color: $bodyFontColor;
+  z-index: $z4 + 1;
+  top: 100px;
+  right:0;
+  font-size: $h4-fs;
+  @include transition(450ms cubic-bezier(0,0.7,0.5,1));
+
+      
+  &[aria-expanded=true]{
+    @include translate(-$ut-bar-width + 1,0);
+
+    &:before {
+        // I cross 4 linearicons
+        //content:"\e870";
+        // I cross bonicons
+        content: $i-cross;
+    }
+  }
+  &.is_on { 
+    @include translate(-$ut-bar-width,0);
+  }
+
+}
+
+
+/**--------------------------------------
+*
+* Controller
+*
+* -------------------------------------- */
+.ut-ctrl{
+  display: block;
+  width: auto !important;
+  z-index: 999999;
+  font-size: 12px;
+  line-height: 1;
+  padding: 2px 8px !important;
+  background-color: #F2F2F2;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  color: $bodyFontColor;
+  position: fixed;
+
+}
+
+.i-state{
+  &:before{
+    content: '+';
+    display: inline-block;
+    @include square-make(12);
+  }
+  .is_on & {
+    &:before{
+      content: '-';
+    }
+  }
+}
+
+
+/**--------------------------------------
+*
+*   Screen size alerts
+*
+* -------------------------------------- */
+#screen-size {
+  bottom: 30px;
+  left: 15px;
+}
+
+/**--------------------------------------
+*
+*   Colores de tallas
+*
+* -------------------------------------- */
+#ut-add-borders{
+  bottom: 60px;
+  left: 15px;
+}
+
+/* Borderize everywhere */
+.is_bordered{
+  * {
+    border: 1px solid #ccc;
+  } 
+}
+
+
+/**--------------------------------------
+*
+*   Hide secction title controller
+*
+* -------------------------------------- */
+#ut-hide-secc-title{
+  bottom: 60px;
+  left: 100px;
+}
+/**--------------------------------------
+*
+*   Colores de tallas
+*
+* -------------------------------------- */
+#sizes-colors {
+  bottom: 30px;
+  left: 100px;
+}
+
+.size-color-wrap {
+  margin-right: 4px;
+  display: inline-block; }
+
+.size-color {
+  display: inline-block;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-right: 2px; }
+  .size-color.color-xxs {
+    background-color: #ffff00; }
+  .size-color.color-xs {
+    background-color: #ffb400; }
+  .size-color.color-sm {
+    background-color: #ff0000; }
+  .size-color.color-md {
+    background-color: #00ff00; }
+  .size-color.color-lg {
+    background-color: #0000ff; }
+  .size-color.color-xl {
+    background-color: #00ffff; }
+  .size-color.color-xxl {
+    background-color: #ff00ff; }

@@ -1,0 +1,124 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Grid Width
+ * credit: Bootstrap
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$row-class          : 'c-row';
+$grid-width-class   : 'c-col';
+$container-class    : 'c-container';
+$grid-item-padding  : $padding-md;
+$total-colums       : 12;
+
+// Container sizes
+// False makes no container
+$container-sizes: (
+    'md': 820px,
+    'lg': 960px,
+    'xl': 960px,
+);
+
+// 
+// Row is parent class for 
+// grid/containers
+// 
+.#{$row-class}{ @include clearfix; }
+
+// 
+// Container and grid
+// 
+.#{$container-class},
+[class*="#{$grid-width-class}"] {
+    position: relative;
+}
+
+
+// 
+// Container class
+// 
+.#{$container-class}{ 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @include clearfix;
+}
+
+// 
+// Grid class
+// 
+[class*="#{$grid-width-class}"] {
+    float: left;
+    display: block;
+
+
+    // adjust element to the box start/end
+    > :first-child(){
+        margin-top: 0;
+    }
+    > :last-child(){
+        margin-bottom: 0;
+    }
+}
+
+
+// 
+// Grid paddings
+// 
+.#{$container-class},
+[class*="#{$grid-width-class}"] {
+    padding: $space-mobile-lg $space-mobile;
+}
+
+
+@include media-query('sm'){
+    .#{$container-class},
+    [class*="#{$grid-width-class}"] {
+        padding: $grid-item-padding;
+    }
+}
+
+
+// 
+// Container sizes responsive
+// 
+/* Main container sizes */
+@each $size, $value in $container-sizes {
+    @include media-query($size){
+        .#{$container-class}{
+            width: $value;
+        }
+    }
+}
+
+/**
+ * Grid 12 Colums
+ */
+@include grid-width($grid-width-class, 'xs', $total-colums);
+
+
+/* Grid SM */
+@media screen and (min-width: $screen-sm-min) { // 639px
+    @include grid-width($grid-width-class, 'sm', $total-colums);
+}
+
+
+/* Grid MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+    @include grid-width($grid-width-class, 'md', $total-colums);
+}
+
+/* Grid LG */
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+    @include grid-width($grid-width-class, 'lg', $total-colums);
+}
+
+/* Grid XL */
+@media screen and (min-width: $screen-xl-min) { // 1200px <
+    @include grid-width($grid-width-class, 'xl', $total-colums);
+}
+
+
+
+
+

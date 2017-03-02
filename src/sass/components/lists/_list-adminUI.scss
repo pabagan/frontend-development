@@ -1,0 +1,53 @@
+/**
+ * Listas
+ */
+
+$c-admin-base-height: $size-rem-sm;
+$c-admin-list-bt-width: 120px;    // buttons width
+$c-admin-list-button-n: 2;    // buttons width
+
+.c-manager-header{
+  line-height: $c-admin-base-height / 1.5;
+  font-weight: 700;
+  font-size: $p-sm;
+  border-bottom: 4px solid $grey3;
+  margin:0;
+}
+.c-manager-list {
+  list-style: none;
+  padding: 0;
+
+  a{
+    line-height: $c-admin-base-height;
+    color: $bodyFontColor;
+    display: block;
+  }
+}
+
+.c-manager-wrap{
+  @include clearfix();
+  position: relative;
+  border-bottom: 1px solid $grey3;
+}
+.c-manager-item{
+  float: left;
+  width: calc(100% - #{$c-admin-list-button-n * $c-admin-base-height });
+}
+
+.c-manager-controls{
+  float: right;
+  height: $c-admin-base-height;
+  a{
+    //@include border-radius(50%);
+    float: left;
+    text-align: center;
+    display: block;
+    //height: $c-admin-base-height;
+    line-height: $c-admin-base-height;
+    width: $c-admin-base-height;
+    
+    &:hover{
+      background-color: $grey9;
+    }
+  }
+}

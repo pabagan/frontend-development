@@ -1,0 +1,131 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Buttons
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$button-ln-class : "c-btn-ln";
+
+$button-ln-bg-default              : $color1;
+$button-ln-color-default           : $colorf;
+$button-ln-bg-default-hover        : $button-ln-color-default;
+$button-ln-color-default-hover     : $button-ln-bg-default;
+$button-ln-opacity                 : 0.80;
+$button-ln-border-radius           : 6px;
+$button-ln-font-weigth             : 600;
+$button-ln-font-style              : uppercase;
+$btn-padding                       : .5rem 1.2rem; // all buttons has same padding
+
+$button-ln-styles: (
+    "1" : ( color: $color1, color-hover: $color1),
+    "2" : ( color: $color2, color-hover: $color2),
+    "f" : ( color: $colorf, color-hover: $colorf),
+);
+
+// TODO: remove padding element if same value...
+$button-ln-sizes: (
+    "sm" : ( padding: $btn-padding, font-size: $p-sm, border-width: 2px ),
+    "md" : ( padding: $btn-padding, font-size: $p, border-width: 2px ),
+    "lg" : ( padding: $btn-padding, font-size: $p-lg, border-width: 2px ),
+);
+
+
+// 
+// Default properties
+// 
+.#{$button-ln-class} { 
+    //padding: $btn-padding;
+    box-shadow: none !important;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background: transparent;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    white-space: nowrap;
+    box-shadow: none !important;
+    
+
+    // 
+    // Button Style
+    // 
+    border: 0;
+    @include border-radius($button-ln-border-radius);
+    opacity: $button-ln-opacity;
+    font-weight: $button-ln-font-weigth;
+    border-color: inherit;
+    border-style: solid;
+    //color: inherit;
+
+    &:active,
+    //&:focus,
+    {
+        opacity: 1;
+        background-image: none;
+        //@include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+    }
+
+    // 
+    // Init hovers in LG screens
+    // 
+    @include media-query('lg') {
+        &:hover {
+            opacity: 1;
+        }    
+    }
+}
+
+
+// 
+/* Button sizes */
+// 
+@each $size, $value-list in $button-ln-sizes {
+    // Set class sizes
+    $size-filter: '';
+    @if $size != 'md' {
+        $size-filter: '-#{$size}';
+    }
+    .#{$button-ln-class}#{$size-filter} { 
+        // Build properties
+        @each $property, $value in $value-list {
+            #{$property}: #{$value}; 
+        }
+    }
+}
+
+
+// 
+/* Button styles */
+// 
+@each $style, $style-properties in $button-ln-styles {
+    // Set class sizes
+    .#{$button-ln-class}-#{$style} { 
+        color: map-get($style-properties, "color");
+        border-color: map-get($style-properties, "color");
+ 
+        &:active,
+        //&:focus,
+        {
+            color: map-get($style-properties, "color-hover");
+            border-color: map-get($style-properties, "color-hover");
+        }
+    }
+}
+
+// 
+/* Active hover on large screens */
+// 
+@include media-query('lg') {
+    @each $style, $style-properties in $button-ln-styles {
+        // Set class sizes
+        .#{$button-ln-class}-#{$style} {
+            &:hover {
+                color: map-get($style-properties, "color-hover");
+                border-color: map-get($style-properties, "color-hover");
+            }
+        }
+    }    
+}

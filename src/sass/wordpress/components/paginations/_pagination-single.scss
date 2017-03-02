@@ -1,0 +1,25 @@
+//
+// Pagination
+//
+//UT: ?p=1171&page=3
+//
+/* Single Pagination */
+$entry-pagination-size: $size-rem-sm;
+.entry-pagination {
+    .entry-pagination-title{
+        margin-right: $space-sm;
+        color: $color-blog1;
+    }
+    .page-numbers{
+        background-color: $grey9;
+        @include square-make($entry-pagination-size);
+        display: inline-block;
+        line-height: $entry-pagination-size;
+        margin-right: $space-xs;
+        //float: left;
+        text-align: center;
+    }
+    a {
+        color: $color-blog1;
+    }
+}

@@ -1,0 +1,156 @@
+// 
+// No style list
+// 
+@mixin l-reset() {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+// 
+// tiled-list list -> divs
+// 
+@mixin div-tiled($item_per_row,$quare_list_gutter: '') {  
+    width: 100%;
+    float: left;
+    
+    div{
+        // per row
+        $item_pecentage: (100% / $item_per_row);
+
+        //  if gutter is set
+        @if ($quare_list_gutter != '') {
+
+            $item_pecentage: $item_pecentage - ( $quare_list_gutter ) + ( $quare_list_gutter / $item_per_row);
+            $quare_list_gutter: ( 1% * $quare_list_gutter  );
+            
+            margin: 0 $quare_list_gutter $quare_list_gutter 0;
+            
+            &:nth-child( #{$item_per_row}n + #{$item_per_row} ){
+                
+                margin-right: 0;
+                
+            }
+        }
+        float: left;
+        width: $item_pecentage; 
+    }
+
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a{ 
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 
+// tiled-list list -> lists
+// 
+@mixin l-tiled($item_per_row,$quare_list_gutter: '') {  
+    @include l-reset();
+    
+    // per row
+    $item_pecentage: (100% / $item_per_row);
+    
+    li{
+        display: block;
+        float: left;
+        width: $item_pecentage; 
+
+        //  if gutter is set
+        @if ($quare_list_gutter != '') {
+
+            $item_pecentage: $item_pecentage - ( $quare_list_gutter ) + ( $quare_list_gutter / $item_per_row);
+            $quare_list_gutter: ( 1% * $quare_list_gutter  );
+            
+            margin: 0 $quare_list_gutter $quare_list_gutter 0;
+            
+            &:nth-child( #{$item_per_row}n + #{$item_per_row} ){
+                
+                margin-right: 0;
+                
+            }
+        }
+    }
+
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    a{ 
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 
+// list inline
+// 
+@mixin l-inline($item_size: '',$item_margin: '',$item_padding: '') {
+    @include l-reset();
+
+    li{
+        display: inline-block;
+    }
+    
+    a{  
+        display: inline-block;
+        // size
+        @if ($item_size != '') {
+            width: $item_size+px;
+            height: $item_size+px;
+        }
+
+        // margin
+        @if ($item_margin != '') {
+            margin: $item_margin+px;
+        }
+
+        // padding
+        @if ($item_padding != '') {
+            padding: 0 $item_padding+px;
+        }
+        
+    }
+}
+
+// 
+// list floated
+// 
+@mixin l-float($item_size: '',$item_margin: '',$item_padding: '') {
+    @include l-reset();
+
+    li{
+        float: left;
+    }
+
+    a{
+        display: block;
+        // size
+        @if ($item_size != '') {
+            width: $item_size+px;
+            height: $item_size+px; 
+        }
+
+        // margin
+        @if ($item_margin != '') {
+            margin: $item_margin+px;
+        }
+
+        // padding
+        @if ($item_padding != '') {
+            padding: $item_padding+px;
+        }
+        
+    }
+}

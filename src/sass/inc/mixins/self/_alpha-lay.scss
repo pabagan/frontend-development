@@ -1,0 +1,16 @@
+// 
+// ALPHA LAY
+// 
+@mixin alpha-lay($alpha-lay-color,$alpha-lay-opacity){
+    &:after{
+        content: '';
+        float: left;
+        position: absolute;
+        background-color: $alpha-lay-color;
+        opacity: $alpha-lay-opacity;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,490 @@
+$widget-title-fs:           $h3-fs; 
+$widget-title-color:        $color-blog1;
+
+$widget-labels-color:       $blog-labels-color; 
+$widget-body-color:         $bodyBgColor; 
+$widget-entry-title-fs:     $p; 
+$widget-entry-title-color:  $bodyFontColor; 
+$widget-labels-color:       $grey5; 
+
+
+.widget{
+    padding-bottom: $size-rem-md;
+    .widget-title{
+        margin: 0 0 $space-lg;
+    }
+
+    img{
+        width: 4.2em;
+    }
+
+    .entry-meta{
+        //display: none;
+    }
+    //border: 4px solid green !important;
+    //margin: 0 0 $space-default;
+    .widget-entry{
+        //margin-top: $space-xl;
+        margin-bottom: $space-md;
+
+        &:last-child{
+            margin: 0;
+        }
+        p:last-child{
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+// Widget title
+.widget-title{
+    margin-bottom: $space-md;
+    font-size: $widget-title-fs;
+    //text-transform: uppercase;
+    text-align: center;
+    color: $widget-title-color;
+}
+
+// Widget entry title
+%widget-entry-title{
+    font-size: $widget-entry-title-fs;
+    margin-bottom: $space-xs;
+    font-family: $second-font;
+    display: block;
+    color: $widget-entry-title-color;
+    font-weight: 400 !important;
+}
+
+.widget{
+    //@extend .c-p-sm;
+    font-size: $p-sm;
+    //color: $widget-body-color;
+
+    // entry title
+    .entry-title{
+        @extend %widget-entry-title;
+    }
+
+    // Labels
+    .post-date,
+    .entry-meta{
+        font-size: $p-xs;
+
+        &, a{
+            color: $widget-labels-color !important;
+        }
+
+        .post-edit-link{
+            margin-left: 4px;
+        }
+    } 
+
+    // All responsive images
+    img{
+        //@extend .c-img;
+    }
+
+    // Small Images
+    .attachment-thumbnail,
+    .avatar{
+        //margin: 0;
+        @extend .c-img-rd;
+        @extend .c-sq-lg;
+    }
+
+
+    // añadir block a enlaces dentro de media 
+    // element
+    .media-thumb {
+        //a,
+        .wp-post-image
+        {
+            //@extend %c-sq-lg;
+            display: block;
+        }
+    }
+    // Big images like sliders
+    .photo{
+        margin-top: 0;
+    }
+
+    li{
+        //@extend %c-p-xs-vert;
+    }
+    p{
+        margin-top: 0;
+    }
+    a{
+        color: $bodyFontColor !important;
+    }
+}
+
+
+
+
+//
+// Widget Twitter
+// ---------------------------//
+.twitter_widget{
+    .circled{
+        background-color: rgb(0, 172, 237);
+        text-align: center;
+    }
+    .i-twitter{
+        color: #ffffff;
+        //color: rgb(0, 172, 237);
+        //@extend %deg4;
+    }
+    //.entry-meta{}
+    //.entry-author{}
+    //.entry-summary{}
+
+    // twitter blue link
+    a{
+        color: rgb(0, 172, 237) !important;
+    }
+}
+
+.attachment-twitter{
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+}
+
+
+//
+// Widget search
+// ---------------------------//
+.widget_search{
+    label,
+    .search-form{
+        margin: 0;
+    }
+
+    .search-field{
+        background-color: #ffffff;
+    }
+
+    .search-submit{
+        @extend .screen-reader-text;
+    }
+}
+
+//
+// Widget forms
+// ---------------------------//
+.widget{
+    label{
+        display: block;
+        width: 100%;
+    }
+    //form {//@extend %salto-md; }
+}
+
+
+//
+// Widget Calendar and tables
+// ---------------------------//
+.widget{
+    table{
+        // caption
+        caption{
+        }
+        
+        td, th{
+        }
+
+        // calendar
+        #next, #prev{
+            padding-right: 0;
+            padding-left: 0;
+            a {
+                background: black(.03);
+                display: inline-block;
+            }
+        }    
+        
+        #prev{
+            text-align: left;
+        }
+
+        #next{
+            text-align: right;
+        }
+    }
+}
+
+
+//
+// Comportamiento 'li' sm
+//
+// Widgets defaults lists
+// ---------------------------//
+.widget_archive,
+.widget_categories,
+.widget_links,
+.widget_meta,
+.widget_nav_menu,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries,
+.tags_widget
+{
+    text-align: center;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        margin-bottom: $space-sm;
+        @extend %widget-entry-title;
+        &:last-child{
+            margin: 0;
+        }
+    }
+
+    li li{
+        padding-left: .5em;
+        display: block;
+        // fix 1 element margin
+        &:first-child{
+            margin-top: $space-sm;
+        }
+        // bullet
+        &:before{
+            content: ' - ';
+        }
+    }
+}
+
+//
+// Comportamiento 'li' lg
+.widget-get-posts,
+.custom_comments_widget,
+.widget_rss,
+{
+    ul{
+        @include l-reset();
+        margin: 0;
+    }
+
+    li{
+        margin-bottom: $space-sm;
+    }
+}
+.widget-entry{
+    margin-bottom: $space-md;
+    &:last-child{
+        margin: 0;
+    }
+
+}
+
+//
+// Widget Recent entries
+// ---------------------------//
+.custom_comments_widget{
+}
+
+//
+// Widget Recent entries
+// ---------------------------//
+.widget_recent_entries {
+    a{
+        display: block;
+        margin: 0;
+        @extend %widget-entry-title;
+    }  
+
+    .post-date{
+        font-family: $main-font;
+        margin-bottom: $space-lg;
+        display: block;
+    }  
+}
+
+
+
+//
+// Widget RSS
+// ---------------------------//
+.widget_rss{
+    a.rsswidget{
+        @extend %widget-entry-title;
+    }
+    .rss-widget-icon{
+        display: none;
+    }
+    .rss-date{
+        display: block;
+    }
+
+    cite{
+        display: block;
+        margin-top: $space-xs;
+    }
+}
+
+
+//
+// Menu widgets
+// ---------------------------//
+.widget_pages,
+.widget_nav_menu{
+    height: auto;
+    li{
+        width: auto;
+        position: relative;
+    }
+}
+
+
+// Submenu elements
+.widget{
+    .children, .sub-menu{
+        a{
+        }
+    }
+}
+
+.widget_pages .children, .widget .sub-menu{
+}
+
+
+//
+// Widget Sliders
+// ---------------------------//
+.widget{
+    .royalSlider{
+        //text-align: left;
+        .wp-post-image{
+            width: 100% !important;
+            display: block;
+        }
+    }
+
+    // bullet wrap
+    .rsNav {
+        margin-bottom: $space-md;
+    }
+
+    .rsBullet {
+        margin: 0 $space-xs !important;
+        span{
+            background-color: $bodyFontColor;
+
+        }   
+    }
+
+}
+
+// aligncenter
+.posts_slider_widget,
+.img_slider_widget {
+    text-align: center;
+}
+
+// Post Slider
+.posts_slider_widget {
+    .wp-post-image{
+        margin-bottom: $space-sm;
+
+
+    }
+    .entry-meta{
+        margin-bottom: $space-md;
+    }
+    
+    // widget thumb
+    .media-thumb{
+        display: inline-block;
+        position: relative;
+    }
+
+    // icon thumb
+    [class*="icon-format-"] {
+    }
+}
+
+//
+// Tiles widgets: Images, Instagram
+// ---------------------------//
+$tile-gutter: 3.125;
+.instagram_widget,
+.widget_tiles,
+{
+    ul{
+        margin:0;
+        @include l-tiled(4,$tile-gutter);
+        margin-bottom: -1 * ($tile-gutter / 2) * 1%;
+    }
+    img{
+        //@extend %no-space;
+        margin: 0 auto;
+        @extend .c-img;
+        @extend .aligncenter;
+    }
+}
+
+
+//
+// Author widgets
+// ---------------------------//
+.author_widget{
+
+    text-align: center;
+    //.avatar{}
+
+    .avatar{
+        margin-left: auto;
+        margin-right: auto;
+        @extend .c-sq-lg;
+        margin-bottom: $space-sm;
+
+    }
+    .author-name{
+        @extend %widget-entry-title;
+    }
+    
+    //.author-info{}
+
+    .gx-author-links{
+        a{
+            //background-color: $grey-7;
+            color: $bodyBgColor !important;
+            //@extend .c-i;
+            margin-right: .5em;
+        }
+    }
+}
+
+
+//
+// Text widgets
+// ---------------------------//
+//.widget_text{}
+
+
+//
+// Category and Tags widget
+// ---------------------------//
+// .tags_widget{
+//     ul{}
+    
+//     a{
+//         &:active{}
+//     }
+// }
+
+
+//
+// Widget edit post
+// ---------------------------//
+// .widget {
+//     .post-edit-link{
+//     }
+// }

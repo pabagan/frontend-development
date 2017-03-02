@@ -1,0 +1,846 @@
+<!DOCTYPE html> 
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Unit Test - Home Shine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" id="geniux-google-fonts-css"  href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C300italic%2C400%2C400italic%2C600%2C700%2C700italic%2C&#038;subset=latin%2Clatin-ext&#038;ver=1" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="//cloud.typography.com/7959874/686688/css/fonts.css?ver=1" type="text/css" media="all" />
+
+
+    <link id="main-styles" type="text/css" href="assets/css/style.min.css" rel="stylesheet" />
+  </head>
+  
+  <body class="hd-space">
+  <a class="skip-link sr-only" href="#c-content">Skip to content</a>
+
+  <noscript>Hey! Javascript should be activated.</noscript><!-- noscript -->
+  
+  <!-- 
+    ******************************************************
+    ******************************************************
+       HEADER & MAIN NAVIGATION
+    ******************************************************
+    ******************************************************
+  -->
+  <header class="site-header" role="banner">
+    <div class="site-branding c-row c-h-md c-bar-top bg-grey12 c-shadow-bottom is_z7">
+      <div class="site-logo is_left">
+        <a class="c-h-md c-m-sm-left" href="/" rel="home">
+          <span class="site-title sr-only">Marca</span>
+          <img class="c-img-h c-m-sm c-h-sm" alt="" src="assets/img/shine/shine-coaching-logo.png" />
+        </a>
+      </div><!--  .site-logo -->
+
+      <button id="main-nav-toggle" data-toggle-classes class="c-nav-toggle c-sq-md is_right bg-grey12 color-1" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="c-icon-sm i-menu-4" aria-hidden="true"></span>
+        <span class="sr-only">Primary Menu</span>
+      </button>
+    </div><!-- .site-branding -->
+
+    <!-- WP like navigation -->
+    <nav id="site-nav" class="site-navigation c-shadow-left c-bar-right c-col-xs-12 c-col-md-6 c-col-lg-4 c-col-xxl-3 bg-1 is_off ct-light" role="navigation">
+      <div class="menu-monster-container">
+        <ul id="primary-menu" class="menu">
+          <li><a href="#">Coaching for your business</a></li>
+          <li class="is_active"><a href="/">Coaching for you</a></li>
+          <li><a href="#/">About Shine</a></li>
+          <li><a href="#/">Leadership Tips &amp; Advice</a></li>
+        </ul>
+      </div>
+    </nav><!-- .site-navigation -->
+  </header><!-- #header -->
+
+  <hr class="sr-only">
+    
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Unit Test Sidebar
+  ******************************************************
+  ******************************************************
+  -->
+  <div id="unitTestBar" class="is_fixed l-window">
+    <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-grey0 color-f"></button>
+
+    <!-- Unit Test Navigation JS populated-->
+    <div id="utNavWrap" class="c-bar-right c-w-xl c-p-xs is_off bg-grey0">
+      <div id="unitTestBarNav" class="c-row bg-grey0 hd-space p-sm"></div>
+    </div>
+  </div>
+
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Home
+  ******************************************************
+  ******************************************************
+  -->
+  <h2 id="home" data-module-title class="utSectionTitle c-m-0">Home</h2>
+
+  <!-- Presentacion -->
+  <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-presentacion_v2.jpg'); ?>)">
+      <div class="c-container is_v-center c-p-lg-vert textcenter">
+        <h2 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 350 250">Growing people,<br> evolving business</h2>
+
+        <p class="p-lg" data-appear  data-offset="100%" data-animation="slideDownIn 250 550">
+          Executive coaching and team coaching for business owners, executives, management teams, and organizations. We develop authentic leadership with impact and high performing teams.
+        </p>
+        <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
+          <a href="javascript:void(0);" data-scroll-to="#home-history" class="anim-bt-1 c-sq-md color-f circled c-border">
+            <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </p>
+      </div>
+  </div>
+
+  <!-- About Home -->
+  <div id="home-history" class="c-row" data-fit-children>
+    <div class="c-col-xs-12 c-h-xl c-col-md-6 c-p-0 c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-shine-coaching-activity.jpg'); ?>)">
+    </div>
+    <div class="c-col-xs-12 c-col-md-6 c-p-lg-vert" data-appear data-animation="slideRightBigIn 750 0">
+      <h2 class="color-1">Executive Coaching, Leadership Coaching &amp; Team Coaching</h2>
+      <p class="c-p-0 c-p">We work with individuals and teams from organizations with international contexts. We develop leadership skills, increase individual and team performance, prepare executives for new stages &amp; responsibilities and help overcome personal and business challenges. Our commitment: connect our clients with their purpose &amp; passions to untap their full potential.</p>
+    </div>
+  </div>
+  
+  <!-- Personal / Bussiness -->
+  <div id="home-bifurca" class="c-row bg-1 ct-light">
+    <div id="home-bifurca-personal" class="home-bifurca-box c-row-xs-6 c-row-sm-4 c-row-md-5 c-row-lg-6 c-col-xs-12 c-col-sm-6 c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-personal-coaching-grey.jpg'); ?>)">
+      <div class="is_v-center-xs textcenter ct-light">
+        <h3>Personal Coaching</h3>
+        <p id="home-btn-personal" class="c-p-0">
+          <a href="#" class="c-btn-ln c-btn-ln-f">
+            Know more
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div id="home-bifurca-business" class="home-bifurca-box c-row-xs-6 c-row-sm-4 c-row-md-5 c-row-lg-6 c-col-xs-12 c-col-sm-6 c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-business-coaching-grey.jpg'); ?>)">
+      <div class="is_v-center-xs textcenter ct-light">
+        <h3>Business Coaching</h3>
+        <p class="c-p-0">
+          <a href="#" class="c-btn-ln c-btn-ln-f">
+            Know more
+          </a>
+        </p>
+      </div>
+    </div> 
+  </div>
+
+  <!-- 
+  ******************************************************
+  ******************************************************
+    About
+  ******************************************************
+  ******************************************************
+  -->
+  <div id="page-about">
+  <h2 id="about-ct" data-module-title class="utSectionTitle c-m-0">About</h2>
+
+  <!-- About Presentacion -->
+  <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-presentacion_v3.jpg'); ?>)">
+      <div class="c-container is_v-center c-p-lg-vert textcenter">
+        <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">Business coaching with eye-opening take-aways</h1>
+
+        <p class="p-lg" data-appear  data-offset="100%" data-animation="slideDownIn 250 550">
+          We offer business coaching for executives, business owners, entrepreneurs and management teams. We consider that behind the title on a business card there is a person with feelings, fears, desires and expectations.
+        </p>
+        <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
+          <a href="javascript:void(0);" data-scroll-to="#about-co-active" class="anim-bt-1 c-sq-md color-f circled c-border">
+            <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </p>
+      </div>
+  </div>
+
+  <!-- About Co-active -->
+  <div id="about-co-active" class="c-row" data-fit-children-md>
+    <!-- 
+    <div class="c-col-xs-12 c-col-md-6 c-h-xl c-img-bg-fix" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/about/about-visible-invisible.jpg'); ?>)">
+    </div>
+     -->
+    <div class="c-col-xs-12 c-col-md-6 c-p-0">
+      <img class="c-img" src="assets/img/shine/about/about-visible-invisible.jpg" alt="Shine Coaching" />
+    </div>
+    <div class="c-col-xs-12 c-col-md-6 c-p-lg bg-grey9" data-appear data-animation="slideRightBigIn 750 0">
+      <div class="is_v-center-lg">
+        <h2 class="color-2">Head. Heart. Guts.</h2>
+        <p class="c-p-0 c-p">Thus, our coaching goes beyond our client’s intellectual capacities and includes the emotional and corporal intelligence to tap into the full leadership potential. Our coaching builds on the <a class="color-2" href="http://www.thecoaches.com/why-cti/what-is-co-active" rel="nofollow">Co-Active model®</a> (by the Coaches Training Institute) and <a class="color-2" href="http://www.crrglobal.com/orsc.html" rel="nofollow">Organization Relationship System Coaching ORSC</a> (by Center for Right Relationship).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission -->
+  <div id="mision" class="c-row c-p-md ct-light bg-about1 textcenter">
+    <div class="c-container c-p-0">
+      <h2>Mission and Values</h2>
+      <p>We lead leaders to authenticity for an efficient, human and sustainable business world.</p>
+    </div>    
+    <div class="c-row" data-fit-children>
+      <div class="c-col-xs-12 c-col-md-6 c-col-lg-1-5 c-p-sm-lat c-box"  data-appear data-animation="expandIn 750 250">
+          <div aria-hidden="true" class="c-icon-lg i-heart color-f aligncenter c-m-xs-bottom"></div>
+          <h3 class="h4">Passion for people</h3>
+          <p>People are our passion. We love and believe in what we do to get our clients to their best version</p>
+      </div>
+      <div class="c-col-xs-12 c-col-md-6 c-col-lg-1-5 c-p-sm-lat c-box" data-appear data-animation="expandIn 750 250">
+          <div aria-hidden="true" class="c-icon-lg i-users color-f aligncenter c-m-xs-bottom"></div>
+          <h3 class="h4">Cross-cultural Diversity</h3>
+          <p>We consider ourselves <em>Cross Cultural Natives</em>. We admire cultural differences and aspire to integrate positive aspects of each society</p>
+      </div>
+      <div class="c-col-xs-12 c-col-md-6 c-col-lg-1-5 c-p-sm-lat c-box"  data-appear data-animation="expandIn 750 250">
+          <div aria-hidden="true" class="c-icon-lg i-face-smile color-f aligncenter c-m-xs-bottom"></div>
+          <h3 class="h4">On the Side of Life</h3>
+          <p>We are positive, optimistic, and appreciate the value of both good and bad things, achievements and errors</p>
+      </div>
+      <div class="c-col-xs-12 c-col-md-6 c-col-lg-1-5 c-p-sm-lat c-box"  data-appear data-animation="expandIn 750 250">
+          <div aria-hidden="true" class="c-icon-lg i-eye color-f aligncenter c-m-xs-bottom"></div>
+          <h3 class="h4">Craving Curiosity</h3>
+          <p>We look at the world with the eyes of a child. We learn, play, enjoy, without prejudice</p>
+      </div>
+      <div class="c-col-xs-12 c-col-md-6 c-col-lg-1-5 c-p-sm-lat c-box"  data-appear data-animation="expandIn 750 250">
+          <div aria-hidden="true" class="c-icon-lg i-loop color-f aligncenter c-m-xs-bottom"></div>
+          <h3 class="h4">Thirst for Knowledge</h3>
+          <p>We absorb wisdom in order to grow and head towards the best version of ourselves</p>
+      </div>
+    </div>
+  </div>  
+
+  <!-- Competences -->
+  <div id="shine-competences" class="c-row bg-about1 ct-light" data-fit-children-md data-appear-children data-animation="slideLeftBigIn 550 0 750">
+    <div class="c-col-xs-12 c-col-md-4 bg-about4 c-shadow-inner-top-left">
+      <h3>We have</h3>
+      <ul class="p-lg">
+        <li>11 yrs Leading and Developing Teams</li>
+        <li>7 yrs in Executive Team and Strategy Committee</li>
+        <li>Experience in Digital, Media and Start-up Environments</li>
+        <li>Cross-cultural Management and Internationalization track record</li>
+      </ul>
+    </div>
+
+    <div class="c-col-xs-12 c-col-md-4 bg-about5 c-shadow-inner-top-left">
+      <h3>We offer</h3>
+      <ul class="p-lg">
+        <li>One-to-One Executive Coaching (Co-Active)</li>
+        <li>Team and Organization Coaching (ORSC)</li>
+        <li>Company Culture, Mission, Vision &amp; Strategy Consulting</li>
+        <li>5 languages (en, es, de, fr, ca)</li>
+        <li>Time Management Training</li>
+        <li>Public Speaking Training</li>
+      </ul>
+    </div>  
+
+    <div class="c-col-xs-12 c-col-md-4 bg-about6 c-shadow-inner-top-left">
+      <h3>We guarantee</h3>
+      <ul class="p-lg">
+        <li>100% personalized coaching experience</li>
+        <li>Sustainable change</li>
+        <li>Secure environment for unfiltered conversations</li>
+        <li>New self-knowledge and self-awareness</li>
+      </ul>
+    </div>  
+  </div>  
+
+  <!-- Team -->
+  <div id="team" class="c-row">
+
+    <div class="c-row">
+    <div class="c-container c-p-0-bottom textcenter">
+      <h2 class="color-2">Team</h2>
+      <p>These are the coaches who will make you and your team shine.</p>
+    </div>
+      <div class="c-col-xs-12 c-col-lg-6">
+        <img class="c-img" src="assets/img/shine/about/shine-rabieh-adib.jpg" />
+        <h3 class="color-1 h4">Rabieh Adib <small class="color-grey7 w400 is_block">Founder / Lead Coach</small></h3>
+        <div>
+          <p>I'm Rabieh Adib, Founder and Principal Coach of Shine. Born in Germany, son of a Belgian mother and a Lebanese father, married to a Spaniard with two Catalan siblings, I consider myself first and foremost a human being.</p>
+          <p>Before I kicked off Shine I dedicated 11 years of my professional career to Softonic, 7 years as member of the Global Executive Team. I co-created, accompanied and learned during the company's growth from a small start-up to one of the biggest European Internet businesses, with 440 people in 4 continents.</p>
+          <p>I went on driven by my desire to fully dedicate myself to my real passion: helping people, teams, and organizations unlock their full potential - for a fulfilled professional and personal life.</p>
+        </div>
+      </div>
+      <div class="c-col-xs-12 c-col-lg-6">
+        <img class="c-h-xl c-img" src="assets/img/shine/about/shine-soko-trinh.jpg" />
+        <h3 class="color-1 h4">Sok-ho Trinh <small class="color-grey7 w400 is_block">Associate Coach</small></h3>
+        <div>
+          <p>I am an international-minded Life-/Leadership coach and mentor with global senior corporate and startup background. Born in France from Chinese parents, I speak 8 languages and have lived and worked in Europe, Asia, and North America. Today I live in the UK.</p>
+          <p>I spent 15 years working with leading multinationals in the Big Data, Analytics, Consumer Goods and Retail space and launched an Internet start up and run my coaching practice where I help people/organisations unlock their Passions and Leadership.</p>
+          <p>I hold a BSc, an MSc, a top tier MBA, and pursue further research in Positive Psychology and Coaching Psychology. I am a Co-Active (CPCC, ACC) and organisation/systemic coach (ORSC, GROW).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Personal
+  ******************************************************
+  ******************************************************
+  -->  
+  <div id="page-personal">
+  <h2 id="personal-ct" data-module-title class="utSectionTitle c-m-0">Personal</h2>
+  
+  <!-- Presentacion Coaching Personal-->
+  <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/personas/shine-coaching-personal_sillas.jpg'); ?>)">
+      <div class="c-container is_v-center c-p-lg-vert textcenter">
+        <h2 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 350 250">Personal Executive Coaching</h2>
+        
+        <p class="p-lg" data-appear  data-offset="100%" data-animation="slideDownIn 250 550">
+          We join business owners, leaders and entrepreneurs on their personal and professional growth path towards an authentic leadership style. Our executive coaching is specialized on success, career and leadership development.
+        </p>
+        <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
+          <a href="javascript:void(0);" data-scroll-to="#preguntas-personal" class="anim-bt-1 c-sq-md color-f circled c-border">
+            <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </p>
+      </div>
+  </div>
+
+  <!-- Boxes -->
+  <div id="preguntas-personal" class="c-row ct-light w400" data-fit-children data-appear-children data-animation="slideLeftBigIn 750 0 350">
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-pax3 c-box">
+      <p class="p-lg">Do you want to develop your leadership skills?</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-pax4 c-box">
+      <p class="p-lg">Do you know what you want, but struggle to achieve it?</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-pax5 c-box">
+      <p class="p-lg">Do you sometimes feel overwhelmed by job and life?</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-pax6 c-box">
+      <p class="p-lg">Do you aspire to change your career or life?</p>
+    </div>
+  </div>  
+
+  <!-- Best Version -->
+  <div id="sacar-mejor-personal" class="c-container textcenter">
+    <h2 class="color-pax1">The best version of yourself</h2>
+    <p>Executive coaching is a space of trust in which you can focus on important topics, goals and challenges, rediscover and enhance your leadership skills, increase self-knowledge and self-awareness, and define actions to achieve goals that are important to you. Together with the coach you go deep to the roots of issues, explore beliefs and desires, identify solutions, and take conscious decisions to achieve your objectives.</p>
+    <div class="c-row" data-appear-children data-fit-children data-animation="expandIn 550 0 350">
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+        <div aria-hidden="true" class="c-icon-lg i-link color-pax1 aligncenter c-m-xs-bottom"></div>
+        <p>We create a space of trust and audacity.</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+        <div aria-hidden="true" class="c-icon-lg i-dialog-double color-pax1 aligncenter c-m-xs-bottom"></div>
+        <p>An environment to speak out the things one keeps to oneself</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+        <div aria-hidden="true" class="c-icon-lg i-loop color-pax1 aligncenter c-m-xs-bottom"></div>
+        <p>A place to develop and gain clarity</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+        <div aria-hidden="true" class="c-icon-lg i-indication color-pax1 aligncenter c-m-xs-bottom"></div>
+        <p>A room to develop action plans and clear steps to change</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div id="mision" class="c-row ct-light bg-1">
+    <div class="c-row bg-about2" data-appear data-animation="slideDownIn 550 0">
+      <div class="c-container c-box">
+        <h2>How our Executive Coaching works</h2>
+        <p>All our coaching processes start with our kick off pack consisting of 8 sessions taking place every 2 weeks. By experience, 8 coaching sessions lead our clients to noticable progress. Depending on the goals and each client's individual process, the coaching duration can vary.</p>
+      </div>
+    </div>
+    <div class="c-row" data-fit-children>
+      <div class="c-col-xs-12 c-col-md-4 bg-about3 c-inner-arrow-top" data-appear data-animation="slideLeftBigIn 550 0">
+        <h3><span class="jumbo is_block">1</span> Discovery session</h3>
+        <p>Define the goals of the executive coaching process, create an alliance to build a secure audacious coaching space and identify personal core values.</p>
+      </div>  
+
+      <div class="c-col-xs-12 c-col-md-4 bg-about4 c-shadow-inner-top-left c-inner-arrow-left" data-appear data-animation="slideLeftBigIn 550 1000">
+        <h3><span class="jumbo is_block">6</span> Working sessions</h3>
+        <p>Getting to the roots of the topics to increase your self-knowledge and awareness, uncover opportunities, take related decisions, and initiate the desired changes.</p>
+      </div>  
+
+      <div class="c-col-xs-12 c-col-md-4 bg-about5 c-shadow-inner-top-left c-inner-arrow-left" data-appear data-animation="slideLeftBigIn 550 2000">
+        <h3><span class="jumbo is_block">1</span> Closing session</h3>
+        <p>Evaluate key take-aways, achievements, and impact of the complete coaching process. Practical tools and insights for the future.</p>
+      </div>  
+    </div>  
+  </div>
+
+  <!-- Quotes -->
+  <div class="c-row bg-quotes">
+    <div class="c-container c-p-lg-vert ct-light">
+      <div class="c-testionials owl-carousel owl-theme textcenter">
+        <div class="item"> 
+          <span aria-hidden="true" class="c-icon-lg i-quotes c-m-lg"></span>
+          <blockquote>
+            It's a pleasure to have Rabieh as a coach, both on a human level as on a professional level. His methods help me confront and solve complex situations in an easier and more structured way than before. His ability to help you look into yourself makes worth spending time with him, as this time would provide lots of ROI for yourself
+            <cite>Eduardo Garolera, DigitalGrowth, Founder</cite>
+          </blockquote>
+        </div>
+        
+        <!--
+        <div class="item"> 
+          <span aria-hidden="true" class="c-icon-md c-sq-md c-border border-f circled i-quotes c-m-lg"></span>
+          <blockquote>
+            I didn't think I needed a coach, thought I was doing pretty well - of course one always wants to be a better leader, and stress was an issue at times, but I never thought about having a coach. Fast forward a few months...I can now say that a coach not only helps with stress, and supports evolution into better leadership, but it creates positive change in all life aspects - since working with Rabieh not only am I better able to manage stress (and certain people), but I also think I'm a better mum, wife and friend...as well as being a better boss. Thanks Rabieh for the gifts you have given me...the ones I didn't know I had inside
+            <cite>Fiona Garvey, VP Sales, Softonic</cite>
+          </blockquote>
+        </div>
+
+        <div class="item"> 
+          <span aria-hidden="true" class="c-icon-md c-sq-md c-border border-f circled i-quotes c-m-lg"></span>
+          <blockquote>
+            I’ve worked with Rabieh both at Softonic and as my coach. During both experiences his passion for people and his efforts to get me to the best version of myself impressed me. I’m not exactly sure how he did it, but he made me know myself better and discover important things I had inside I hadn’t been conscious of before. I strongly feel anybody can grow with him as a coach
+            <cite>Diana Castelltort, CMO, Floraqueen</cite>
+          </blockquote>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Business
+  ******************************************************
+  ******************************************************
+  -->
+  <div id="page-business">
+  <h2 id="business-ct" data-module-title class="utSectionTitle c-m-0">Organizaciones</h2>
+
+  <!-- Presentacion Coaching Empresas -->
+  <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/empresas/empresas_v01.jpg'); ?>)">
+    <div class="c-container is_v-center c-p-lg-vert textcenter">
+      <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">
+        Business Coach for Executives, Teams and Companies
+      </h1>
+      
+      <p class="p-lg" data-appear  data-offset="100%" data-animation="slideDownIn 250 550">
+        We offer one-to-one executive coaching for key profiles of your business, bespoke team coaching to bring team performance to the next level, and off-the-shelf leadership workshops. Our business coach promise: leadership with higher impact, increased team performance, better relationships and higher productivity.
+      </p>
+      <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
+        <a href="javascript:void(0);" data-scroll-to="#business-active" class="anim-bt-1 c-sq-md color-f circled c-border">
+          <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- About Co-active -->
+  <div id="business-active" class="c-row" data-fit-children>
+    <div class="c-col-xs-12 c-h-xl c-col-md-6 c-p-0 c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/empresas/shine-coaching-empresas.jpg'); ?>)">
+    </div>
+    <div class="c-col-xs-12 c-col-md-6 c-p-lg bg-grey9" data-appear data-animation="slideRightBigIn 750 0">
+      <h2 class="color-emp1">
+        Our commitment
+      </h2>
+      <p>
+        Business coaching is not magic. At it's core, successful business coaching depends on people wanting to do something. And this is our promise: we trigger people towards leadership with higher impact, increased team performance, better relationships and higher productivity.
+      </p>
+    </div>
+  </div>
+
+  <!-- Boxes -->
+  <div id="preguntas-empresas" class="c-row ct-light w400" data-fit-children data-appear-children data-animation="slideLeftBigIn 750 0 350">
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-emp3 c-box">
+      <p class="p-lg">Develop an impactful leadership style</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-emp4 c-box">
+      <p class="p-lg">Overcome challenges and conflicts</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-emp5 c-box">
+      <p class="p-lg">Prepare transitions and new responsibilities</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-col-md-3 bg-emp6 c-box">
+      <p class="p-lg">Clarify long term strategy and take challenging decisions</p>
+    </div>
+  </div>  
+
+  <!-- Best Version -->
+  <div id="sacar-mejor" class="c-container textcenter">
+    <h2 class="color-emp1">Leverage your team's full potential</h2>
+    <p>Our executive coaching assists businesses and management teams in important moments. To achieve the desired results, we design bespoke coaching programs together with the coachee, the team leader and HR. They are focused on both the business context and company goals and the coachee's/team's needs to be sustainable in time.</p>
+
+    <div class="c-row" data-appear-children data-fit-children data-animation="expandIn 550 0 350">
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+          <div aria-hidden="true" class="c-icon-lg i-link color-emp1 aligncenter c-m-xs-bottom"></div>
+          <p>We create a space of trust and audacity.</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+          <div aria-hidden="true" class="c-icon-lg i-dialog-double color-emp1 aligncenter c-m-xs-bottom"></div>
+          <p>An environment to speak out the things that need to be said</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+          <div aria-hidden="true" class="c-icon-lg i-loop color-emp1 aligncenter c-m-xs-bottom"></div>
+          <p>A place to gain awareness and develop competences</p>
+      </div>
+      <div class="c-col-xs-12 c-col-sm-6 c-box">
+          <div aria-hidden="true" class="c-icon-lg i-indication color-emp1 aligncenter c-m-xs-bottom"></div>
+          <p>A room to develop action plans and clear goals</p>
+      </div>
+    </div>  
+  </div>
+
+  <!-- Coaching Programs -->
+  <div id="mision" class="c-row ct-light bg-about1">
+    <div class="c-container textcenter c-box">
+      <h3>Our Coaching Programs</h3>
+      <p>We offer the following corporate coaching programs for businesses and organizations. We adapt the final design of each of these coaching processes to the person's, team's and organization's specific needs:</p>
+    </div>
+
+    <div class="c-row" data-fit-children>
+      <div class="c-col-xs-12 c-col-md-6 c-col-xl-1-5 c-p-sm-lat bg-about2 c-shadow-inner-top-left c-box" data-appear data-animation="slideLeftBigIn 550">
+        <h3>Leadership Development</h3>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Goals</h4>
+        <p>Increase self-knowledge and self-awareness; Develop leadership competences; Identify and work on high-impact skills</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Who</h4>
+        <p>C-Level, Top management, Business owners, Key profiles</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">When</h4>
+        <p>Wish to improve as a leader; Desire of fulfilled work and life; Professional growth and development</p>
+      </div>
+
+      <div class="c-col-xs-12 c-col-md-6 c-col-xl-1-5 c-p-sm-lat bg-about3 c-shadow-inner-top-left c-box" data-appear data-animation="slideRightBigIn 550">
+        <h3>Challenges</h3>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Goals</h4>
+        <p>Identify challenges and strengthen key skills to overcome them successfully</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Who</h4>
+        <p>C-Level, Top management, Business owners, Key players</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">When</h4>
+        <p>Cutting through moments; High impact business changes (strategy, monetization, market); Significant decisions; Business about to get to next level; Fix critical areas of improvement</p>
+      </div>
+
+      <div class="c-col-xs-12 c-col-md-6 c-col-xl-1-5 c-p-sm-lat bg-about4 c-shadow-inner-top-left c-box" data-appear data-animation="slideLeftBigIn 550">
+        <h3>Next Level</h3>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Goals</h4>
+        <p>Prepare for new responsibilities/roles; facilitate transitions; Strengthen key leadership skills</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Who</h4>
+        <p>Top and middle management, High potentials, Designated successors, Emerging Leaders</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">When</h4>
+        <p>New responsibilities; Prepare for succession; Onboarding of new key people</p>
+      </div>
+
+      <div class="c-col-xs-12 c-col-md-6 c-col-xl-1-5 c-p-sm-lat bg-about5 c-shadow-inner-top-left c-box" data-appear data-animation="slideRightBigIn 550">
+        <h3>Attract &amp; Retain</h3>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Goals</h4>
+        <p>Based on the coachee's priorities, e.g. personal and professional development, increase self-knowledge, explore and reinforce personal strengths</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Who</h4>
+        <p>Any key profile you want to retain or attract</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">When</h4>
+        <p>Attraction of new key profiles; Social benefit for the staff or key people</p>
+      </div>
+
+      <div class="c-col-xs-12 c-col-md-6 c-col-xl-1-5 c-p-sm-lat bg-about6 c-shadow-inner-top-left c-box" data-appear data-animation="slideLeftBigIn 550">
+        <h3>Team Coaching</h3>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Goals</h4>
+        <p>Develop high performing teams; Build/improve team dynamics; Change Management; Resolve conflicts</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">Who</h4>
+        <p>Committees, Boards, Extended/Management Teams, Key teams, Entire Organizations</p>
+        <h4 class="p-sm is_upper c-m-0 is_mainfont">When</h4>
+        <p>Big changes; Transitions; Low performance</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Extra Allways Content
+  ******************************************************
+  ******************************************************
+  -->
+  <h2 id="extra-content" data-module-title class="utSectionTitle c-m-0">Extra content</h2>
+
+  <!-- why Shine -->
+  <div class="c-row ct-light c-img-bg-fix" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/home/home-why-shine_v2.jpg'); ?>)">
+    <div class="c-container c-p-lg-vert textcenter ct-light c-box">
+      <h2 data-appear data-offset="bottom-in-view" data-animation="slideDownBigIn 500 0">Why Shine</h2>
+      <p data-appear data-offset="bottom-in-view" data-animation="slideDownIn 500 250">
+        We lead leaders to authenticity for an efficient, human and sustainable business world
+      </p>
+      <p data-appear data-offset="bottom-in-view" data-animation="slideDownIn 500 350">
+        <button type="submit" class="c-btn-ln c-btn-ln-md c-btn-ln-f">
+          Know more
+        </button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Entry Boxes 2  -->
+  <div class="c-row bg-blog1">   
+    <article id="post-007" class="post-loop" onclick="window.location = 'http://google.es'">
+      <header class="entry-header c-col-xs-12 c-col-lg-6 c-p-0">
+        <div class="c-h-xl c-col-xs-12 c-col-md-6 bg-blog3 c-p-0-vert ct-light">
+          <div class="c-box-content is_v-center-xs textcenter c-box">
+            <h3 class="entry-title h4 w600">
+              <a href="#">
+                High Performing Teams: Psychological safety is the key to successful team work
+              </a>
+            </h3>
+          </div>
+        </div>
+
+        <div class="entry-featured-content c-curtain-ct c-h-xl c-col-xs-12 c-col-md-6 c-p-0 c-inner-arrow-left color-blog3">
+          <div class="c-h-xl entry-featured-img c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/760-429-entrada1.jpg'); ?>)">
+          </div>
+          <div class="c-curtain ct-light textcenter">
+            <div class="is_v-center c-sq-md">
+              <span class="c-icon-lg i-plus color-f" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </header><!-- .entry-header -->
+    </article><!-- #post-## -->
+
+    <article id="post-007" class="post-loop" onclick="window.location = 'http://google.es'">
+      <header class="entry-header c-col-xs-12 c-col-lg-6 c-p-0">
+        <div class="c-h-xl c-col-xs-12 c-col-md-6 bg-blog4 c-p-0-vert ct-light textcenter">
+          <div class="c-box-content is_v-center-xs textcenter c-box">
+            <h3 class="entry-title h4 w600">
+              <a href="#">
+                Successful team work
+              </a>
+            </h3>
+          </div>
+        </div>
+        <div class="entry-featured-content c-curtain-ct c-h-xl c-col-xs-12 c-col-md-6 c-p-0 c-inner-arrow-left color-blog4">
+          <div class="c-h-xl entry-featured-img c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/760-429-entrada2.jpg'); ?>)">
+          </div>
+          <div class="c-curtain ct-light textcenter">
+            <div class="is_v-center-xs c-sq-md">
+              <span class="c-icon-lg i-plus color-f" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </header><!-- .entry-header -->
+    </article><!-- #post-## -->
+
+    <article id="post-007" class="post-loop" onclick="window.location = 'http://google.es'">
+      <header class="entry-header c-col-xs-12 c-col-lg-6 c-p-0">
+        <div class="entry-featured-content c-curtain-ct c-h-xl c-col-xs-12 c-col-md-6 c-p-0 c-inner-arrow-right color-blog5">
+          <div class="c-h-xl entry-featured-img c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/760-429-entrada3.jpg'); ?>)">
+          </div>
+          <div class="c-curtain ct-light textcenter">
+            <div class="is_v-center-xs c-sq-md">
+              <span class="c-icon-lg i-plus color-f" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="c-h-xl c-col-xs-12 c-col-md-6 bg-blog5 c-p-0-vert ct-light textcenter">
+          <div class="c-box-content is_v-center-xs textcenter c-box">
+            <h3 class="entry-title h4 w600">
+              <a href="#">
+                 Team Building or Team Coaching: What does my team need? 
+              </a>
+            </h3>
+          </div>
+        </div>
+      </header><!-- .entry-header -->
+    </article><!-- #post-## -->
+
+    <article id="post-007" class="post-loop" onclick="window.location = 'http://google.es'">
+      <header class="entry-header c-col-xs-12 c-col-lg-6 c-p-0">
+        <div class="entry-featured-content c-curtain-ct c-h-xl c-col-xs-12 c-col-md-6 c-p-0 c-inner-arrow-right color-blog6">
+          <div class="c-h-xl entry-featured-img c-img-bg" style="background-image: url(<?php echo esc_url( get_template_directory_uri() . '/assets/img/shine/760-429-entrada4.jpg'); ?>)">
+          </div>
+          <div class="c-curtain ct-light textcenter">
+            <div class="is_v-center-xs c-sq-md">
+              <span class="c-icon-lg i-plus color-f" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="c-h-xl c-col-xs-12 c-col-md-6 bg-blog6 c-p-0-vert ct-light">
+          <div class="c-box-content is_v-center-xs textcenter c-box">
+            <h3 class="entry-title h4 w600">
+              <a href="#">
+                Teamwork: 4 toxins that can make teams derail, and how to avoid them 
+              </a>
+            </h3>
+          </div>
+        </div>
+      </header><!-- .entry-header -->
+    </article><!-- #post-## -->
+  </div>
+  
+  <!-- Quotes -->
+  <div class="c-row bg-quotes ct-light">
+    <div class="c-container c-p-lg-vert">
+      <div class="c-testionials owl-carousel owl-theme textcenter">
+        <div class="item"> 
+          <img class="c-sq-md circled aligncenter" src="assets/img/shine/testimonials/Bill-Gates-Microsoft.jpg" alt="Bill Gates">
+          <blockquote>
+              We all need people who will give us feedback. That’s how we improve
+              <cite>Bill Gates, Microsoft</cite>
+          </blockquote>
+        </div>
+    
+        <div class="item"> 
+          <img class="c-sq-md circled aligncenter" src="assets/img/shine/testimonials/Eric-Schmidt-Google.jpg" alt="Eric Schmidt">
+          <blockquote>
+              Every famous athlete, every famous performer has somebody who’s a coach.  Somebody who can watch what they’re doing and say, “Is that what you really meant?  Did you really do that?”  They can give them perspective
+              <cite>Eric Schmidt, Executive Chairman Google</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <div id="c-contact" class="c-row bg-1 c-shadow-inner-top-left">
+    <div class="c-col-xs-12 c-col-sm-6 c-p-lg ct-light">
+      <h2>Contact us to Unlock your Passion</h2>
+      <p>Feeling the desire to get going? Leave us your details and we will get back to you within 24 hours.</p>
+      <p>If you can’t wait, call <a href="tel:+34649355752"></span>+34 649 355 752</a>.</p>
+    </div>
+    <div class="c-col-xs-12 c-col-sm-6 c-p-lg">
+      <form id="contact-form" class="c-form-bg" method="post" action="/action" novalidate>
+
+        <div class="form-group">
+          <label class="sr-only" for="name1">Name:</label>
+          <input name="name1" id="name1" type="text" maxlength="120" placeholder="Name *" required>
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="phone1">Phone or email (we preffer phone)</label>
+          <input name="phone1" id="phone1" type="text" maxlength="120" placeholder="Phone or email *" data-rule-phoneoremail="true">
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="message1">Comments:</label>
+          <textarea name="message1" id="message1" rows="3" placeholder="What do you want to achieve? (optional)" maxlength="500"></textarea>
+        </div>
+
+        <button type="submit" class="c-btn-ln c-btn-ln-sm c-btn-ln-f">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 
+  ******************************************************
+  ******************************************************
+     Footer
+  ******************************************************
+  ******************************************************
+  -->
+  <h2 id="footer" data-module-title class="utSectionTitle c-m-0">footer</h2>
+  <footer id="footer" class="c-row bg-grey0">
+    <div class="c-row">
+      <div class="c-col-xs-12 c-col-md-6 ct-light">
+        <h2>
+          <img class="footer-logo" alt="Shine Coaching" src="assets/img/shine/shine-footer-logo.png" />
+          <span class="sr-only">Shine</span>
+        </h2>
+        <p>
+          Personal coaching and executive coaching in UK, Germany, France, Spain, and the rest of Europe.
+        </p>
+        
+        <div class="c-row">
+          <ul class="c-l-float c-m-child-lg-right">
+            <li><img class="c-h-xs c-m-bottom-0" src="assets/img/shine/logos-certs/logo-acc.png" /></li>
+            <li><img class="c-h-xs  c-m-bottom-0" src="assets/img/shine/logos-certs/logo-cpcc.png" /></li>
+            <li><img class="c-h-xs  c-m-bottom-0" src="assets/img/shine/logos-certs/logo-orsc.png" /></li>   
+          </ul>
+        </div>
+
+      </div>
+      <div class="c-col-xs-12 c-col-md-6 ct-light">
+        <h2>find us</h2>
+        <ul class="c-l-block c-m-md-bottom">
+          <li class="c-m-md-bottom">Av. Mare de Déu de Monstserrat 137 <br>Barcelona, Spain.</li>
+          <li><span class="sr-only">Email:</span> <span class="c-icon c-sq-xs i-mail"></span> <a href="mailto:info@shinecoachingbarcelona.com">info@shinecoachingbarcelona.com</a></li>
+          <li><span class="sr-only">Phone:</span> <span class="c-icon c-sq-xs i-phone"></span> <a href="tel:+34649355752">+34 649 355 752</a></li>
+        </ul>
+        <p>
+          <ul id="page-social-links" class="c-l-inline c-m-child-md-right">
+            <li>
+              <a href="https://www.linkedin.com/company/shine-coaching" target="_blank" title="LinkedIn">
+                <span class="c-icon-md i-linkedin" aria-hidden="true"></span>
+                <span class="screen-reader-text">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/CoachingShine" target="_blank" title="Twitter">
+                <span class="c-icon-md i-twitter" aria-hidden="true"></span>
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/shinecoachingbarcelona" target="_blank" title="Facebook">
+                <span class="c-icon-md i-facebook" aria-hidden="true"></span>
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://google.com/+Shinecoachingbarcelona" target="_blank" title="Google+">
+                <span class="c-icon-md i-google" aria-hidden="true"></span>
+                <span class="screen-reader-text">Google+</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="http://shinecoachingbarcelona.com/en/feed/" target="_blank" title="RSS">
+                <span class="c-icon-md i-rss" aria-hidden="true"></span>
+                <span class="screen-reader-text">RSS</span>
+              </a>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    
+    <div class="c-row p-sm ct-light">
+      
+      <div class="c-col-xs-12 c-p-0-vert">
+        <hr>
+      </div>
+
+      <div class="c-col-xs-12 c-col-sm-6 c-p-sm-vert">
+          <nav id="footer-navigation" class="footer-navigation nav" role="navigation">
+              <div class="menu-footer_en-container">
+                <ul id="legales-nav" class="c-l-inline">
+                  <li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968"><a href="http://shinecoachingbarcelona.com/en" title="Shine Coaching Barcelona">©2016 Shine Coaching Barcelona | </a></li>
+                  <li id="menu-item-1968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968"><a title="Terms and Conditions of Shine Coaching" href="http://shinecoachingbarcelona.com/en/terms-conditions/">Terms and Conditions | </a></li>
+                  <li id="menu-item-1969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1969"><a title="Cookies Policy of Shine Coaching" href="http://shinecoachingbarcelona.com/en/cookie-policy/">Cookies Policy</a></li>
+                </ul>
+              </div>
+          </nav><!-- #footer-navigation -->
+      </div>
+          
+      <div id="shineLanguages" class="c-col-xs-12 c-col-sm-5 c-p-sm-vert">
+        <h3 class="screen-reader-text">Translate page</h3>
+        <nav id="footer-lang-nav" class="footer-navigation nav" role="navigation">
+          <ul class="c-l-inline">
+            <!--
+            <li class="lang-item lang-item-27 lang-item-en"><a hreflang="en" href="http://shinecoachingbarcelona.com/en/">English</a><span class="separator">|</span></li>
+            <li class="lang-item lang-item-27 lang-item-es"><a hreflang="es" href="http://shinecoachingbarcelona.com/es/">Español</a><span class="separator">|</span></li>
+            <li class="lang-item lang-item-27 lang-item-ca"><a hreflang="ca" href="http://shinecoachingbarcelona.com/ca/">Català</a><span class="separator">|</span></li>
+            <li class="lang-item lang-item-27 lang-item-de"><a hreflang="de" href="http://shinecoachingbarcelona.com/de/">Deutsch</a><span class="separator">|</span></li>
+            <li class="lang-item lang-item-27 lang-item-fr"><a hreflang="fr" href="http://shinecoachingbarcelona.com/fr/">Français</a></li>
+            -->
+            <li class="lang-item lang-item-27 lang-item-en"><a hreflang="en" href="http://shinecoachingbarcelona.com/en/">English | </a></li>
+            <li class="lang-item lang-item-27 lang-item-es"><a hreflang="es" href="http://shinecoachingbarcelona.com/es/">Español | </a></li>
+            <li class="lang-item lang-item-27 lang-item-ca"><a hreflang="ca" href="http://shinecoachingbarcelona.com/ca/">Català | </a></li>
+            <li class="lang-item lang-item-27 lang-item-de"><a hreflang="de" href="http://shinecoachingbarcelona.com/de/">Deutsch | </a></li>
+            <li class="lang-item lang-item-27 lang-item-fr"><a hreflang="fr" href="http://shinecoachingbarcelona.com/fr/">Français</a></li>
+          </ul>
+        </nav>
+      </div><!-- #siteLanguages -->     
+      <div id="go-top" class="c-col-xs-12 c-col-sm-1 c-p-sm-vert">
+        <a href="javascript:void(0)" title="Go top" class="is_right is_block color-f textcenter" data-scroll-to=".skip-link">
+          <span class="c-icon-md i-arrow-up" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </footer><!-- #footer -->  
+
+  <script src="assets/js/plugins.min.js"></script>  
+  <script src="assets/js/main.min.js"></script>  
+</body>
+</html>
+

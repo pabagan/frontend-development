@@ -1,0 +1,21 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Margins
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$margin-children-class: "c-m-child";
+$children-margin-position: left,right;
+
+@each $side in $children-margin-position {
+    @each $size, $value in $spaces {
+        // Default salto
+        .#{$margin-children-class}-#{$size}-#{$side} { 
+            > * {
+                margin-bottom: $value;
+                margin-#{$side}: $value;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+// Self @pabagan
+// --------------------------------------------------
+@import 
+"self/alignments",            	// Alineaciones
+"self/alpha-lay",               // bg( $bgColor, $bgColorHover)
+"self/animations",              // ver mix
+"self/backgrounds",             // Image Bakcground
+"self/border-center",           // 
+"self/border-radious",          // border-radius($radious)
+"self/borders",                 // borders() show border in * elements
+"self/box-emboss",              // box-emboss( $opacity, $opacity2)
+"self/box-models",              // content-box() | border-box()
+"self/clearfix",                // clearfix()
+"self/colors",                  // colors()
+"self/font-face",               // font-face($font-name, $font-weight, $font-nice-name: '', $font-file-name: '', $name-prefix: '', $name-subfix: '' )
+"self/fonts",                   // font(size, lh), emfont(size, lh), remfont(size, lh) 
+"self/gradients",               // gradient( $type, $gradient )
+"self/grid-factory",            // height-grid( $grid_class, $size, $total_cols )
+"self/hide-text",               // hide-text()
+"self/hyphens",                 // hyphens()
+"self/icons",                 	// font icon defaults
+"self/lists",                   // TODO: mejorar listas
+"self/navigation",              // navigation()
+"self/media-query",     		// navigation()
+"self/size",                    // size( $width:'', $height:'')
+"self/shadows",                 // size( $width:'', $height:'')
+"self/transform",               // transform
+"self/translate",               // translate
+"self/wp-gallery";              // wp-gallery-grid()
+
+
+// Mixins Bootstrap
+// --------------------------------------------------
+@import 
+// Utilities
+"bootstrap/hide-text",
+"bootstrap/opacity",
+"bootstrap/image",
+"bootstrap/labels",
+"bootstrap/reset-filter",
+"bootstrap/resize",
+"bootstrap/responsive-visibility",
+"bootstrap/size",
+"bootstrap/tab-focus",
+"bootstrap/reset-text",
+"bootstrap/text-emphasis",
+"bootstrap/text-overflow",
+"bootstrap/vendor-prefixes",
+
+// Components
+"bootstrap/alerts",
+"bootstrap/buttons",
+"bootstrap/panels",
+"bootstrap/pagination",
+"bootstrap/list-group",
+"bootstrap/nav-divider",
+"bootstrap/forms",
+"bootstrap/progress-bar",
+"bootstrap/table-row",
+
+// Skins
+"bootstrap/background-variant",
+"bootstrap/border-radius",
+"bootstrap/gradients",
+
+// Layout
+"bootstrap/clearfix",
+"bootstrap/center-block",
+"bootstrap/nav-vertical-align",
+"bootstrap/grid-framework",
+"bootstrap/grid";

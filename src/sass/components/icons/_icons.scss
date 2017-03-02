@@ -1,0 +1,20 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Icons
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+%icon,
+[class*="#{$icons-class}"] {
+    @include icon-resets();
+}
+// 
+// Create font-sizes
+// 
+@each $size, $icon-config in $icons {
+    .#{$icons-class}-#{$size} { 
+        font-size: map-get($icon-config, 'font-size');
+        line-height: 1;
+    }
+}

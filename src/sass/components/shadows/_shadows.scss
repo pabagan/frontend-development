@@ -1,0 +1,53 @@
+/**--------------------------------------
+ * --------------------------------------
+ * 
+ * Shadows
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+$shadow-class: 'c-shadow';
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+
+
+// 
+// Outer shadows
+// 
+.#{$shadow-class} {
+  @include shadow(0 4px 8px 0 $shadow-color);
+}
+
+.#{$shadow-class}-bottom {
+  @include shadow(0 8px 5px -5px $shadow-color);
+}
+
+
+.#{$shadow-class}-left {
+  @include shadow( -5px 0px 5px $shadow-color);
+}
+
+.#{$shadow-class}-right {
+  @include shadow( 5px 0px 5px $shadow-color);
+ 
+}
+
+// 
+// Inner shadows
+// 
+.#{$shadow-class}-inner {
+  @include shadow(inset 0 0 8px $shadow-color);
+}
+
+.#{$shadow-class}-inner-top {
+  @include shadow(inset 3px 3px 3px $shadow-color);
+}
+
+.#{$shadow-class}-inner-top-right {
+  @include shadow(inset -5px 3px 8px $shadow-color);
+}
+
+.#{$shadow-class}-inner-top-left {
+	//border: 4px solid green !important;
+  @include shadow(inset 5px 3px 8px $shadow-color);
+  
+}

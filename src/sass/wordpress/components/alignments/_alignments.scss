@@ -1,0 +1,19 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Alignments
+//
+// ---------------------------------------
+// ---------------------------------------
+.alignleft{
+    margin: $space-xs $space-md $space-md 0 !important;
+    float:left;
+}
+.alignright{
+    margin: $space-xs 0 $space-md $space-md !important;
+    float:right;
+}
+.aligncenter{
+    margin-bottom: $space-md;
+    clear: both;
+}

@@ -1,0 +1,86 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Forms fields with backgrounds
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$form-bg-class              : "c-form-bg";
+$form-bg-font-size          : $p-sm;
+$form-bg-color              : $bodyFontColor;
+
+// labels
+$form-bg-label-fs           : $p-sm;
+$form-bg-label-color        : $colorf;
+$form-bg-label-margin       : 0 0 $space-xs;
+
+// inputs
+$form-bg-input-bg           : $colorf;
+$form-bg-input-height       : $size-rem-sm;
+$form-bg-input-padding      : .64em .52em;
+$form-bg-input-radius       : $space-xs;
+$form-bg-placeholder-color  : $grey3;
+$form-bg-error-color        : red;
+
+// 
+// Specials styles
+// 
+  
+label {
+  color: $form-bg-label-color;
+  font-size: $form-bg-label-fs;
+  margin: $form-bg-label-margin;
+  
+  // Hide jQuery validation text errors
+  &.error { display:none !important }
+}
+
+textarea,
+input{
+  border: 0;
+  font-size: $form-bg-font-size;
+  color: $form-bg-color;
+  background-color: $form-bg-input-bg;
+  border-bottom: 1px solid #ffffff;
+  @include border-radius($form-bg-input-radius);
+}
+// 100% width fields
+%input-full, // clase para comportamiento por defecto input 100% + padding
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    width: 100%;
+    display: block;
+    //height: $form-bg-input-height;
+    padding: $form-bg-input-padding;
+
+    
+}
+
+// 
+// Placeholders
+// 
+textarea,
+input{
+  @include placeholder($form-bg-placeholder-color);
+
+  &.error{
+    border: 1px solid red !important;
+    color: $form-bg-error-color;
+    @include placeholder($form-bg-error-color);
+  }
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  margin-top: 1.2em;
+  margin-bottom:0.5em;
+}

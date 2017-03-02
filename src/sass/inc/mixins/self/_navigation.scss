@@ -1,0 +1,15 @@
+//Navigation
+@mixin navigation {
+    list-style-type:none;
+    > li{
+        display:inline-block;
+        &:last-child{
+            margin-right:0px;
+        }
+    }
+    
+    .nav-side li, .nav-side a{
+        display:block;
+        width: 100%;
+    }
+}

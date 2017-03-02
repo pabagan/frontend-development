@@ -1,0 +1,47 @@
+// 
+// Image background size
+// 
+@mixin bg-size( $size ) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+// 
+// Animar fondos
+// 
+@mixin bg-cover( $image-url, $size: '', $position: '', $attachment: '' ) {
+    background-image: url($image-url); 
+    background-repeat: no-repeat;
+    // attachment: scroll|fixed|local|initial|inherit
+    @if ($attachment != '') {
+        background-attachment: $attachment;
+    }
+    @if ($position != '') {
+        background-position: $position;
+    } @else {
+        background-position: 0 0;
+    }
+    @if ($size == '') {
+        @include bg-size( cover );
+    } @else {
+        @include bg-size( $size );
+    }
+    //@include bg-size( inherit );
+}
+
+// 
+// Animar fondos
+// 
+@mixin bg( $bgColor, $bgColorHover) {
+
+    background-color: $bgColor;
+    
+    @include transition(background-color 0.3s linear);
+    
+    &:hover {
+        background-color: $bgColorHover;
+        @extend %bg-color;
+    }
+}

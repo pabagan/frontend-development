@@ -1,0 +1,230 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Font sizes
+ *
+ * TODO: try em/rem instead %
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+
+// en los números se ve el WorkFlow
+
+// 
+// 0. Families
+// 
+$main-font          : "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+$second-font        : "Sentinel A", "Sentinel B", Times, serif !important;
+$monospace-font     : Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+// 
+// 1. Diseño da tamaño de fuentes en píxeles 
+//
+$jumbo-px   : 66.666;
+$h1-px      : 53.333;
+$h2-px      : 40;
+$h3-px      : 33.333;
+$h4-px      : 25.714;
+$h5-px      : 20;
+$h6-px      : 17.42;
+$p-xs-px    : 14.285;
+$p-sm-px    : 17.42;
+$p-px       : 20;
+$p-lg-px    : 24;
+
+// 
+// base root sizes
+// 
+$fs-mobile    : 16.666;
+$fs-tablet    : 18.571;
+$fs-desktop   : 20;
+
+// 
+// Responsive breakpoints to change 
+// base html font-size.
+// 
+$font-changeat_1 : 'sm';
+$font-changeat_2 : 'xl';
+
+// Conver size in % and keep in variables. 
+// It computes size consider $fs-px in relation
+// with base font size at desktop size
+$fs-base : $fs-desktop;
+
+$jumbo-fs   : font_proportion($jumbo-px, $fs-base);
+$h1-fs      : font_proportion($h1-px, $fs-base);
+$h2-fs      : font_proportion($h2-px, $fs-base);
+$h3-fs      : font_proportion($h3-px, $fs-base);
+$h4-fs      : font_proportion($h4-px, $fs-base);
+$h5-fs      : font_proportion($h5-px, $fs-base);
+$h6-fs      : font_proportion($h6-px, $fs-base);
+$p-xs       : font_proportion($p-xs-px, $fs-base);
+$p-sm       : font_proportion($p-sm-px, $fs-base);
+$p          : font_proportion($p-px, $fs-base);
+$p-lg       : font_proportion($p-lg-px, $fs-base);
+
+
+//
+// Line heights
+//
+$lh-xs  : 1.059;
+$lh-lg : 1.4;
+$lh-md    : 1.2;
+$lh-sm   : 1.166;
+
+// 
+// Weights
+// 
+$fw400   : 400;
+$fw700   : 700;
+
+// Define qué elementos selector de elemento
+$html_elements: ( "h1", "h2", "h3", "h4", "h5", "h6", "p" );
+$theme-sizes: (
+    "jumbo"   : ( font-size: $jumbo-fs, line-height: $lh-sm, font-weight: $fw700 ),
+    "h1"        : ( font-size: $h1-fs, line-height: $lh-sm, font-weight: $fw700 ),
+    "h2"        : ( font-size: $h2-fs, line-height: $lh-md, font-weight: $fw700 ),
+    "h3"        : ( font-size: $h3-fs, line-height: $lh-md, font-weight: $fw700 ),
+    "h4"        : ( font-size: $h4-fs, line-height: $lh-lg, font-weight: $fw700 ),
+    "h5"        : ( font-size: $h5-fs, line-height: $lh-lg, font-weight: $fw700 ),
+    "h6"        : ( font-size: $h6-fs, line-height: $lh-lg, font-weight: $fw700 ),
+    "p-xs"      : ( font-size: $p-xs, line-height: $lh-lg, font-weight: $fw400 ),
+    "p-sm"      : ( font-size: $p-sm, line-height: $lh-lg, font-weight: $fw400 ),
+    "p-md"      : ( font-size: $p, line-height: $lh-lg, font-weight: $fw400 ),
+    "p-lg"      : ( font-size: $p-lg, line-height: $lh-lg, font-weight: $fw400 ),
+);
+
+//
+// Ajuste de html para trabajar con rem/em/px en
+// proporción 1:1
+// 
+html { 
+    font-size: $fs-mobile + px; 
+}
+
+body{
+    font-size: 100%;
+    // font-size: 13.333px; // mobile
+    //font-size: 16.66px; /* Tablet */
+    font-family: $main-font;
+    line-height: $lh-lg;
+    font-weight: $fw400;
+}
+
+//
+// Asignar familias
+//
+%main-font{ font-family: $main-font }
+%second-font{ font-family: $second-font }
+
+// 
+// Create font-sizes and line-height
+// 
+@each $name, $sizes in $theme-sizes {
+    
+    $selector : ".#{$name}";
+    
+    // If is html element includes selector
+    @if (index($html_elements, $name ) != null ){
+        $selector : "#{$name}, .#{$name}";
+    }
+
+    #{$selector} {
+        font-size: map-get($sizes, font-size);
+        line-height: map-get($sizes, line-height);
+        // Utilizar si cada una tiene diferentes
+        // pesos
+        //font-weight: map-get($sizes, font-weight);
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6
+{
+    
+    text-rendering: optimizeLegibility;
+    font-weight: $fw700;
+    font-style: normal;
+    @extend %second-font;
+}
+
+input,
+textarea,
+label,
+button {
+  font-family: inherit;
+}
+
+// Blockquote
+blockquote{
+    font-weight: 100;
+    margin: 0 0 0.8em;
+    padding-left: 1em;
+    //font-style: italic;
+    font-size: $h2-fs;
+    line-height: $lh-md;
+    font-style: normal;
+    font-family: $main-font;
+}
+
+
+cite{
+    //@extend %h6;
+    font-weight: 600;
+    font-size: 50%;
+    margin-top: 0.75em;
+    //text-transform: uppercase;
+    font-style: normal;
+    @extend %main-font;
+
+    blockquote & {
+        margin-bottom: 0;
+    }
+}
+
+// Aplica corrección solo para mobile de 
+// h1 a h3. Se sobre-escribe el $base-font-size
+// por $base-font-size-especial para truquear
+// los tamaños de h1 a h3 que eran demasiado 
+// caballísticos
+@media screen and (max-width: $screen-sm-min) { // 639px
+    // Cuanto mayor número más pequeño!
+    $base-font-size-special: 24;
+
+    .jumbo { @include relative-font($base-font-size-special - 2, $jumbo-px) }
+    h1, .h1 { @include relative-font($base-font-size-special, $h1-px) }
+    h2, .h2 { @include relative-font($base-font-size-special, $h2-px) }
+    blockquote,
+    h3, .h3 { @include relative-font($base-font-size-special, $h3-px) }
+}
+
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// SM
+// 
+// ---------------------------------------
+// ---------------------------------------
+@include media-query($font-changeat_1) {
+    html{
+        font-size: $fs-tablet + px;
+    }
+}
+
+// ---------------------------------------
+// ---------------------------------------
+// 
+// XL
+// 
+// ---------------------------------------
+// ---------------------------------------
+@include media-query($font-changeat_2) {
+    html{
+        font-size: $fs-desktop + px;
+    }
+}

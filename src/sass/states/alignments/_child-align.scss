@@ -1,0 +1,64 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *   Child Alignments
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+/**--------------------------------------
+*
+*
+* -------------------------------------- */
+// ---------------------------------------
+// Alignments
+// Vertical align
+// Center align
+// Bottom align
+// ---------------------------------------
+// ---------------------------------------
+
+// Asignar talla para activar. TODO: 
+$start-vertical-centering: 	'sm';
+// Centrar solo a partir 
+[class*="is_v"],
+[class*="is_top"],
+[class*="is_mid"],
+[class*="is_bottom"] {
+    position: relative; // ojo!! Mantener en relative, así no hay desbordamientos.
+}
+
+.is_v-center-xs{ @include v-center }
+
+// 
+// Top align
+// 
+.is_top-left{ @include top-left }
+.is_top-center{ @include top-center }
+.is_top-right{ @include top-right }
+
+// 
+// Center align
+// 
+.is_mid-left{ @include mid-left }
+.is_mid-center{ @include mid-center }
+.is_mid-right{ @include mid-right }
+
+// 
+// Bottom align
+// 
+.is_bottom-left{ @include bottom-left }
+.is_bottom-center{ @include bottom-center }
+.is_bottom-right{ @include bottom-right }
+
+@include media-query($start-vertical-centering){
+    .is_v-center{ @include v-center }
+    .is_v-center-sm{ @include v-center }
+}
+
+@include media-query('md'){
+	.is_v-center-md{ @include v-center }
+}
+
+@include media-query('lg'){
+	.is_v-center-lg{ @include v-center }
+}

@@ -1,0 +1,44 @@
+// 
+// SIZE
+//
+@mixin sized( $width:'', $height:'') {
+    // set width
+    @if ($width != '') {
+        width: $width+px;
+    } @else {
+        width: 100%;
+    }
+
+    // set height
+    @if ($height != '') {
+        height: $height+px;
+    } @else {
+        height: 100%;
+    }
+    @if ($height == '' and $width == '') {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 
+// Square lays
+//
+@mixin square-make( $size:'' ) {
+    // set width
+    @if ($size != '') {
+        width: $size;
+        height: $size;
+    } @else {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 
+// Full width/height
+//
+@mixin full() {
+    height: 100%;
+    width: 100%;
+}

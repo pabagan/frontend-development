@@ -1,0 +1,32 @@
+//
+//
+// Border all element
+//
+//
+@mixin borders(){
+    body{
+        *,
+        img,
+        *:before,
+        *:after,
+        {
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+    }    
+}
+
+//
+//
+// Border all element
+//
+//
+@mixin grid-borders(){
+    $grid_width_elem_class: 'gx-col';
+    .c-container,
+	[class*="#{$grid_width_elem_class}-xs"],
+	[class*="#{$grid_width_elem_class}-sm"],
+	[class*="#{$grid_width_elem_class}-md"],
+	[class*="#{$grid_width_elem_class}-lg"]{
+        border: 1px solid rgba(0, 0, 0, 0.2);
+	}
+}

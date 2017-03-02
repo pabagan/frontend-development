@@ -1,0 +1,61 @@
+// Entry Taxonomies
+// ---------------------------
+.entry-taxonomies {
+    text-align: center;
+    // categories
+    // ---------------------------
+    .meta-cats {
+        font-size: $p-lg;
+        &, a {
+            color: $grey4;
+        }
+        
+        &:before{
+            margin: 0 0.3em 0 0;
+        }
+    }
+
+    // tags
+    // ---------------------------
+    .meta-tags  {
+        display: block;
+        margin: $space-md 0;
+        
+        a{
+            font-size: $p-sm;
+            @include border-radius(4px);
+            display: inline-block;
+            color: $color-blog1;
+            border: 1px solid $color-blog1;
+            margin: 0 0.333em 0.333em 0;
+            padding: .3em .4em;
+        
+            &:active{
+                background-color: $color-blog1;
+                color: #fff;
+            }       
+        }
+    }
+}
+
+
+
+// Post category and tags
+// ---------------------------
+.entry-cats{
+    &:before{
+        
+    }
+}
+
+
+.entry-tags {
+    border: 4px solid green !important;
+    a{
+        font-size: $p-sm;
+        &:active{
+        }
+    }
+}
+
+
