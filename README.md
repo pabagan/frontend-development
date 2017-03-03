@@ -45,13 +45,22 @@ In development Gulp is taking sources from `/src` to `./temp` folder. Browsersyn
 ├── .jshintrc
 ```
 
- 
+## Run 
 ```bash
+# Clone repo
+git clone git@github.com:pabagan/frontend-development.git
 # Install node modules
 npm install
+# install dependencies
+bower install
 # Execute gulp (default gulp task configuration does the heavy lifting)
 gulp
 ```
+
+After that: 
+
+* [http://localhost:3000/](http://localhost:3000/) Browsersync server.
+* [http://localhost:3001/](http://localhost:3001/) Browsersync goodies.
 
 ## Dependencies
 Project dependencies are managed using [Bower](http://bower.com/). Find [API docs](https://bower.io/docs/api/).
