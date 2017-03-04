@@ -115,6 +115,9 @@ $container-sizes: (
 
 /* Grid XL */
 @media screen and (min-width: $screen-xl-min) { // 1200px <
+    .#{$container-class}-xl{
+        width: 1160px;
+    }   
     @include grid-width($grid-width-class, 'xl', $total-colums);
 }
 

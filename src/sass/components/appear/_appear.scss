@@ -1,0 +1,29 @@
+// 
+// Animate appear
+// 
+$appear-class 			: 'c-appear';
+$appear-childs-class 	: 'c-appear-childs';
+$appear-activation 		: 'lg';
+
+// Disabled until
+@include media-query($appear-activation) {
+	.#{$appear-class},
+	[data-appear]{
+	    opacity: 0;
+	    
+	    &.is_appear{
+	    	visibility: visible;
+	    }
+	}
+	.#{$appear-childs-class},
+	[data-appear-children]{
+	    > * {
+	        //display: none;
+	        opacity: 0;
+	    }
+
+	    &.is_appear{
+	        opacity: 1;
+	    }
+	}
+}

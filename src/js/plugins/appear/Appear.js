@@ -20,7 +20,8 @@
     $.gx = $.gx || {};
 
     var defaults = {
-        animateChilds: false,                                            
+        animateChilds: false,
+        class: 'is_appear',
         animation: {
             name: 'fadeIn',                 // match velocityUI fx
             duration: 350,                  // animation duration
@@ -112,7 +113,7 @@
 
             // velocity transition
             $elem.velocity('transition.'+ animation.name, velAnimation);
-            $elem.addClass('is_appeared');
+            $elem.addClass(this.settings.class);
             elem.disable();
         },
 
@@ -165,7 +166,7 @@
         // @return void 
         unset: function(){
             //console.log('$.gx.Appear.unset()');
-            $(this.element).addClass('is_appeared');
+            $(this.element).addClass(this.settings.class);
             Waypoint.disableAll();
         },
 

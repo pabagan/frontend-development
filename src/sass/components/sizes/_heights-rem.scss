@@ -19,9 +19,4 @@ $height-rem-class : "c-h";
     .#{$height-rem-class}-#{$size} { 
         height: $value;
     }
-
-    // Create simetric top padding
-    .#{$height-rem-class}-p-#{$size} { 
-        padding-top: $value;
-    }
 }

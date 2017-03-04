@@ -6,20 +6,12 @@ var gulp = require('gulp'),
 /**
  * BrowserSync
  */
-gulp.task('bsync-dev', ['sass', 'scripts', 'html', 'images'], function() {
+gulp.task('bsync-dev', ['styles', 'scripts', 'scripts-deps', 'html', 'images'], function() {
   browserSync.init({
-  server: temp.base,
-  open: false,
-  reloadDelay: 550, // 525
+    server: temp.base,
+    open: false,
+    reloadDelay: 550, // 525
   });
-
-  // 
-  // TODO: llevar el liaco de URL a gulpfile
-  // 
-  // 
-  // 
-  // Watch
-  // 
 
   // html
   var htmlSources = [
@@ -29,21 +21,21 @@ gulp.task('bsync-dev', ['sass', 'scripts', 'html', 'images'], function() {
  
   // js deps
   var scriptDepsSources = [
-  base.bower + '/**/*.js',
-  base.src + '/unitTest/*.js',  // Unit Test
-  base.gulp + '/*.js',
-  src.scripts + '/vendor/**/*.js',
+    base.bower + '/**/*.js',
+    base.src + '/unitTest/*.js',  // Unit Test
+    base.gulp + '/*.js',
+    src.scripts + '/vendor/**/*.js',
   ];
 
   // sass
   var sassSources = [
-  base.src + '/unitTest/*.scss',  // Unit Test
-  src.sass + '/**/**/**/*.scss',
+    base.src + '/unitTest/*.scss',  // Unit Test
+    src.sass + '/**/**/**/*.scss',
   ];  
 
   gulp.watch(htmlSources, ['html-watch']);
   gulp.watch(src.scripts + '/**/*.js', ['scripts-watch']);
-  gulp.watch(sassSources, ['sass-watch']);
+  gulp.watch(sassSources, ['styles-watch']);
   gulp.watch(src.images + '/**/*', ['images-watch']);
   gulp.watch(scriptDepsSources, ['scripts-deps-watch']);
   gulp.watch(src.fonts + '/**/*', ['fonts-watch']);
@@ -52,7 +44,7 @@ gulp.task('bsync-dev', ['sass', 'scripts', 'html', 'images'], function() {
   
 });
 
-gulp.task('sass-watch', ['sass'], function (done) {
+gulp.task('styles-watch', ['styles'], function (done) {
   browserSync.reload();
   done();
 });
