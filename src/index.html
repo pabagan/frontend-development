@@ -27,36 +27,41 @@
     ******************************************************
     ******************************************************
   -->
-  <header class="site-header" role="banner">
-    <div id="app-topbar" class="site-branding">
-      <div id="app-logo" class="site-logo">
-        <a href="/" rel="home">
-          <span class="site-title sr-only">
-            Marca
-          </span>
-          <img alt="" src="assets/img/unit-test-logo.png" />
-        </a>
-      </div><!--  .site-logo -->
-
-      <button id="nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="c-icon-sm" aria-hidden="true"></span>
-        <span class="sr-only">
-          Primary Menu
+  <header id="app-topbar" class="site-header" role="banner">
+    <div id="app-logo" class="site-logo">
+      <a href="/" rel="home">
+        <span class="site-title sr-only">
+          Marca
         </span>
-      </button>
-    </div><!-- .site-branding -->
+        <img alt="" src="assets/img/unit-test-logo.png" />
+      </a>
+    </div><!-- #app-logo -->
 
-    <!-- WP like navigation -->
-    <nav id="site-nav" class="site-navigation c-shadow-left c-bar-right c-col-xs-12 c-col-md-6 c-col-lg-4 c-col-xxl-3 bg-1 is_off ct-light" role="navigation">
+    <button id="nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="c-icon-sm" aria-hidden="true"></span>
+      <span class="sr-only">
+        Primary Menu
+      </span>
+    </button><!--  #nav-toggle -->
+    
+    <nav id="site-nav" class="site-navigation" role="navigation">
       <div class="menu-monster-container">
-        <ul id="primary-menu" class="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="#">Menu 1</a></li>
-        <li><a href="#">Menu 2</a></li>
+        <ul id="primary-menu" class="navbar-nav menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-scroll-to="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" data-scroll-to="#profile">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#messages" data-scroll-to="#messages">Messages</a>
+          </li>
         </ul>
       </div>
-    </nav><!-- .site-navigation -->
-  </header><!-- #header -->
+    </nav><!-- #site-navitation -->
+  </header><!-- #header --> 
   
   <!-- 
   ******************************************************

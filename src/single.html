@@ -26,33 +26,41 @@
     ******************************************************
     ******************************************************
   -->
-  <header class="site-header" role="banner">
-    <div class="site-branding c-row c-h-md c-bar-top bg-grey12 c-shadow-bottom is_z7">
-      <div class="site-logo is_left">
-        <a class="c-h-md c-m-sm-left" href="/" rel="home">
-          <span class="site-title sr-only">Marca</span>
-          <img class="c-img-h c-m-sm c-h-sm" alt="" src="assets/img/shine/shine-coaching-logo.png" />
-        </a>
-      </div><!--  .site-logo -->
+  <header id="app-topbar" class="site-header" role="banner">
+    <div id="app-logo" class="site-logo">
+      <a href="/" rel="home">
+        <span class="site-title sr-only">
+          Marca
+        </span>
+        <img alt="" src="assets/img/unit-test-logo.png" />
+      </a>
+    </div><!-- #app-logo -->
 
-      <button id="main-nav-toggle" data-toggle-classes class="c-nav-toggle c-sq-md is_right bg-grey12 color-1" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="c-icon-sm i-menu-4" aria-hidden="true"></span>
-        <span class="sr-only">Primary Menu</span>
-      </button>
-    </div><!-- .site-branding -->
-
-    <!-- WP like navigation -->
-    <nav id="site-nav" class="site-navigation c-shadow-left c-bar-right c-col-xs-12 c-col-md-6 c-col-lg-4 c-col-xxl-3 bg-1 is_off ct-light" role="navigation">
+    <button id="nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="c-icon-sm" aria-hidden="true"></span>
+      <span class="sr-only">
+        Primary Menu
+      </span>
+    </button><!--  #nav-toggle -->
+    
+    <nav id="site-nav" class="site-navigation" role="navigation">
       <div class="menu-monster-container">
-        <ul id="primary-menu" class="menu">
-          <li><a href="#">Coaching for your business</a></li>
-          <li class="is_active"><a href="/">Coaching for you</a></li>
-          <li><a href="#/">About Shine</a></li>
-          <li><a href="#/">Leadership Tips &amp; Advice</a></li>
+        <ul id="primary-menu" class="navbar-nav menu">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home" data-scroll-to="#home">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" data-scroll-to="#profile">Profile</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#messages" data-scroll-to="#messages">Messages</a>
+          </li>
         </ul>
       </div>
-    </nav><!-- .site-navigation -->
-  </header><!-- #header -->
+    </nav><!-- #site-navitation -->
+  </header><!-- #header --> 
   
   <!-- 
   ******************************************************

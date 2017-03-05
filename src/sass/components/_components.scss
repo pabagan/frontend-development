@@ -43,7 +43,8 @@
 @import "media/media";
 //@import "modals/modals";
 @import "navigation/navigation";
-@import "navigation/site-navigation";
+// site-navigation defined at layout inside header files
+//@import "navigation/site-navigation";
 @import "navigation/superfish";
 //@import "slides/royal-slider";
 @import "separators/blank-space";

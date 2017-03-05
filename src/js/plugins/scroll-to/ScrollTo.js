@@ -40,8 +40,11 @@
         click: function () {
             var that = this;
             //console.log('$.gx.ScrollTo.click()');
-            $(this.selector).on('click', function(){
+            $(this.selector).on('click', function(e){
+                e.preventDefault();
+                
                 var targetSelector = $(this).data('scroll-to');
+
                 that.scrollBodyTo(targetSelector);
             });
         },
