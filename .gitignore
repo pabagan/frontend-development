@@ -3,3 +3,6 @@ node_modules
 .temp
 .dist
 *.sublime-*
+
+/**/create-github-menu-from-file
+/**/*-nav.md
