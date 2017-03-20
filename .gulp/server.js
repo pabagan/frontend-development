@@ -1,12 +1,12 @@
 'use strict';
 
-var gulp = require('gulp'),
+var g = require('gulp'),
   browserSync = require('browser-sync');
 
 /**
  * BrowserSync
  */
-gulp.task('bsync-dev', ['styles', 'scripts', 'scripts-deps', 'html', 'images'], function() {
+g.task('bsync-dev', ['styles', 'scripts', 'scripts-deps', 'html', 'images'], function() {
   browserSync.init({
     server: temp.base,
     open: false,
@@ -23,7 +23,7 @@ gulp.task('bsync-dev', ['styles', 'scripts', 'scripts-deps', 'html', 'images'], 
   var scriptDepsSources = [
     base.bower + '/**/*.js',
     base.src + '/unitTest/*.js',  // Unit Test
-    base.gulp + '/*.js',
+    base.g + '/*.js',
     src.scripts + '/vendor/**/*.js',
   ];
 
@@ -33,45 +33,45 @@ gulp.task('bsync-dev', ['styles', 'scripts', 'scripts-deps', 'html', 'images'], 
     src.sass + '/**/**/**/*.scss',
   ];  
 
-  gulp.watch(htmlSources, ['html-watch']);
-  gulp.watch(src.scripts + '/**/*.js', ['scripts-watch']);
-  gulp.watch(sassSources, ['styles-watch']);
-  gulp.watch(src.images + '/**/*', ['images-watch']);
-  gulp.watch(scriptDepsSources, ['scripts-deps-watch']);
-  gulp.watch(src.fonts + '/**/*', ['fonts-watch']);
+  g.watch(htmlSources, ['html-watch']);
+  g.watch(src.scripts + '/**/*.js', ['scripts-watch']);
+  g.watch(sassSources, ['styles-watch']);
+  g.watch(src.images + '/**/*', ['images-watch']);
+  g.watch(scriptDepsSources, ['scripts-deps-watch']);
+  g.watch(src.fonts + '/**/*', ['fonts-watch']);
   
-  // Fonts andjs-deps with gulp build
+  // Fonts andjs-deps with g build
   
 });
 
-gulp.task('styles-watch', ['styles'], function (done) {
+g.task('styles-watch', ['styles'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('html-watch', ['html'], function (done) {
+g.task('html-watch', ['html'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('scripts-watch', ['scripts'], function (done) {
+g.task('scripts-watch', ['scripts'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('scripts-deps-watch', ['scripts-deps'], function (done) {
+g.task('scripts-deps-watch', ['scripts-deps'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('images-watch', ['images'], function (done) {
+g.task('images-watch', ['images'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('fonts-watch', ['fonts'], function (done) {
+g.task('fonts-watch', ['fonts'], function (done) {
   browserSync.reload();
   done();
 });
 
-gulp.task('server-dev', ['bsync-dev']);
+g.task('server-dev', ['bsync-dev']);

@@ -50,10 +50,11 @@ function urls_creator(baseLocation, groupInsideAssets ){
     //html:     '.',
     //php:      '.',
     // Plain html strategy
-    html:     baseLocation,
+    //html:     baseLocation,
 
     // assets
     assets:   assets,
+    html:     assets + '/html',
     images:   assets + '/img',
     css:      assets + '/css',
     sass:     assets + '/sass',

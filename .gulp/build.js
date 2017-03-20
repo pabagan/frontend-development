@@ -3,7 +3,7 @@
 /**
  * plugins
  */
-var gulp = require('gulp'),
+var g = require('gulp'),
   gutil = require('gulp-util'),
   cache = require('gulp-cached'),
   htmlhint = require('gulp-htmlhint'),
@@ -11,6 +11,7 @@ var gulp = require('gulp'),
   header = require('gulp-header'),
   jshint = require('gulp-jshint'),
   plumber = require('gulp-plumber'),
+  prettify = require('gulp-prettify'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps');
@@ -41,7 +42,7 @@ var file_header = ['/**',
  * just over self scripts. Concat all 
  * at '/assets/js/scripts.min.js'.
  */
-gulp.task('scripts-deps', function() {
+g.task('scripts-deps', function() {
   // Vendor sources
   var sources = [
     // jQuery -->  86.7 kb
@@ -95,11 +96,11 @@ gulp.task('scripts-deps', function() {
   ];
 
   // Minify and copy all JavaScript (except vendor scripts)
-  return gulp.src(sources)
+  return g.src(sources)
     //.pipe(jshint.reporter('default'))
     .pipe(concat('plugins.min.js')) // still not minified
     .pipe(header(file_header, { pkg : pkg } ))
-    .pipe(gulp.dest(temp.scripts))
+    .pipe(g.dest(temp.scripts))
     .on('error', gutil.log);
 });
 
@@ -109,7 +110,7 @@ gulp.task('scripts-deps', function() {
  * just over self scripts. Concat all 
  * at '/assets/js/scripts.min.js'.
  */
-gulp.task('scripts', function() {
+g.task('scripts', function() {
   // Self sources
   var sources = [
     // Unit Test
@@ -143,27 +144,27 @@ gulp.task('scripts', function() {
   ];
 
   // Minify and copy all JavaScript (except vendor scripts)
-  return gulp.src(sources)
+  return g.src(sources)
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     //.pipe(jshint.reporter('default'))
     .pipe(concat('main.min.js')) // still not minified
     .pipe(header(file_header, { pkg : pkg } ))
-    .pipe(gulp.dest(temp.scripts))
+    .pipe(g.dest(temp.scripts))
     .on('error', gutil.log);
 });
 
 /**
  * Vendor scripts to '/assets/js'
  */
-gulp.task('vendor-scripts', function() {
+g.task('vendor-scripts', function() {
   // sass sources
   var sources = [
     // Unit Test
     base.bower + '/jquery/dist/jquery.min.js',
     base.bower + '/bootstrap/dist/js/bootstrap.min.js',
   ];
-  return gulp
+  return g
     .src(sources)
     //.pipe(plumber(function(error) {
       // Output an error message
@@ -171,7 +172,7 @@ gulp.task('vendor-scripts', function() {
       // emit the end event, to properly end the task
       //this.emit('end');
     //}))
-    .pipe(gulp.dest(temp.scripts))
+    .pipe(g.dest(temp.scripts))
     .on('error', gutil.log);
 });
 
@@ -179,13 +180,13 @@ gulp.task('vendor-scripts', function() {
  * Styles concatenate sass and put
  * at '/assets/css'
  */
-gulp.task('styles', function () {
+g.task('styles', function () {
   // sass sources
   var sources = [
     src.sass + '/**/*.scss',
   ];
 
-  return gulp.src(sources) // max 3 levels
+  return g.src(sources) // max 3 levels
     .pipe(plumber(function(error) {
       // Output an error message
       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
@@ -198,12 +199,12 @@ gulp.task('styles', function () {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest(temp.css))
+    .pipe(g.dest(temp.css))
     
     // WP Themes
     // Theme development strategy keeps css 
     // at root . and not rename.
-    //.pipe(gulp.dest('.'))
+    //.pipe(g.dest('.'))
 
     .pipe(header(file_header, { pkg : pkg } ))
     .on('error', gutil.log);
@@ -212,14 +213,14 @@ gulp.task('styles', function () {
 /**
  * Vendor styles to '/assets/css'
  */
-gulp.task('vendor-styles', function() {
+g.task('vendor-styles', function() {
   // sass sources
   var sources = [
     // Unit Test
     base.bower + '/bootstrap/dist/css/bootstrap.min.css',
     base.bower + '/bootstrap/dist/css/bootstrap-grid.min.css',
   ];
-  return gulp
+  return g
     .src(sources)
     //.pipe(plumber(function(error) {
       // Output an error message
@@ -227,49 +228,53 @@ gulp.task('vendor-styles', function() {
       // emit the end event, to properly end the task
       //this.emit('end');
     //}))
-    .pipe(gulp.dest(temp.css))
+    .pipe(g.dest(temp.css))
     .on('error', gutil.log);
 });
 
 /**
  * HTML
  */
-gulp.task('html', function () {
+g.task('html', function () {
   var sources = [
-    src.html + '/*.html',
-    src.html + '/html/*.html',
+    src.html + '/**/*.html',
   ];
   
-  return gulp
+  return g
     .src(sources)
     .pipe(htmlhint())
-    .pipe(gulp.dest(temp.html))
+    .pipe(prettify({
+      indent_size: 2, 
+      indent_inner_html: true,
+      unformatted: ['pre', 'code']
+    }))
+    .pipe(g.dest(temp.base))
     .on('error', gutil.log);
 });
 
 /**
  * Copy all static images
  */
-gulp.task('images', function() {
-  return gulp.src(src.images + '/**/*')
+g.task('images', function() {
+  return g.src(src.images + '/**/*')
     .pipe(cache('images'))
-    .pipe(gulp.dest(temp.images))
+    .pipe(g.dest(temp.images))
     .on('error', gutil.log);
 });
 
 /**
  * Fonts
  */
-gulp.task('fonts', function() {
-  return gulp.src([src.fonts + '/**/*'])
+g.task('fonts', function() {
+  return g.src([src.fonts + '/**/*'])
     .pipe(cache('fonts'))
-    .pipe(gulp.dest(temp.fonts))
+    .pipe(g.dest(temp.fonts))
     .on('error', gutil.log);
 });
 
 
 // Heavy lifting start
-gulp.task('build', [ 
+g.task('build', [ 
     'scripts', 
     'scripts-deps', 
     'vendor-scripts', 

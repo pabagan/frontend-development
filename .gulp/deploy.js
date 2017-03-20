@@ -3,102 +3,99 @@
 /**
  * plugins
  */
-var gulp = require('gulp'),
+var g = require('gulp'),
   clean = require('gulp-clean'),
   gutil = require('gulp-util'),
   browserSync = require('browser-sync').create(),
   cleanCSS = require('gulp-clean-css'),
   concat = require('gulp-concat'),
+  htmlmin = require('gulp-htmlmin'),
   imagemin = require('gulp-imagemin'),
-  prettify = require('gulp-prettify'),
   rsync = require('rsync'),
   uglify = require('gulp-uglify');
 
 /*
 // TOD: copia chulis
-gulp.task('copyHtml', function() {
+g.task('copyHtml', function() {
   // copy any html files in source/ to public/
-  gulp.src('source/*.html').pipe(gulp.dest('public'));
+  g.src('source/*.html').pipe(g.dest('public'));
 });
 */
 
 /**
  * Copy from temp
  */
-gulp.task('clone-temp', function () {
-  return gulp
-    .src(base.temp)
-    .pipe(gulp.dest(base.dist))
+g.task('clone-temp', function () {
+  return g
+    .src(base.temp + '/**/*')
+    .pipe(g.dest(base.dist))
+    .on('error', gutil.log);
+});
+
+/**
+ * HTML Minify
+ */
+g.task('html-minify', function() {
+  return g.src(temp.base + '/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(g.dest('dist'));
+});
+
+
+/**
+ * CSS Minify
+ */
+g.task('css-minify', function () {
+  return g
+    .src(temp.css + '/**/*.css')
+    .pipe(cleanCSS())
+    .pipe(g.dest(dist.css))
     .on('error', gutil.log);
 });
 
 /**
  * Scripts Minify
  */
-gulp.task('scripts-minify', function() {
-  return gulp
-    .src(temp.scripts + '/main.min.js')
+g.task('scripts-minify', function() {
+  return g
+    .src(temp.scripts + '/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest(dist.scripts))
-    .on('error', gutil.log);
-});
-
-/**
- * CSS Minify
- */
-gulp.task('css-minify', function () {
-  return gulp
-    .src(temp.css + '/style.min.css')
-    .pipe(cleanCSS())
-    .pipe(gulp.dest(dist.css))
+    .pipe(g.dest(dist.scripts))
     .on('error', gutil.log);
 });
 
 /**
  * Optimize images
  */
-gulp.task('images-optimize', function() {
-  return gulp.src(temp.images + '/**/*')
+g.task('images-optimize', function() {
+  return g.src(temp.images + '/**/*')
     // Pass in options to the task
-    .pipe(imagemin({optimizationLevel: 5}))
-    .pipe(gulp.dest(dist.images))
-    .on('error', gutil.log);
-});
-
-/**
- * HTML Pretify
- */
-gulp.task('html-pretify', function () {
-  gulp.src(temp.html + '/**/*.html')
-    .pipe(prettify({
-      indent_size: 2, 
-      indent_inner_html: true,
-      unformatted: ['pre', 'code']
-    }))
-    .pipe(gulp.dest(dist.html))
+    .pipe(imagemin())
+    .pipe(g.dest(dist.images))
     .on('error', gutil.log);
 });
 
 /**
  * Clean ./temp
  */
-gulp.task('clean', function () {
-  return gulp.src(base.temp, {read: false})
+g.task('clean', function () {
+  return g.src(base.temp, {read: false})
     .pipe(clean())
     .on('error', gutil.log);
 });
 
 
 /*
- * Using Vanilla rsync
+ * Rsync
+ * https://www.npmjs.com/package/rsync
  */
-gulp.task('rsync', function() {
+g.task('rsync', function() {
   var cmd;
   cmd = rsync.build({
-      'flags': 'avz',
-      'shell': 'ssh',
-      'source': '/home/pabagan/Dev/www/UT/.temp/',
-      'destination': process.env.UT_SERVER,
+    'flags': 'avz',
+    'shell': 'ssh',
+    'source': './.dist/',
+    'destination': process.env.CAROFILE_WEBSITE,
   })
 
   cmd.execute(function(error, code, cmd) {
@@ -108,6 +105,24 @@ gulp.task('rsync', function() {
 
 
 
-gulp.task('minify', [ 'scripts-minify', 'css-minify']);
 // 'images-optimize' not active
-gulp.task('deploy', [ 'build', 'clone-temp', 'minify', 'html-pretify', 'rsync']);
+g.task('minify-src', [ 
+  'images-optimize', 
+  'scripts-minify', 
+  'css-minify', 
+  'html-minify'
+]);
+
+// 'images-optimize' not active
+g.task('minify', [ 
+  'clone-temp',
+], function(){
+  g.start('minify-src');
+});
+
+
+g.task('deploy', [ 
+  'minify',
+], function(){
+  g.start('rsync');
+});
