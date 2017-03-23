@@ -12,22 +12,23 @@ $button-color-default           : $colorf;
 $button-bg-default-hover        : $button-color-default;
 $button-color-default-hover     : $button-bg-default;
 $button-opacity                 : 0.80;
-$button-border-radius           : 6px;
-$button-font-weigth             : 600;
+$button-border-radius           : $p-lg;
+$button-font-weigth             : 700;
 $button-font-style              : uppercase;
-$btn-padding                    : .66em 1.2em; // all buttons has same padding
+$btn-padding                    : 1em 1.4em; // all buttons has same padding
 
 $button-styles: (
     "1" : ( bg: $button-bg-default, bg-hover: $button-bg-default-hover, color: $button-color-default, color-hover: $button-color-default-hover),
     "2" : ( bg: $color1, bg-hover: $color1, color: $colorf, color-hover: $color2),
     "3" : ( bg: $color3, bg-hover: $colorf, color: $colorf, color-hover: $color3),
+    "f" : ( bg: $colorf, bg-hover: $color1, color: $grey1, color-hover: $color0),
 );
 
 // TODO: remove padding element if same value...
 $button-sizes: (
     "sm" : ( padding: $btn-padding, font-size: $p-sm ),
-    "md" : ( padding: $btn-padding, font-size: $p ),
-    "lg" : ( padding: $btn-padding, font-size: $p-lg ),
+    "md" : ( padding: $btn-padding, font-size: $p-sm ),
+    "lg" : ( padding: $btn-padding, font-size: $p-sm ),
 );
 
 
@@ -40,6 +41,7 @@ $button-sizes: (
     box-shadow: none !important;
     display: inline-block;
     text-align: center;
+    text-transform: uppercase;
     text-decoration: none;
     vertical-align: middle;
     touch-action: manipulation;
@@ -59,7 +61,9 @@ $button-sizes: (
     font-weight: $button-font-weigth;
     background-color: $button-bg-default;
     color: $button-color-default;
-
+    letter-spacing: .1em;
+    @include shadow( 5px 0px 5px rgba(0,0,0,1));
+    
     &:active,
     //&:focus,
     {

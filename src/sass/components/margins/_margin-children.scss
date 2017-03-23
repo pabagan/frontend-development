@@ -1,17 +1,17 @@
 /**--------------------------------------
  * --------------------------------------
  *
- * Margins
+ * Margins children
  *
  * --------------------------------------
  * -------------------------------------- */
-$margin-children-class: "c-m-child";
+$margin-children-class: "mc";
 $children-margin-position: left,right;
 
 @each $side in $children-margin-position {
     @each $size, $value in $spaces {
         // Default salto
-        .#{$margin-children-class}-#{$size}-#{$side} { 
+        .#{$margin-children-class}#{short-position($side)}-#{$size} { 
             > * {
                 margin-bottom: $value;
                 margin-#{$side}: $value;

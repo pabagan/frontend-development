@@ -5,7 +5,7 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-$margin-class: "c-m";
+$margin-class: "m";
 
 // iterate throw $spaces to 
 // create margin sizes
@@ -16,18 +16,26 @@ $margin-class: "c-m";
     }
     
     // lateral
-    .#{$margin-class}-#{$size}-lat{
+    .#{$margin-class}l-#{$size}{
         margin-left: $value;
         margin-right: $value;
     }
 
     // vertical
-    .#{$margin-class}-#{$size}-vert{
+    .#{$margin-class}v-#{$size}{
         margin-top: $value;
         margin-bottom: $value;
     }
-} 
 
+    // Positions
+    @each $position in $positions {    
+        $position-minified: short-position($position); 
+        
+        .#{$margin-class}#{$position-minified}-#{$size}{
+            margin-#{$position}: map-get($spaces, $size);
+        }
+    }
+}
 
 /**
  * Margin reset
@@ -36,12 +44,21 @@ $margin-class: "c-m";
     margin: 0 !important;
 }
 
-.#{$margin-class}-vert-0 { 
+// Positions
+@each $position in $positions {    
+    $position-minified: short-position($position); 
+    
+    .#{$margin-class}#{$position-minified}-0{
+        margin-#{$position}: 0;
+    }
+}
+
+.#{$margin-class}v-0 { 
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
-.#{$margin-class}-lat-0 { 
+.#{$margin-class}l-0 { 
     margin-right: 0 !important;
     margin-left: 0 !important;
 }

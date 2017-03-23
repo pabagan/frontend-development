@@ -12,53 +12,43 @@
 
 // heights
 $appHeader-height           : $size-rem-md;
-$appHeader-bg               : $grey12;
+$appHeader-bg               : $color1;
 
-//
 // Logo
 // 
 // Select using <img> or CSS background 
 // at logo. Leave this blank '' to use <img>.
 $appLogo-margin             : 0 $space-sm; 
+$appLogo-height             : 28px; 
+$appLogo-height-xl          : 36px; 
 $appLogo-img                : 'assets/img/shine-coaching-logo.svg'; 
 $appLogo-img                : ''; 
 $appLogo-img-no-svg         : 'assets/img/shine-coaching-logo.png'; 
 
-//
 // Nav Toggle
-//
 $appToggle-icon             : $i-menu-4;
 $appToggle-icon-expanded    : $i-cross;
-$appToggle-fs               : $h3-fs;
+$appToggle-fs               : $h4-fs;
 $appToggle-position         : left;
-$appToggle-color            : $color1;
+$appToggle-color            : #000000;
 $appToggle-bg               : transparent;
-$appToggle-bt-color         : $color1;
-$appToggle-bt-color_active  : $color1;
 
-//
-// App Sidebar
-//
-$appCol-width       : $size-rem-xl;
-$appCol-padding     : $space-sm;
-
-//
 // Nav Main
-//
 $main-nav-font          : $main-font;
-$main-nav-fs            : $p-lg;
+$main-nav-fs            : $p-sm;
 $main-nav-lh            : $lh-sm;
-$main-nav-f-weight      : 300;
-$main-nav-l-spacing     : -0.5px;
+$main-nav-f-weight      : 700;
+$main-nav-l-spacing     : 0;
 $main-nav-i-padding     : $padding-sm $padding-xs;
 
-// Color
+// Colors
 $main-nav-color         : $colorf;
-$main-nav-active-bg     : $grey0;
+$main-nav-active-bg     : $color0;
 $main-nav-active-color  : $colorf;
 $main-nav-bg            : $color1;
-$main-nav-child-bg      : $color3;
-$main-nav-child-color   : $color1;
+$main-nav-child-bg      : $grey3;
+$main-nav-child-color   : $color0;
+$main-nav-child-padding : $padding-xs $padding-xs;
 
 // define screen to toggle displayed nad
 $main-nav-breakpoint    : 1;
@@ -67,16 +57,16 @@ $main-nav-breakpoint-at : 'md';
 //
 // Nav Main after breakpoint
 //
-$main-nav2-fs           : $p;
+$main-nav2-fs           : 14.666px;
 $main-nav2-lh           : $appHeader-height;
-$main-nav2-f-weight     : 400;
+$main-nav2-f-weight     : 700;
 $main-nav2-l-spacing    : 0px;
 $main-nav2-i-padding    : 0 $size-rem-1;
 
 // Color
-$main-nav2-color        : $grey3;
-$main-nav2-active-bg    : $grey9;
-$main-nav2-active-color : $grey0;
+$main-nav2-color        : $color0;
+$main-nav2-active-bg    : $color1;
+$main-nav2-active-color : $grey4;
 $main-nav2-bg           : transparent;
 $main-nav2-child-bg     : $color3;
 $main-nav2-child-color  : $color1;
@@ -86,7 +76,7 @@ $main-nav2-child-color  : $color1;
 // 
 // Branding area
 // 
-#app-topbar {
+.app-header {
     height: $appHeader-height; 
     background-color: $appHeader-bg;
     z-index: $z7;
@@ -97,37 +87,45 @@ $main-nav2-child-color  : $color1;
     @include shadow(0 8px 5px -5px rgba(0, 0, 0, 0.1));
 }
 
-#app-logo {
+.app-logo {
     display: inline-block;
     margin: $appLogo-margin;
     line-height: $appHeader-height;
     height: $appHeader-height;
     
-    a {
+    &__link {
         display: block;
         padding: $space-sm 0;
         height: $appHeader-height;
+        @extend .is_v-center-xs;
     }
 
-    img {
+    &__img {
         display: block;
         max-height: 100%;
-        //c-img-h c-m-sm c-h-sm
+        height: $appLogo-height;
+        
+        @include media-query('xl'){
+            height: $appLogo-height-xl;
+        }
     }
 }
 
 // 
 // Menu toggle
 //         
-#nav-toggle {
+.app-nav-toggle {
     background: $appToggle-bg;
     margin: 0;
     color: $appToggle-color;
     float: right;
     @include square-make($appHeader-height);
 
-    [class*="#{$icons-class}"]{
+    &__icon{
+        @extend %icon;
+        font-size: $appToggle-fs;
         line-height: $appHeader-height;
+
         &:before {
             content: $appToggle-icon;
         }
@@ -140,7 +138,7 @@ $main-nav2-child-color  : $color1;
     }
 }
 
-.site-navigation{
+.app-nav{
     //margin-top: $appHeader-height;
     background-color: $main-nav-bg;
     //border: 4px solid green !important;
@@ -153,151 +151,111 @@ $main-nav2-child-color  : $color1;
     left: 0;
     right: 0;
     z-index: $z6;
+    font-family: $main-nav-font;
 
     &.is_on {
         height: auto;
     }
 
-    a{
-        font-family: $main-nav-font;
+    &__list {
+        @include l-reset();
+    }
+    &__item {
+        position: relative;
+    }
+
+    &__link {
         font-size: $main-nav-fs;
-        //line-height: $main-nav-lh !important;
+        line-height: $main-nav-lh;
         letter-spacing: $main-nav-l-spacing;
         font-weight: $main-nav-f-weight;
         color: $main-nav-color;
-        display: inline-block;
+        display: block;
         padding: $main-nav-i-padding;
-        &:after{
-            opacity: 0;
-            @include transition(250ms cubic-bezier(0,0.7,0.5,1) 250ms);
-            content: ' ';
-            @include size(5px, 5px);
-            background-color: #ffffff;
-            @include border-radius(50%);
-            position: absolute;
-            display: inline-block;
-            font-size: 90%;
-            @include translate(5px, 7px);
-        }
-    }
-
-    // bootstrap scrollSpy
-    a.active { 
-        background-color: $main-nav-active-bg;
-        color: $main-nav-active-color;
-    }
-
-    // submenu
-    .sub-menu,
-    .children {
-        li{
-            background-color: $main-nav-child-bg;
-            //font-size: 90%;
-        }
-
-        a{
-            color: $main-nav-child-color;
-        }
-    }
-
-    // Active with WP classes (TODO: separate WP classes).
-    .current-menu-item,
-    .current-menu-ancestor,
-    .current_page_item,
-    .current_page_ancestor,
-    .current_page_item,
-    .current_page_ancestor,
-    .active,
-    .is_active{
-        //background-color: $main-nav-active-bg;
-        > a{
+        // bootstrap scrollSpy
+        
+        // active link
+        &--active { 
+            background-color: $main-nav-active-bg;
             color: $main-nav-active-color;
-            font-weight: 400;
-            //border-bottom: 2px solid #fff;
-            //margin-bottom: 0.33em;
         }
-
     }
+
+}
+
+.app-subnav{
+    @include l-reset();
+    //@include box-shadow( 0 2px 2px -1px black(.1));
+    // managed by superfish
+    //display: none;
+    z-index: $z3;
+    //background-color: ;
+    &__item {
+        display: block;
+        width: 100%;
+        text-align: inherit;
+        background-color: $main-nav-child-bg;
+    }
+
+    &__link{
+        line-height: $main-nav-lh;
+        color: $main-nav-child-color;
+        padding: $main-nav-child-padding;
+        display: block;
+        font-size: $main-nav-fs;
+    }
+
 }
 
 // bigger screen breackpoint
 @if($main-nav-breakpoint == 1){
 @include media-query($main-nav-breakpoint-at){
-    #nav-toggle {
+    .app-nav-toggle {
         display: none;
     }
-    .site-navigation{
+    .app-nav{
         // just mobile
         position: static;
-        height: auto;
         float: right;
+        overflow: visible;
         background-color: $main-nav2-bg;
         
-        li{
+        &__item{
             float: left;
+            position: relative;
         }
 
-        a{
+        &__link{
+            display: block;
             font-size: $main-nav2-fs;
             line-height: $main-nav2-lh;
             letter-spacing: $main-nav2-l-spacing;
             font-weight: $main-nav2-f-weight;
             color: $main-nav2-color;
             padding: $main-nav2-i-padding;
-            
-            &:after{
-                background-color: #ffffff;
-                position: absolute;
-                display: inline-block;
-                font-size: 90%;
-                @include translate(5px, 7px);
-            }
-
-            &:hover{
-                &:after{
-                    @include transition(500ms cubic-bezier(0,0.7,0.5,1) 250ms);
-                    opacity: 1;
-                    //background-color: #ffffff;
-                    //@include size(.333rem, .333rem );
-                    //@include
-                }
-            }
-        }
-
-        // bootstrap scrollSpy
-        a.active { 
-            background-color: $main-nav2-active-bg;
-            color: $main-nav2-active-color;
-        }
-
-        // submenu
-        .sub-menu,
-        .children {
-            li{
-                background-color: $main-nav2-child-bg;
-                //font-size: 90%;
-            }
-
-            a{
-                color: $main-nav2-child-color;
-            }
-        }
-
-        // Active with WP classes (TODO: separate WP classes).
-        .current-menu-item,
-        .current-menu-ancestor,
-        .current_page_item,
-        .current_page_ancestor,
-        .current_page_item,
-        .current_page_ancestor,
-        .active,
-        .is_active{
-            //background-color: $main-nav-active-bg;
-            > a{
+            // bootstrap scrollSpy
+            &--active { 
+                background-color: $main-nav2-active-bg;
                 color: $main-nav2-active-color;
             }
-
         }
     } 
+
+    .app-subnav{
+        position: absolute;
+        top: $appHeader-height;
+        right: 0;
+        width: 160px;
+
+        &__item{
+            background-color: $main-nav2-child-bg;
+            //font-size: 90%;
+        }
+
+        &__link{
+            color: $main-nav2-child-color;
+            line-height: $main-nav2-lh;
+        }
+    }
 }
 } // end if $main-nav-breakpoint

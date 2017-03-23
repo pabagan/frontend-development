@@ -57,12 +57,33 @@ h4, .h4,
 h5, .h5,
 h6, .h6
 {
-    
     text-rendering: optimizeLegibility;
     font-weight: $fw700;
-    font-style: normal;
+    font-style: normal;   
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+{
     @extend %second-font;
 }
+
+h5, .h5,
+h6, .h6{
+    @extend %main-font;
+}
+
+
+h5, .h5{
+    letter-spacing: 0.1em;
+}
+
+h6, .h6{
+    letter-spacing: 0.2em;
+}
+
 
 input,
 textarea,

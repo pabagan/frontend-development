@@ -9,13 +9,14 @@
 $row-class          : 'c-row';
 $grid-width-class   : 'c-col';
 $container-class    : 'c-container';
-$grid-item-padding  : $padding-md;
+$grid-item-padding  : $base-padding-u;
 $total-colums       : 12;
 
 // Container sizes
-// False makes no container
+// False makes   no container
 $container-sizes: (
-    'md': 820px,
+    'sm': 540px,
+    'md': 720px,
     'lg': 960px,
     'xl': 960px,
 );
@@ -30,14 +31,17 @@ $container-sizes: (
 // Container and grid
 // 
 .#{$container-class},
+.#{$container-class}-xl,
 [class*="#{$grid-width-class}"] {
     position: relative;
+    padding: $grid-item-padding;
 }
 
 
 // 
 // Container class
 // 
+.#{$container-class}-xl,
 .#{$container-class}{ 
     margin-left: auto !important;
     margin-right: auto !important;
@@ -50,15 +54,6 @@ $container-sizes: (
 [class*="#{$grid-width-class}"] {
     float: left;
     display: block;
-
-
-    // adjust element to the box start/end
-    > :first-child(){
-        margin-top: 0;
-    }
-    > :last-child(){
-        margin-bottom: 0;
-    }
 }
 
 
@@ -66,12 +61,13 @@ $container-sizes: (
 // Grid paddings
 // 
 .#{$container-class},
-[class*="#{$grid-width-class}"] {
-    padding: $space-mobile-lg $space-mobile;
+[class*="#{$grid-width-class}"] 
+{
+    //padding: $space-mobile-lg $space-mobile;
 }
 
 
-@include media-query('sm'){
+@include media-query('md'){
     .#{$container-class},
     [class*="#{$grid-width-class}"] {
         padding: $grid-item-padding;

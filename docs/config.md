@@ -220,7 +220,7 @@ $color0   : #999999;
 // 
 // greys
 // 
-$grey0    : #121212;
+$color0    : #121212;
 $grey1    : #3c3b3a;
 $grey2    : #585756;
 $grey3    : #706f6f;
@@ -243,7 +243,7 @@ $colors: (
   "2":    $color2,
   "3":    $color3,
   "4":    $color4,
-  "grey0":    $grey0,
+  "grey0":    $color0,
   "grey1":    $grey1,
   "grey2":    $grey2,
   "grey3":    $grey3,

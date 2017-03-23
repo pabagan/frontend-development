@@ -7,8 +7,10 @@
  *
  * --------------------------------------
  * -------------------------------------- */
+$box-class      : "c-box";
+
 // Reset last child spacing
-.c-box {
+[class*="#{$box-class}"] {
 	// top margin reset
 	:first-child{
 		margin-top: 0 !important;
@@ -21,5 +23,95 @@
 	
 	p:last-child{
 		padding-bottom: 0 !important;
+	}
+}
+
+
+// mobile paddings, just 1 size
+$box-xs 	  : $base-padding;
+$box-xs-u	  : $base-padding-u; // with units
+// tablet to desktop paddings
+$box-lg-sm 	: 80px;
+$box-sm 	  : 40px;
+// > desktop
+$box-lg-xl 	: 160px;
+$box-xl 	  : 80px;
+
+
+/* Padding sizes mobile */
+.#{$box-class},
+.#{$box-class}-lg {
+  padding: ($box-xs * 3)+ em $box-xs-u;
+}
+.#{$box-class}v,
+.#{$box-class}v-lg {
+  padding-top: ($box-xs * 3)+ em;
+  padding-bottom: ($box-xs * 3)+ em;
+
+}
+.#{$box-class}s,
+.#{$box-class}s-lg {
+  padding-right: $box-xs-u;
+  padding-left: $box-xs-u;
+}
+
+/* Padding from small devices. Usually tablets */
+@include media-query('sm') {
+	// Box MD
+	.#{$box-class} {
+	  padding: $box-sm; 
+	}
+	.#{$box-class}v {
+	  padding-top: $box-sm;
+	  padding-bottom: $box-sm;
+
+	}
+	.#{$box-class}s {
+	  padding-right: $box-sm; 
+	  padding-left: $box-sm; 
+	}
+	
+	// Box LG
+	.#{$box-class}-lg {
+	  padding: $box-lg-sm; 
+	}
+	.#{$box-class}v-lg {
+	  padding-top: $box-lg-sm;
+	  padding-bottom: $box-lg-sm;
+
+	}
+	.#{$box-class}s-lg {
+	  padding-right: $box-lg-sm; 
+	  padding-left: $box-lg-sm; 
+	}
+}
+
+@include media-query('xl') {
+	// Box MD
+	.#{$box-class} {
+	  padding: $box-xl; 
+	}
+	.#{$box-class}v {
+	  padding-top: $box-xl;
+	  padding-bottom: $box-xl;
+
+	}
+	.#{$box-class}s {
+	  padding-right: $box-xl; 
+	  padding-left: $box-xl; 
+	}	
+
+	// Box LG
+	.#{$box-class}-lg {
+	  padding: $box-lg-xl; 
+	}
+	.#{$box-class}v-lg {
+	  padding-top: $box-lg-xl;
+	  padding-bottom: $box-lg-xl;
+
+	}
+	.#{$box-class}s-lg {
+	  padding-right: $box-lg-xl; 
+	  padding-left: $box-lg-xl; 
 	}
 }

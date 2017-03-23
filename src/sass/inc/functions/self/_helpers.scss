@@ -1,0 +1,3 @@
+@function short-position($position){
+    @return str-slice($position,0,1)
+}

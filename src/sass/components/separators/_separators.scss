@@ -1,0 +1,35 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Separators
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$separators-class : "c-sep";
+
+//
+// Create height classes
+//
+
+[class*="#{$separators-class}"]{
+    display: block;
+    border: 1px solid $grey6 !important;
+}
+
+@each $size, $value in $rem-sizes {
+    .#{$separators-class}-#{$size} { height: $value }
+    .#{$separators-class}-#{$size}-lat { width: $value }
+}
+
+
+
+
+// Add extra paddings to fit with
+// to elements with fixed header.
+.hd-space{
+    padding-top: $appHeader-height !important;
+}
+
+.hd-space-not{
+    margin-top: -$appHeader-height !important;
+}

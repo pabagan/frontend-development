@@ -15,7 +15,7 @@ Apply to a lay:
 * `data-animation="animation duration delay stagger"` apply any VelocityUI fx.
 
 ```html
-<div class="c-container is_v-center c-p-lg-vert textcenter">
+<div class="c-container is_v-center pv-lg textcenter">
   <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">
     Hey there! Look how cool we do!
   </h1>

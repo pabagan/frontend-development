@@ -13,10 +13,6 @@ $size-rem-md    	: 4.2rem;
 $size-rem-lg    	: 7rem;
 $size-rem-xl    	: 13.5rem;
 
-// Mobile paddings
-$space-mobile 		: 18px;
-$space-mobile-lg 	: 40px;
-
 // Base REM sizes Fibonacci's progression
 // --------------------------------------
 //$size-rem-xs    : 2rem;
@@ -37,13 +33,14 @@ $rem-sizes: (
 // 
 // Typography
 // --------------------------------------
-$main-font          : "Source Sans Pro", Helvetica, Arial, sans-serif !important;
-$second-font        : "Sentinel A", "Sentinel B", Times, serif !important;
+$main-font          : "Lato", Helvetica, Arial, sans-serif !important;
+$second-font        : "Inconsolata", Times, serif !important;
 $monospace-font     : Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
 // 
 // 1. Diseño da tamaño de fuentes en píxeles 
 //
+/*
 $jumbo-px   : 66.666;
 $h1-px      : 53.333;
 $h2-px      : 40;
@@ -51,16 +48,27 @@ $h3-px      : 33.333;
 $h4-px      : 25.714;
 $h5-px      : 20;
 $h6-px      : 17.42;
-$p-xs-px    : 14.285;
-$p-sm-px    : 17.42;
+ */
+
+//Carofile
+$jumbo-px   : 64;
+$h1-px      : 55;
+$h2-px      : 48;
+$h3-px      : 40;
+$h4-px      : 32;
+$h5-px      : 20;
+$h6-px      : 16;
+
+$p-xs-px    : 14;
+$p-sm-px    : 16;
 $p-px       : 20;
 $p-lg-px    : 24;
 
 // 
 // base root sizes
 // 
-$fs-mobile    : 16.666;
-$fs-tablet    : 18.571;
+$fs-mobile    : 14.666;
+$fs-tablet    : 14.666;
 $fs-desktop   : 20;
 
 // 
@@ -111,10 +119,10 @@ $theme-sizes: (
     "h4"        : ( font-size: $h4-fs, line-height: $lh-lg, font-weight: $fw700 ),
     "h5"        : ( font-size: $h5-fs, line-height: $lh-lg, font-weight: $fw700 ),
     "h6"        : ( font-size: $h6-fs, line-height: $lh-lg, font-weight: $fw700 ),
-    "p-xs"      : ( font-size: $p-xs, line-height: $lh-lg, font-weight: $fw400 ),
-    "p-sm"      : ( font-size: $p-sm, line-height: $lh-lg, font-weight: $fw400 ),
-    "p-md"      : ( font-size: $p, line-height: $lh-lg, font-weight: $fw400 ),
-    "p-lg"      : ( font-size: $p-lg, line-height: $lh-lg, font-weight: $fw400 ),
+    "f-xs"      : ( font-size: $p-xs, line-height: $lh-lg, font-weight: $fw400 ),
+    "f-sm"      : ( font-size: $p-sm, line-height: $lh-lg, font-weight: $fw400 ),
+    "f-md"      : ( font-size: $p, line-height: $lh-lg, font-weight: $fw400 ),
+    "f-lg"      : ( font-size: $p-lg, line-height: $lh-lg, font-weight: $fw400 ),
 );
 
 // 
@@ -140,11 +148,31 @@ $spaces:(
 // 
 // Inner Spacing/paddings
 // --------------------------------------
+/*
+
 $padding-xs     : 1.04%;
-$padding-sm     : 2.08%;
+$padding-sm     : 2.08%; 
 $padding-md     : 4.16%;
 $padding-lg     : 8.32%;
 $padding-xl     : 16.64%;
+*/
+// Mobile paddings
+$base-padding      : 0.625;
+$base-padding-u    : $base-padding + rem;
+
+$padding-xs     : 0.6rem;
+$padding-sm     : 1.2rem;
+$padding-md     : 1.8rem;
+$padding-lg     : 4rem;
+$padding-xl     : 9.2rem;
+
+$paddings-mobile:(
+    "xs": 18px,
+    "sm": 18px,
+    "md": 18px,
+    "lg": 18px,
+    "xl": 18px,
+);
 
 $paddings:(
     "xs": $padding-xs,
@@ -207,18 +235,17 @@ $screen-sizes: (
 // 
 // Colors
 // --------------------------------------
-$color1 	: #e4032e; 	// rojo shine
+$color1 	: #FECB00; 	// amarillo carofile
 $color2 	: #831f82; 	// morado
 $color3 	: #e6007e; // magenta
 $color4 	: #169fdb; 	// cyan
 
 
 $colorf 	: #ffffff;
-$color0 	: #999999;
+$color0 	: #1e1e1e;
 // 
 // greys
 // 
-$grey0  	: #121212;
 $grey1  	: #3c3b3a;
 $grey2  	: #585756;
 $grey3  	: #706f6f;
@@ -237,11 +264,11 @@ $colors: (
 	"f":  		$colorf,
 	"body":  	$colorf,
 	"font":  	$colorf,
+    "0":        $color0,
 	"1":		$color1,
-	"2":		$color2,
-	"3":		$color3,
-	"4":		$color4,
-	"grey0":  	$grey0,
+	//"2":		$color2,
+	//"3":		$color3,
+	//"4":		$color4,
 	"grey1":  	$grey1,
 	"grey2":  	$grey2,
 	"grey3":  	$grey3,
@@ -265,15 +292,15 @@ $linksColor: $color1;
 // 
 // Icons
 // --------------------------------------
-$icons-class: 'c-icon';
-$iconfix-class   : "c-icon-f"; // no responsive
+$icons-class        : 'c-icon';
+$iconfix-class      : "c-icon-f"; // no responsive
 
 $icons: (
     'xs': (size: $size-rem-xs, font-size: $h5-fs, padding: .6em),
     'sm': (size: $size-rem-sm, font-size: $h4-fs, padding: .6em),
     'md': (size: $size-rem-md, font-size: $h3-fs, padding: .6em),
     'lg': (size: $size-rem-lg, font-size: $h1-fs, padding: .6em),
-    'xl': (size: $size-rem-xl, font-size: $jumbo-fs, padding: .3em),
+    'xl': (size: $size-rem-xl, font-size: 4.5rem, padding: .3em),
 );
 
 // Font used: Bonicons

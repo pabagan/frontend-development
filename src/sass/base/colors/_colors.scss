@@ -35,5 +35,6 @@ a{
 // ---------------------------------------
 // ---------------------------------------
 .ct-light{ @include colorElements(#ffffff); }
+.ct-dark{ @include colorElements($color0); }
 .ct-1{ @include colorElements($color1); }
 

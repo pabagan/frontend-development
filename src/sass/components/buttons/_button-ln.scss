@@ -12,7 +12,7 @@ $button-ln-color-default           : $colorf;
 $button-ln-bg-default-hover        : $button-ln-color-default;
 $button-ln-color-default-hover     : $button-ln-bg-default;
 $button-ln-opacity                 : 0.80;
-$button-ln-border-radius           : 6px;
+$button-ln-border-radius           : $p-lg;
 $button-ln-font-weigth             : 600;
 $button-ln-font-style              : uppercase;
 $btn-padding                       : .5rem 1.2rem; // all buttons has same padding

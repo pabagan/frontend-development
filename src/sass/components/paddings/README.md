@@ -2,9 +2,10 @@
 
 ## Using %
 
-* Padding: `c-p-[xs,sm,md,lg]`.
-* Vertical padding: `c-p-[xs,sm,md,lg]-vert`.
-* Lateral padding: `c-p-[xs,sm,md,lg]-lat`.
+* Padding: `p-[xs,sm,md,lg]`.
+* Per side padding: `p[t,r,b,l]-[xs,sm,md,lg]`.
+* Vertical padding: `pv-[xs,sm,md,lg]`.
+* Lateral padding: `pl-[xs,sm,md,lg]`.
 
 ```html
 <div class="c-p-md">

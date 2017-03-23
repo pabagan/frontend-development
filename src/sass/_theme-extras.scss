@@ -1,0 +1,78 @@
+* {
+  border: 1px solid $grey8;
+}
+.underline{
+  border-width: 0 0 3px;
+  border-style: solid;
+  margin-top: 2px;
+  //border: 3px solid $color0;
+}
+
+.subscribe-row__ct{
+  text-align: center;
+  @include media-query('sm'){
+    background-image:  url(../img/mecanico-subscribe.png);
+    background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  @include media-query('md'){
+    text-align: left;
+    background-position: 0 0;
+  }
+}
+
+.manage-row{
+  @include media-query('md'){
+    background-image:  url(../img/home/manage-car-tablet.png);
+    background-position: bottom right;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+  }
+  @include media-query('lg'){
+    background-image:  url(../img/home/manage-car.png);
+  }
+}
+
+
+.features-item{
+  height: 400px;
+  @include media-query('md'){
+    height: 520px;
+  }
+}
+
+.feature-curtain,
+.features-item{
+  //padding: 64px;
+  @include media-query('md'){
+    //padding: 50px;
+  }
+}
+
+.bt-feature-toggle {
+  z-index: $z6;
+  cursor: pointer;
+
+  &:before {
+    content: $i-plus;
+  }
+
+  &[aria-expanded=true]{
+    &:before{
+      content: $i-cross;
+      color: $color0;
+    }
+  }
+}
+
+.site-footer{
+  &__col1{
+    @include media-query('md'){
+      padding-right: 50px;
+    }
+  }
+  &__col2{
+    //padding-top: 0;
+  }
+}

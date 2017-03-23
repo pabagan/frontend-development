@@ -54,3 +54,8 @@ html,body{
 @media screen and (min-width: $screen-lg-min) { // 1200px <
   @include height-grid($grid_height_class, 'lg', $total_height_colums);
 }
+
+/* Screen XL*/
+@media screen and (min-width: $screen-xl-min) { // 1599px <
+  @include height-grid($grid_height_class, 'xl', $total_height_colums);
+}

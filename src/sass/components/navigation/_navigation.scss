@@ -7,52 +7,19 @@
  * -------------------------------------- */
 // para listas verticales con elementos 
 // con borde inferior y superior.
-$nav-item-padding:                      .3em .0em;
-$nav-item-decoration-borders:           0;
-$nav-item-decoration-borders-width:     1px;
-$nav-item-decoration-borders-color:     $grey8;
-$nav-item-decoration-background:        0;
-$nav-item-decoration-background-color:  $grey8;
-
-$nav-bg-color:                          map-get($colors, 'grey-11');
-$c-nav-color:                             #ffffff;
-$nav-fs:                                $h3-fs;
 // Block menus to inline 
-$navs-to-inline-breakpoint: $screen-sm-min;
+$navs-to-inline-breakpoint: 'sm';
 
-.c-nav-bar{
-    text-align: center;    
-}
-
-.c-nav-bar,
-.c-nav-col,
-.nav,
-.menu{
+.nav-col,
+.nav {
     @include l-reset();
 
     // li
-    li{
-        position: relative;
-        // borders
-        // Background decoration
-        @if ($nav-item-decoration-background == 1) {
-            background-color: $nav-item-decoration-background-color;
-        }
-    }
-
-    // Enlaces
-    a{
-        text-decoration: none;
-        display: block;
-    }
-
-
-    li{
+    &__item{
         position: relative;
         ul,ol{
             // managed by superfish
             //display: none;
-            margin: 0;
         }
 
         &:hover{
@@ -63,114 +30,58 @@ $navs-to-inline-breakpoint: $screen-sm-min;
         }
     }
 
-    // Active
-    .current-menu-item,
-    .current-menu-ancestor,
-    .current_page_item,
-    .current_page_ancestor,
-    .current_page_item,
-    .current_page_ancestor,
-    .active,
-    .is_active{
-        //background-color: $color1;
-        > a{
-            color: $colorf
-        }
+    // Enlaces
+    &__link{
+        text-decoration: none;
+        display: block;
     }
 }
 
 // submenu
-.sub-menu,
-.children {
+.nav-children {
     //@include box-shadow( 0 2px 2px -1px black(.1));
     // managed by superfish
     //display: none;
     z-index: $z3;
+    margin: 0;
     padding: 0;
     //background-color: ;
-    li{
+    &__item {
         display: block;
         width: 100%;
         text-align: inherit;
     }
 }
 
-
-.sf-with-ul:after {
-    //@extend .c-i;
-    content: "\e878";
-    //content: $i-arrow-down-medium;
-    color: inherit !important;
-    display: block;
-    //margin-top: 1em;
-    @include transform(translate(0, 40px));
-    //position: absolute;
-    margin-left: 0.25em;
-    margin-right: .5em;
-}
-
-
-.nav-divider{
-    padding: 0 $space-xs;
-}
-
 // Comportamiento en salto
-@media screen and (min-width: $navs-to-inline-breakpoint)  {
+@include media-query($navs-to-inline-breakpoint)  {
 
-    //
     //
     // Navegación inline.
-    //
     //
     .c-nav-bar{
         li{
             display: inline-block;
             float: left;
-            // borders
-            @if ($nav-item-decoration-borders == 1) {
-                border-style: solid;
-                border-color: $nav-item-decoration-borders-color;
-                // lateral borders
-                border-width: 0 0 0 $nav-item-decoration-borders-width;
-                &:first-child{
-                    border-left-width: $nav-item-decoration-borders-width;
-                }
-            }
         }
 
         .sub-menu,
         .children {
             position: absolute;
             top: 100%;
+            bottom: -100%;
             left: -10%;
-            width: 120%;            
+            width: 120%;
         }    
-
-        // Evitar overflow de anterior position absolute
-        .sf-with-ul:after {
-            position: static;
-        }
     }
 
     //
-    //
     // Navegación Column
-    //
     //
     .c-nav-col{
 
         li{
             display: block;
-            // borders
-            @if ($nav-item-decoration-borders == 1) {
-                border-style: solid;
-                border-color: $nav-item-decoration-borders-color;
-                // lateral borders
-                border-width: 0 0 0 $nav-item-decoration-borders-width;
-                &:first-child{
-                    border-left-width: $nav-item-decoration-borders-width;
-                }
-            }
         }
 
         .sub-menu,
@@ -179,11 +90,6 @@ $navs-to-inline-breakpoint: $screen-sm-min;
             // top: 100%;
             // left: 0;
             width: 100%;            
-        }    
-
-        // Evitar overflow de anterior position absolute
-        .sf-with-ul:after {
-            position: static;
         }
     }
 }

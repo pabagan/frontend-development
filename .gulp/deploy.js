@@ -79,6 +79,7 @@ g.task('images-optimize', function() {
  * Clean ./temp
  */
 g.task('clean', function () {
+  
   return g.src(base.temp, {read: false})
     .pipe(clean())
     .on('error', gutil.log);

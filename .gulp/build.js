@@ -48,7 +48,7 @@ g.task('scripts-deps', function() {
     // jQuery -->  86.7 kb
     // is loading appart at html to trying 
     // to load from window.jQuery first.
-    //base.bower + '/jquery/dist/jquery.min.js',
+    base.bower + '/jquery/dist/jquery.min.js',
     
     base.bower + '/imagesloaded/imagesloaded.pkgd.min.js',          // Images loaded --> 5.4 kb
     // base.bower + '/isotope/dist/isotope.pkgd.min.js',            // Isotope
@@ -243,11 +243,6 @@ g.task('html', function () {
   return g
     .src(sources)
     .pipe(htmlhint())
-    .pipe(prettify({
-      indent_size: 2, 
-      indent_inner_html: true,
-      unformatted: ['pre', 'code']
-    }))
     .pipe(g.dest(temp.base))
     .on('error', gutil.log);
 });

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>Unit Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" id="geniux-google-fonts-css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C300italic%2C400%2C400italic%2C600%2C700%2C700italic%2C&#038;subset=latin%2Clatin-ext&#038;ver=1" type="text/css" media="all" />
+    <link id="main-styles" type="text/css" href="assets/css/style.min.css" rel="stylesheet" /> </head>
+  <body class="hd-space">
+    <a class="skip-link sr-only" href="#gx-content">Skip to content</a>
+    <noscript>Hey! Javascript should be activated.</noscript>
+    <!-- noscript -->
+    <!-- 
+    ******************************************************
+    ******************************************************
+       HEADER & MAIN NAVIGATION
+    ******************************************************
+    ******************************************************
+  -->
+    <header id="app-topbar" class="site-header" role="banner">
+      <div id="app-logo" class="site-logo">
+        <a href="/" rel="home">
+          <span class="site-title sr-only"> Marca </span>
+          <img alt="" src="assets/img/carofile-logo.png" /> </a>
+      </div>
+      <!-- #app-logo -->
+      <button id="nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="c-icon-sm" aria-hidden="true"></span>
+        <span class="sr-only"> Primary Menu </span>
+      </button>
+      <!--  #nav-toggle -->
+      <nav id="site-nav" class="site-navigation" role="navigation">
+        <div class="menu-monster-container">
+          <ul id="primary-menu" class="navbar-nav menu">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" data-scroll-to="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#profile" data-scroll-to="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#messages" data-scroll-to="#messages">Messages</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- #site-navitation -->
+    </header>
+    <!-- #header -->
+  <!-- 
+  ******************************************************
+  ******************************************************
+    Unit Test Sidebar
+  ******************************************************
+  ******************************************************
+  -->
+    <div id="unitTestBar" class="is_fixed l-window">
+      <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-grey0 color-f"></button>
+      <!-- Unit Test Navigation JS populated-->
+      <div id="utNavWrap" class="c-bar-right c-w-xl c-p-xs is_off bg-grey0">
+        <div id="unitTestBarNav" class="c-row bg-grey0 hd-space p-sm"></div>
+      </div>
+    </div>
+    <main id="unitTest">
+      <div class="c-row">
+        <h2 id="presentation" data-module-title class="utSectionTitle">Presentation</h2>
+        <!-- Presentacion Coaching Empresas -->
+        <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(/assets/img/slide-3.png)">
+          <div class="c-container is_v-center pv-lg textcenter">
+            <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750"> Hey there! Look how cool we do! </h1>
+            <p class="f-lg" data-appear data-offset="100%" data-animation="slideDownIn 250 550"> Ipsum xitito Torpedo amatomaa caballo blanco caballo negroorl torpedo va usté muy cargadoo papaar papaar va usté muy cargadoo se calle ustée caballo blanco caballo negroorl. Se calle ustée diodenoo por la gloria de mi madre diodeno la caidita
+              ahorarr quietooor se calle ustée. </p>
+            <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
+              <a href="javascript:void(0);" data-scroll-to="#business-active" class="anim-bt-1 c-sq-md color-f circled c-border">
+                <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
+                <span class="sr-only"> Next </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      FORMS
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="formularios" data-module-title class="utSectionTitle">Forms</h2>
+        <div class="c-container">
+          <p>Class <code>c-form-bg</code> to form label.</p>
+        </div>
+        <div id="c-contact" class="c-row bg-1 c-shadow-inner-top-left no_overflow">
+          <div class="c-col-xs-12 c-col-sm-6 c-p-lg ct-light">
+            <h2> Contact us to Unlock your Passion </h2>
+            <p> Feeling the desire to get going? Leave us your details and we will get back to you within 24 hours </p>
+            <p> If you can’t wait, call
+              <a href="tel:+34649355752">+34 649 355 752</a>
+            </p>
+          </div>
+          <div class="c-col-xs-12 c-col-sm-6">
+            <div id="c-contact2-wrap" class="c-p-lg">
+              <form class="c-form-bg" method="post" action="/action">
+                <div class="form-group">
+                  <label for="name1">Name:</label>
+                  <input name="name1" id="name1" type="text" maxlength="120" placeholder="Name" required> </div>
+                <div class="form-group">
+                  <label for="phone1">Phone or mail</label>
+                  <input name="phone1" id="phone1" type="text" maxlength="120" placeholder="Phone or mail *" data-rule-phoneoremail="true"> </div>
+                <div class="form-group">
+                  <label for="message1">Message:</label>
+                  <textarea name="message1" id="message1" rows="3" placeholder="Message" maxlength="500"></textarea>
+                </div>
+                <button type="submit" class="c-btn-ln c-btn-ln-f">Submit</button>
+              </form>
+            </div>
+            <div id="form-KO-msg" class="c-curtain-top is_off bg-f c-p-lg textcenter">
+              <button data-close-parent class="c-sq-sm bg-transparent is_top-right" type="button">
+                <span class="c-icon-sm i-cross"></span>
+                <span class="sr-only"> Close </span>
+              </button>
+              <div class="is_v-center">
+                <h3 class="color-1">Message not sent!</h3>
+                <p>Blimey! There som problem with the form. You still can phone or email us. Sorry for the inconvenience.</p>
+              </div>
+            </div>
+            <!-- #form-KO-msg -->
+            <div id="form-OK-msg" class="c-curtain-top is_off bg-f c-p-lg textcenter">
+              <button data-close-parent class="c-sq-sm bg-transparent is_top-right" type="button">
+                <span class="c-icon-sm i-cross" aria-hidden="true"></span>
+                <span class="sr-only"> Close </span>
+              </button>
+              <div class="is_v-center">
+                <span class="c-icon-xl color-1 i-face-smile" aria-hidden="true"></span>
+                <h3 class="color-1">Message sent</h3>
+                <p class="p">We will be in touch shortly</p>
+              </div>
+            </div>
+            <!-- #form-OK-msg -->
+          </div>
+        </div>
+        <div class="c-row">
+          <div class="c-col-xs-12 c-col-sm-6 textcenter">
+            <p>
+              <span class="c-icon-xl i-face-smile" aria-hidden="true"></span>
+            </p>
+            <h2>Form sent!</h2>
+            <p>It goes well</p>
+          </div>
+          <div class="c-col-xs-12 c-col-sm-6 textcenter">
+            <p>
+              <span class="c-icon-xl i-face-sad" aria-hidden="true"></span>
+            </p>
+            <h2>Form error!</h2>
+            <p>Our form doesn't like to perform at this time</p>
+          </div>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      ICONOS: Creadas por JS
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="iconos" data-module-title class="utSectionTitle">Iconos</h2>
+        <div class="c-container">
+          <p>Class <code>c-icon c-icon-[xs,sm,md,lg,xl]</code>.</p>
+        </div>
+        <div class="c-row textcenter">
+          <h2>Iconos LG con caja de texto</h2>
+          <div class="c-col-xs-12 c-col-sm-6 c-col-lg-3">
+            <span class="c-p-rem-xs c-icon-lg circled bg-grey2 ct-light i-diamond c-m-xs-bottom" aria-hidden="true"></span>
+            <h4>For my ally is the Force</h4>
+            <p>For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us.</p>
+          </div>
+          <div class="c-col-xs-12 c-col-sm-6 c-col-lg-3">
+            <span class="c-p-rem-xs c-icon-lg circled bg-grey2 ct-light i-menu-3 c-m-xs-bottom" aria-hidden="true"></span>
+            <h4>And a powerful ally it is</h4>
+            <p>For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us.</p>
+          </div>
+          <div class="c-col-xs-12 c-col-sm-6 c-col-lg-3">
+            <span class="c-p-rem-xs c-icon-lg circled bg-grey2 ct-light i-user c-m-xs-bottom" aria-hidden="true"></span>
+            <h4>For my ally is the Force</h4>
+            <p>For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us.</p>
+          </div>
+          <div class="c-col-xs-12 c-col-sm-6 c-col-lg-3">
+            <span class="c-p-rem-xs c-icon-lg circled bg-grey2 ct-light i-cross c-m-xs-bottom" aria-hidden="true"></span>
+            <h4>And a powerful ally it is</h4>
+            <p>For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      BUTTONS BG
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="botones-bg" data-module-title class="utSectionTitle">Buttons BG</h2>
+        <div class="c-container">
+          <p>Add a/button/input <code>c-btn c-btn-[sm,lg] btn-[1-2-3]</code>.</p>
+        </div>
+        <div class="c-container textcenter">
+          <p>
+            <button type="submit" class="c-btn c-btn-lg btn-1">Button LG</button>
+          </p>
+          <p class="p-sm">
+            <button type="submit" class="c-btn-ln c-btn-ln-sm btn-1">Button SM</button>
+          </p>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      VERTICAL GRID
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="vertical-grid" data-module-title class="utSectionTitle">Vertical grid</h2>
+        <div class="c-container">
+          <p>Add <code>c-row-[1-12]-[size]</code>. Each size fit to the viewport size percentage being 12 100% and 1 100/12%.</p>
+          <p>Height grid needs a html and body to be relative and 100% height.</p>
+        </div>
+        <div class="c-container">
+          <div class="c-row-xs-1 bg-grey0 color-f">1/12</div>
+          <div class="c-row-xs-2 bg-grey1 color-f">2/12</div>
+          <div class="c-row-xs-3 bg-grey2 color-f">3/12</div>
+          <div class="c-row-xs-4 bg-grey3 color-f">4/12</div>
+          <div class="c-row-xs-5 bg-grey4 color-f">5/12</div>
+          <div class="c-row-xs-6 bg-grey5 color-f">6/12</div>
+          <div class="c-row-xs-7 bg-grey6 color-f">7/12</div>
+          <div class="c-row-xs-8 bg-grey7">8/12</div>
+          <div class="c-row-xs-9 bg-grey8">9/12</div>
+          <div class="c-row-xs-10 bg-grey9">10/12</div>
+          <div class="c-row-xs-11 bg-grey10">11/12</div>
+          <div class="c-row-xs-12 bg-grey11">12/12</div>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      Curtains
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="curtain-lays" data-module-title class="utSectionTitle">Curtain Lays</h2>
+        <div class="c-container">
+          <p>Add inner lay with <code>c-curtain-[top,right,bottom,left]</code>.</p>
+        </div>
+        <div class="c-curtain-ct is_on c-col-xs-6 c-col-lg-3 bg-grey7">
+          <div class="c-curtain-top bg-3 ct-light textcenter">
+            <h3 class="is_v-center">Curtain top</h3>
+          </div>
+        </div>
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey8">
+          <div class="c-curtain-right bg-4 ct-light textcenter">
+            <h3 class="is_v-center">Curtain rigth</h3>
+          </div>
+        </div>
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey9">
+          <div class="c-curtain-bottom bg-3 ct-light textcenter">
+            <h3 class="is_v-center">Curtain bottom</h3>
+          </div>
+        </div>
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey10">
+          <div class="c-curtain-left bg-4 ct-light textcenter">
+            <h3 class="is_v-center">Curtain left</h3>
+          </div>
+        </div>
+      </div>
+      <!-- 
+    ******************************************************
+    ******************************************************
+      Curtains closable
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="curtain-lays-closable" data-module-title class="utSectionTitle">Curtain Lays (close)</h2>
+        <div class="c-container">
+          <p>Add inner lay with <code>c-curtain-[top,right,bottom,left]</code> and a button child with <code>close-parent-link</code> class</p>
+        </div>
+        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
+          <h4>Curtain amazing content</h4>
+          <div class="c-curtain-top is_on bg-3 ct-light c-p-md-lat c-p-rem-sm-vert">
+            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
+              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
+              <span class="sr-only"> Close </span>
+            </button>
+            <h5>Closeable Curtain top</h5>
+          </div>
+        </div>
+        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
+          <h4>Curtain amazing content</h4>
+          <div class="c-curtain-left is_on bg-3 ct-light c-p-md-lat c-p-rem-sm-vert">
+            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
+              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
+              <span class="sr-only"> Close </span>
+            </button>
+            <h5>Closeable Curtain left</h5>
+          </div>
+        </div>
+        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
+          <h4>Curtain amazing content</h4>
+          <div class="c-curtain-bottom is_on bg-3 ct-light c-p-md-lat c-p-rem-sm-vert">
+            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
+              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
+              <span class="sr-only"> Close </span>
+            </button>
+            <h5>Closeable Curtain bottom</h5>
+          </div>
+        </div>
+        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
+          <h4>Curtain amazing content</h4>
+          <div class="c-curtain-right is_on bg-3 ct-light c-p-md-lat c-p-rem-sm-vert">
+            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
+              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
+              <span class="sr-only"> Close </span>
+            </button>
+            <h5>Closeable Curtain right</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 
+    ******************************************************
+    ******************************************************
+      Velocity Toggle
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row">
+        <h2 id="velocity-toggle" data-module-title class="utSectionTitle">Velocity toggle</h2>
+        <div class="c-container">
+          <p>Add velocity FX to toggle in/out lays. This is how toggle buttons/link are labeled <code>data-toggle-velocity aria-expanded="true" aria-controls="velocityTogglerCt2" id="velocityToggler2" type="submit" class="c-btn btn-1"</code></p>
+        </div>
+        <div class="c-container">
+          <div class="c-row">
+            <div class="bg-grey8 c-col-xs-3 c-p-0">
+              <button data-toggle-velocity aria-expanded="true" aria-controls="velocityTogglerCt" id="velocityToggler" type="submit" class="c-btn btn-1">toggle Open 1</button>
+            </div>
+            <div id="velocityTogglerCt" class="bg-grey2 c-col-xs-9"> Content </div>
+          </div>
+          <div class="c-row">
+            <div class="bg-grey8 c-col-xs-3 c-p-0">
+              <button data-toggle-velocity aria-expanded="true" aria-controls="velocityTogglerCt2" id="velocityToggler2" type="submit" class="c-btn btn-1">toggle Open 2</button>
+            </div>
+            <div id="velocityTogglerCt2" class="bg-grey2 c-col-xs-9"> Content </div>
+          </div>
+        </div>
+      </div>
+      <!-- #bootstrap -->
+      <!-- 
+    ******************************************************
+    ******************************************************
+       Footer
+    ******************************************************
+    ******************************************************
+    -->
+      <h2 id="footer-secc" data-module-title class="utSectionTitle">Footer</h2>
+      <footer id="footer" class="c-row bg-grey0">
+        <div class="c-col-xs-12 c-col-md-6 ct-light">
+          <h2>Hey!</h2>
+          <p>Aenean posuere laoreet tristique. Vivamus eu tempus nibh. Integer vehicula tellus vel nisi volutpat, a egestas enim aliquet. Duis condimentum massa metus, quis cursus quam maximus quis.</p>
+          <div class="c-row">
+            <ul class="c-l-float mcr-sm">
+              <li>
+                <img class="c-h-sm" src="assets/img/logo-acc.png" /> </li>
+              <li>
+                <img class="c-h-sm" src="assets/img/logo-cpcc.png" /> </li>
+              <li>
+                <img class="c-h-sm" src="assets/img/logo-orsc.png" /> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="c-col-xs-12 c-col-md-6 ct-light">
+          <h2>Contact</h2>
+          <p>Así es como puedes contactar con nosotros.</p>
+          <ul class="c-l-block">
+            <li>Av. Se llama Mezquita 24, Córdoba</li>
+            <li>
+              <a href="mailto:pabagan@gmail.com">email@me.com</a>
+            </li>
+            <li>
+              <a href="tel:+346060606060">+34 405 303 116</a>
+            </li>
+          </ul>
+          <ul class="c-l-inline">
+            <li>
+              <a href="#" target="_blank" title="LinkedIn">
+                <span class="c-icon c-icon-sm i-linkedin" aria-hidden="true"></span>
+                <span class="screen-reader-text">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" title="Twitter">
+                <span class="c-icon c-icon-sm i-twitter" aria-hidden="true"></span>
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" title="Facebook">
+                <span class="c-icon c-icon-sm i-facebook" aria-hidden="true"></span>
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" title="Google+">
+                <span class="c-icon c-icon-sm i-google" aria-hidden="true"></span>
+                <span class="screen-reader-text">Google+</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" title="RSS">
+                <span class="c-icon c-icon-sm i-rss" aria-hidden="true"></span>
+                <span class="screen-reader-text">RSS</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <!-- #footer -->
+      <!-- 
+    ******************************************************
+    ******************************************************
+       FIN!!
+    ******************************************************
+    ******************************************************
+    -->
+      <div class="c-row c-row-xs-12 bg-1 ct-light">
+        <div class="is_v-center textcenter" data-type="background" data-speed="10">
+          <h1 class="h-jumbo">¡Esto es todo amigáncanos!</h1>
+        </div>
+      </div>
+    </main>
+    <!-- #unitTest -->
+    <script>
+      window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')
+    </script>
+    <script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

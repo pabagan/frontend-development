@@ -10,4 +10,9 @@
     //position: absolute;
     margin-left: 0.333em;
     margin-right: -7px;
+    @include media-query($main-nav-breakpoint-at)  {
+        // Evitar overflow de anterior position absolute
+        display: none;
+    }
 }
+
