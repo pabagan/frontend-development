@@ -17,6 +17,7 @@ $embeds-class: "c-embed";
     padding-bottom: 56.25%;     // 16:9
     //padding-bottom: 75%;        // 4:3
 
+    &__ct,
     iframe,
     embed,
     object {

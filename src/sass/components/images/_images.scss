@@ -5,19 +5,18 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-.c-img-rd,
-.c-img{
+$images-class: "c-img";
+
+.#{$images-class} {
     display: block;
     max-width: 100% !important;
     height: auto;
-}
-.c-img-h{
-	display: block;
-    max-height: 100% !important;
-    width: auto;
-}
 
-.c-img-rd,
-.circled {
-    @include border-radius(50%);
+    &--h{
+      max-height: 100% !important;
+      width: auto;
+    }
+    &--rd{
+      @include border-radius(50%);
+    }
 }

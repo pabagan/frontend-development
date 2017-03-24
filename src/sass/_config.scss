@@ -33,8 +33,13 @@ $rem-sizes: (
 // 
 // Typography
 // --------------------------------------
-$main-font          : "Lato", Helvetica, Arial, sans-serif !important;
-$second-font        : "Inconsolata", Times, serif !important;
+// google fonts
+//$main-font          : "Lato", Helvetica, Arial, sans-serif !important;
+//$second-font        : "Inconsolata", Times, serif !important;
+// secure fonts
+
+$main-font          : Helvetica, Arial, sans-serif !important;
+$second-font        : Helvetica, Arial, sans-serif !important;
 $monospace-font     : Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
 // 
@@ -235,10 +240,10 @@ $screen-sizes: (
 // 
 // Colors
 // --------------------------------------
-$color1 	: red;
-$color2 	: green;
-$color3 	: yellow;
-$color4 	: blue;
+$color1     : #e4032e;  // rojo shine
+$color2     : #831f82;  // morado
+$color3     : #e6007e; // magenta
+$color4     : #169fdb;  // cyan
 
 
 $colorf 	: #ffffff;

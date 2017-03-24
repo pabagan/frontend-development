@@ -12,6 +12,7 @@ $squares-class      : "c-sq";
 //
 [class*="#{$squares-class}"] {
 	display: inline-block;
+  text-align: center;
 }
 
 @each $size, $value in $rem-sizes {

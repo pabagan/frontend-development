@@ -12,7 +12,7 @@
 
 // heights
 $appHeader-height           : $size-rem-md;
-$appHeader-bg               : transparent;
+$appHeader-bg               : $grey12;
 
 // Logo
 // 
@@ -66,7 +66,7 @@ $main-nav2-i-padding    : 0 $size-rem-1;
 // Color
 $main-nav2-color        : $color0;
 $main-nav2-active-bg    : $color1;
-$main-nav2-active-color : $grey4;
+$main-nav2-active-color : $colorf;
 $main-nav2-bg           : transparent;
 $main-nav2-child-bg     : $color3;
 $main-nav2-child-color  : $color1;
@@ -97,7 +97,6 @@ $main-nav2-child-color  : $color1;
     height: $appHeader-height;
     
     &__link {
-        border: 4px solid green !important;
         display: block;
         padding: 0;
         font-size: $h2-fs;

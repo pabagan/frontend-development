@@ -12,7 +12,7 @@
     
     <noscript>Hey! Javascript should be activated.</noscript><!-- noscript -->
     
-    <header class="app-header app-header--fixed" role="banner">
+    <header class="app-header app-header--fixed bg-grey12" role="banner">
       <div class="app-logo">
         <a class="app-logo__link" href="/" rel="home">
           <span class="site-title sr-only">Carofile</span>
@@ -65,19 +65,18 @@
     <div id="unitTestBar" class="is_fixed l-window">
       <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-0 color-f"></button>
       <!-- Unit Test Navigation JS populated-->
-      <div id="utNavWrap" class="c-bar-right c-w-xl p-xs is_off bg0">
-        <div id="unitTestBarNav" class="c-row bg-0 hd-space p-sm"></div>
+      <div id="utNavWrap" class="c-bar c-bar--right is_off bg-0">
+        <div id="unitTestBarNav" class="c-row p-md"></div>
       </div>
     </div>
     <main id="unitTest">
       <div class="c-row">
         <h2 id="presentation" data-module-title class="utSectionTitle">Presentation</h2>
         <!-- Presentacion Coaching Empresas -->
-        <div class="c-row ct-light c-row-sm-12 c-img-bg-fix hd-space" style="background-image: url(/assets/img/slide-3.png)">
+        <div class="c-row ct-light c-row-sm-12 c-bg c-bg--fix hd-space" style="background-image: url(/assets/img/1920x1080.jpg)">
           <div class="c-container is_v-center p-lg-vert textcenter">
-            <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750"> Hey there! Look how cool we do! </h1>
-            <p class="f-lg" data-appear data-offset="100%" data-animation="slideDownIn 250 550"> Ipsum xitito Torpedo amatomaa caballo blanco caballo negroorl torpedo va usté muy cargadoo papaar papaar va usté muy cargadoo se calle ustée caballo blanco caballo negroorl. Se calle ustée diodenoo por la gloria de mi madre diodeno la caidita
-              ahorarr quietooor se calle ustée. </p>
+            <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">This is a presentation lay</h1>
+            <p class="f-lg" data-appear data-offset="100%" data-animation="slideDownIn 250 550"> Ipsum xitito Torpedo amatomaa caballo blanco caballo negroorl torpedo va usté muy cargadoo papaar papaar va usté muy cargadoo se calle ustée caballo blanco caballo negroorl.</p>
             <p class="c-m-xl-top" data-appear data-offset="100%" data-animation="slideUpIn 350 650">
               <a href="javascript:void(0);" data-scroll-to="#business-active" class="anim-bt-1 c-sq-md color-f circled c-border">
                 <span class="c-icon-lg i-arrow-down" aria-hidden="true"></span>
@@ -91,7 +90,7 @@
       <div class="c-row">
         <h2 id="image-text-module" data-module-title class="utSectionTitle">Images and Text Module</h2>
         <div id="business-active" class="c-row" data-fit-children>
-          <div class="c-col-xs-12 c-col-md-6 p-0 c-img-bg" style="background-image: url(/assets/img/shine/empresas/shine-coaching-empresas.jpg)">
+          <div class="c-col-xs-12 c-col-md-6 p-0 c-bg" style="background-image: url(/assets/img/shine/empresas/shine-coaching-empresas.jpg)">
             <img class="c-img is_hide-md" src="/assets/img/shine/empresas/shine-coaching-empresas.jpg" /> </div>
           <div class="c-col-xs-12 c-col-md-6 p-lg bg-grey9" data-appear data-animation="slideRightBigIn 750 0">
             <h2 class="color-emp1"> A cool text/image module </h2>
@@ -109,7 +108,7 @@
     -->
       <div class="c-row">
         <h2 id="formularios" data-module-title class="utSectionTitle">Forms</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-form-bg</code> to form label.</p>
         </div>
         <div id="c-contact" class="c-row bg-1 c-shadow-inner-top-left no_overflow">
@@ -136,7 +135,7 @@
                 <button type="submit" class="c-btn-ln c-btn-ln-f">Submit</button>
               </form>
             </div>
-            <div id="form-KO-msg" class="c-curtain-top is_off bg-f p-lg textcenter">
+            <div id="form-KO-msg" class="c-curtain c-curtain--top is_off bg-f p-lg textcenter">
               <button data-close-parent class="c-sq-sm bg-transparent is_top-right" type="button">
                 <span class="c-icon-sm i-cross"></span>
                 <span class="sr-only"> Close </span>
@@ -147,7 +146,7 @@
               </div>
             </div>
             <!-- #form-KO-msg -->
-            <div id="form-OK-msg" class="c-curtain-top is_off bg-f p-lg textcenter">
+            <div id="form-OK-msg" class="c-curtain c-curtain--top is_off bg-f p-lg textcenter">
               <button data-close-parent class="c-sq-sm bg-transparent is_top-right" type="button">
                 <span class="c-icon-sm i-cross" aria-hidden="true"></span>
                 <span class="sr-only"> Close </span>
@@ -179,15 +178,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Heights rem
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Heights rem
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="height-rem" data-module-title class="utSectionTitle">Height rem</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-h-[xs,sm,md,lg,xl]</code>.
             <ul class="c-l-float">
               <li class="c-h-xs">XS</li>
@@ -198,16 +197,17 @@
             </ul>
         </div>
       </div>
+      
       <!-- 
-    ******************************************************
-    ******************************************************
-      Widths rem
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Widths rem
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="width-rem" data-module-title class="utSectionTitle">Width rem</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-w-[xs,sm,md,lg,xl]</code>.
             <ul class="c-l-float">
               <li class="c-w-xs">XS</li>
@@ -222,7 +222,7 @@
       <div class="c-row">
         <h2 id="Media content" data-module-title class="utSectionTitle">Media content</h2>
         
-        <div class="c-container c-boxv-lg">
+        <div class="c-container c-boxv c-boxv-lg">
           <p>
             Class <code>media__thumb</code> and <code>media__ct</code>. Align content adding extra class with modifier <code>media__ct--[bottom,mid, top]</code>.
           </p>
@@ -261,15 +261,15 @@
       </div>
     
       <!-- 
-    ******************************************************
-    ******************************************************
-      LISTS
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        LISTS
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="listas" data-module-title class="utSectionTitle">Lists</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>List inline</h2>
           <p>Class <code>class="c-l-inline"</code> over list element.</p>
           <ul class="c-l-inline">
@@ -280,7 +280,7 @@
             <li>Elemento 5</li>
           </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>List block</h2>
           <p>Add <code>c-l-block</code> over list element.</p>
           <ul class="c-l-block">
@@ -297,7 +297,7 @@
             <li>Elemento 5</li>
           </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>List float</h2>
           <p>Add <code>class="c-l-tiles"</code> con iconos.</p>
           <ul class="c-l-float c-m-child-xs-right">
@@ -315,7 +315,7 @@
             </li>
           </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>List icons</h2>
           <p>Add <code>class="c-l-icons is_[sm,md,lg,xl]"</code> con iconos.</p>
           <ul class="c-l-icons is_sm">
@@ -346,40 +346,30 @@
           </ul>
         </div>
       </div>
+
       <!-- 
-    ******************************************************
-    ******************************************************
-      LISTS ADMIN UI
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        LISTS ADMIN UI
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="admin-UI" data-module-title class="utSectionTitle">Admin UI</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>List admin</h2>
           <p>Class <code>c-manager-list</code>. And many more. See and copy the code at console.</p>
           <p>Add <code>c-l-admin</code> over list element.</p>
-          <div class="c-row">
-            <div class="c-manager-header h3 is_upper"> Elemento 1 </div>
-            <ul class="c-manager-list">
-              <li class="c-manager-wrap">
-                <a class="c-manager-item" href="#"> Elemento 1 </a>
-                <div class="c-manager-controls">
-                  <a href="#">
+          <div class="c-manager">
+            <div class="c-manager__header h3 is_upper"> Elemento 1 </div>
+            <ul class="c-manager__list">
+              <li class="c-manager-item">
+                <a class="c-manager-item__name" href="#"> Elemento 1 </a>
+                <div class="c-manager-item__controls">
+                  <a class="c-manager-item__bt" href="#">
                     <span class="c-icon i-pencil" aria-hidden="true"></span>
                   </a>
-                  <a href="#">
-                    <span class="c-icon i-eye" aria-hidden="true"></span>
-                  </a>
-                </div>
-              </li>
-              <li class="c-manager-wrap">
-                <a class="c-manager-item" href="#"> ... </a>
-                <div class="c-manager-controls">
-                  <a href="#">
-                    <span class="c-icon i-pencil" aria-hidden="true"></span>
-                  </a>
-                  <a href="#">
+                  <a class="c-manager-item__bt" href="#">
                     <span class="c-icon i-eye" aria-hidden="true"></span>
                   </a>
                 </div>
@@ -388,18 +378,19 @@
           </div>
         </div>
       </div>
+
       <!-- 
-    ******************************************************
-    ******************************************************
-      Squares
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Squares
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="squares" data-module-title class="utSectionTitle">Square rem</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-sq-[xs,sm,md,lg,xl]</code>. </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <ul class="c-l-float">
             <li class="c-sq-xs">XS</li>
             <li class="c-sq-sm">SM</li>
@@ -409,16 +400,17 @@
           </ul>
         </div>
       </div>
+      
       <!-- 
-    ******************************************************
-    ******************************************************
-      ICONOS: Creadas por JS
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        ICONOS: Creadas por JS
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="iconos" data-module-title class="utSectionTitle">Iconos</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-icon c-icon-[xs,sm,md,lg,xl]</code>.</p>
         </div>
         <div class="c-row textcenter">
@@ -442,7 +434,7 @@
           <div id="c-icon-list-xl"></div>
           <hr class="salto-lg"> </div>
         <!-- Icon con elementos -->
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>Icons list</h2>
           <div class="c-col-xs-12 c-col-sm-4">
             <h3>Cabecera</h3>
@@ -514,40 +506,41 @@
           </div>
         </div>
       </div>
+      
       <!-- 
-    ******************************************************
-    ******************************************************
-      BARS
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        BARS
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="bars" data-module-title class="utSectionTitle">Fixed bars</h2>
-        <div class="c-container">
-          <p>Fixed bars with: <code>c-bar-[top|right|bottom|left]</code>. Mix with height/width classes usually.</p>
+        <div class="c-container c-boxv">
+          <p>Fixed bars with: <code>c-bar</code> and <code>c-bar c-bar---[t,r,b,l]</code>.</p>
         </div>
         <div class="c-row-xs-6 is_rel bg-grey7 ct-light">
-          <div class="c-bar-right p-md is_abs bg-1">Bar right</div>
-          <div class="c-bar-left p-md is_abs bg-2">Bar left</div>
+          <div class="c-bar c-bar--right p-md is_abs bg-1">Bar right</div>
+          <div class="c-bar c-bar--left p-md is_abs bg-2">Bar left</div>
         </div>
         <div class="c-row-xs-6 is_rel bg-grey7 ct-light">
-          <div class="c-bar-top p-md is_abs bg-1">Bar top</div>
-          <div class="c-bar-bottom p-md is_abs bg-2">Bar bottom</div>
+          <div class="c-bar c-bar--top p-md is_abs bg-1">Bar top</div>
+          <div class="c-bar c-bar--bottom p-md is_abs bg-2">Bar bottom</div>
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      BUTTONS BG
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        BUTTONS BG
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="botones-bg" data-module-title class="utSectionTitle">Buttons BG</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Add a/button/input <code>c-btn c-btn-[sm,lg] btn-[1-2-3]</code>.</p>
         </div>
-        <div class="c-container textcenter">
+        <div class="c-container c-boxv textcenter">
           <p class="p-sm">
             <button type="submit" class="c-btn c-btn-sm btn-1">Button SM</button>
           </p>
@@ -560,18 +553,18 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      BUTTONS LINED
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        BUTTONS LINED
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="botones-ln" data-module-title class="utSectionTitle">Buttons lined</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Add a/button/input <code>c-btn-ln c-btn-ln-[size] btn-[style]</code>.</p>
         </div>
-        <div class="c-container textcenter">
+        <div class="c-container c-boxv textcenter">
           <p class="p-sm">
             <button type="submit" class="c-btn-ln c-btn-ln-sm btn-1">Button SM</button>
           </p>
@@ -607,15 +600,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-       NAVEGACIÓN
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+         NAVEGACIÓN
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="navigation" data-module-title class="utSectionTitle">Navigation</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>Nav inline</h2>
           <p>Class <code>c-nav-bar</code> sobre elemento de lista.</p>
           <ul class="c-nav-bar">
@@ -647,7 +640,7 @@
             </li>
           </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h2>Nav vertical</h2>
           <p>Class <code>c-nav nav-col</code> sobre elemento de lista.</p>
           <ul class="c-nav-col">
@@ -681,17 +674,17 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Shadows
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Shadows
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="shadows-secc" data-module-title class="utSectionTitle">Box Shadows</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-shadow</code> normal and <code>c-shadow-[bottom,top-right-inner, top-left-inner])</code>. </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <ul class="c-l-float c-m-child-xl-left">
             <li class="c-sq-md c-shadow">Normal</li>
             <li class="c-sq-md c-shadow-bottom">Bottom</li>
@@ -703,15 +696,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Inner spacing: padding
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Inner spacing: padding
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="espacios" data-module-title class="utSectionTitle">Spacing paddings</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>p-[xxs,xs,sm,md,lg,xl]</code>.
             <ul>
               <li>XXS: <code>0.52%</code></li>
@@ -722,7 +715,7 @@
               <li>XL: <code>16.64%</code></li>
             </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <div class="c-row">
             <div class="p-xs">
               <div style="line-height: 1;"> XXS </div>
@@ -744,22 +737,22 @@
             </div>
           </div>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <h3>Mix sizes is available</h3>
           <p>Next <code>p-sm-lat p-lg-vert </code>.</p>
           <div class="p-sm-lat p-lg-vert">XXS</div>
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Outer Spacing: margins
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Outer Spacing: margins
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="espacios-margin" data-module-title class="utSectionTitle">Spacing margins</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-m-[size]</code> applies top/bottom margins. Can also use <code>c-m-[size]-[top,right bottom, left]</code> </p>
           <ul>
             <li>XS: <code>0.333rem</code></li>
@@ -773,7 +766,7 @@
           -->
           </ul>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <div class="c-row-xs">
             <div class="c-m-xs">c-m-xs</div>
             <div class="c-m-sm">c-m-sm</div>
@@ -787,15 +780,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Child margins
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Child margins
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="child-margin-secc" data-module-title class="utSectionTitle">Children spacing</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Class <code>c-m-child-[size]-[left,right]</code> applies side/bottom margins.</p>
           <div class="c-row">
             <div class="p-vert">
@@ -822,12 +815,12 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-       Entry Boxes
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+         Entry Boxes
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="entradas" data-module-title class="utSectionTitle">Masonry boxes</h2>
         <div class="c-row">
@@ -836,15 +829,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Typo
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Typo
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="typo-secc" data-module-title class="utSectionTitle">Typo</h2>
-        <div class="c-row c-container">
+        <div class="c-row c-container c-boxv">
           <h1>h1 - Patience you must have my young padawan</h1>
           <h2>h2 - Patience you must have my young padawan</h2>
           <h3>h3 - Patience you must have my young padawan</h3>
@@ -860,15 +853,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      GRID
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        GRID
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="columnas-caja-de-texto" data-module-title class="utSectionTitle">Grid</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Is a 12 columns grid <code>c-col-[xs,sm,md,lg,xl]-[1-12]</code> applies side/bottom margins.</p>
         </div>
         <div class="c-row">
@@ -893,19 +886,19 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      VERTICAL GRID
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        VERTICAL GRID
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="vertical-grid" data-module-title class="utSectionTitle">Vertical grid</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Add <code>c-row-[1-12]-[size]</code>. Each size fit to the viewport size percentage being 12 100% and 1 100/12%.</p>
           <p>Height grid needs a html and body to be relative and 100% height.</p>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <div class="c-row-xs-1 bg0 color-f">1/12</div>
           <div class="c-row-xs-2 bg-grey1 color-f">2/12</div>
           <div class="c-row-xs-3 bg-grey2 color-f">3/12</div>
@@ -920,16 +913,17 @@
           <div class="c-row-xs-12 bg-grey11">12/12</div>
         </div>
       </div>
+      
       <!-- 
-    ******************************************************
-    ******************************************************
-       CENTRADO VERTICAL
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+         CENTRADO VERTICAL
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="centrado-vertical" data-module-title class="utSectionTitle">Vertical centering</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Parent class with a fit height (can use grid height) and child applies a centering class <code>is_v-center</code>.</p>
           <ul>
             <li><code>is_v-center</code></li>
@@ -946,16 +940,16 @@
           </ul>
         </div>
         <div class="c-row c-row-xs-12 c-row-md-6 bg-grey11">
-          <div class="c-container is_v-center bg-grey6">
+          <div class="c-container c-boxv is_v-center bg-grey6">
             <h2>fit height / is_v_center</h2>
           </div>
         </div>
         <div class="c-row c-row-xs-12 c-row-md-6 bg-grey9">
-          <div class="c-container is_bottom-right bg-grey6">
+          <div class="c-container c-boxv is_bottom-right bg-grey6">
             <h2>fit height / is_bottom-right</h2>
           </div>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Example using height grid and vertical centering <code>is_v-center</code>.</p>
         </div>
         <div class="c-col-xs-12 c-col-sm-6 c-row-xs-12 bg-grey8">
@@ -980,15 +974,15 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-       PARALLAX BACKGROUND CON STELLAR
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+         PARALLAX BACKGROUND CON STELLAR
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="parallax-bg" data-module-title class="utSectionTitle">Parallax Backgrounds</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Parallax js still buggy
             <a href="#" target="_blank">using XXX</a>.</p>
         </div>
@@ -1034,34 +1028,34 @@
       </div>
       --></div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      Curtains
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        Curtains
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="curtain-lays" data-module-title class="utSectionTitle">Curtain Lays</h2>
-        <div class="c-container">
-          <p>Add inner lay with <code>c-curtain-[top,right,bottom,left]</code>.</p>
+        <div class="c-container c-boxv">
+          <p>Parent with <code>c-curtain-ct</code> and inner lay with <code>c-curtain c-curtain--[top,right,bottom,left]</code>.</p>
         </div>
-        <div class="c-curtain-ct is_on c-col-xs-6 c-col-lg-3 bg-grey7">
-          <div class="c-curtain-top bg-3 ct-light textcenter">
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey7 p-xl">
+          <div class="c-curtain c-curtain--t bg-3 ct-light textcenter">
             <h3 class="is_v-center">Curtain top</h3>
           </div>
         </div>
-        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey8">
-          <div class="c-curtain-right bg-4 ct-light textcenter">
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey8 p-xl">
+          <div class="c-curtain c-curtain--r bg-4 ct-light textcenter">
             <h3 class="is_v-center">Curtain rigth</h3>
           </div>
         </div>
-        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey9">
-          <div class="c-curtain-bottom bg-3 ct-light textcenter">
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey9 p-xl">
+          <div class="c-curtain c-curtain--b bg-3 ct-light textcenter">
             <h3 class="is_v-center">Curtain bottom</h3>
           </div>
         </div>
-        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey10">
-          <div class="c-curtain-left bg-4 ct-light textcenter">
+        <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey10 p-xl">
+          <div class="c-curtain c-curtain--l bg-4 ct-light textcenter">
             <h3 class="is_v-center">Curtain left</h3>
           </div>
         </div>
@@ -1075,12 +1069,12 @@
     -->
       <div class="c-row">
         <h2 id="curtain-lays-closable" data-module-title class="utSectionTitle">Curtain Lays (close)</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Add inner lay with <code>c-curtain-[top,right,bottom,left]</code> and a button child with <code>close-parent-link</code> class</p>
         </div>
         <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
           <h4>Curtain amazing content</h4>
-          <div class="c-curtain-top is_on bg-3 ct-light p-md-lat pr-sm-vert">
+          <div class="c-curtain c-curtain--top is_on bg-3 ct-light p-md-lat pr-sm-vert">
             <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
               <span class="c-icon-sm i-cross" aria-hidden="true"></span>
               <span class="sr-only"> Close </span>
@@ -1090,7 +1084,7 @@
         </div>
         <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
           <h4>Curtain amazing content</h4>
-          <div class="c-curtain-left is_on bg-3 ct-light p-md-lat pr-sm-vert">
+          <div class="c-curtain c-curtain--left is_on bg-3 ct-light p-md-lat pr-sm-vert">
             <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
               <span class="c-icon-sm i-cross" aria-hidden="true"></span>
               <span class="sr-only"> Close </span>
@@ -1100,7 +1094,7 @@
         </div>
         <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
           <h4>Curtain amazing content</h4>
-          <div class="c-curtain-bottom is_on bg-3 ct-light p-md-lat pr-sm-vert">
+          <div class="c-curtain c-curtain--bottom is_on bg-3 ct-light p-md-lat pr-sm-vert">
             <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
               <span class="c-icon-sm i-cross" aria-hidden="true"></span>
               <span class="sr-only"> Close </span>
@@ -1110,7 +1104,7 @@
         </div>
         <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
           <h4>Curtain amazing content</h4>
-          <div class="c-curtain-right is_on bg-3 ct-light p-md-lat pr-sm-vert">
+          <div class="c-curtain c-curtain--right is_on bg-3 ct-light p-md-lat pr-sm-vert">
             <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
               <span class="c-icon-sm i-cross" aria-hidden="true"></span>
               <span class="sr-only"> Close </span>
@@ -1128,7 +1122,7 @@
     -->
       <div class="c-row">
         <h2 id="fit-childs" data-module-title class="utSectionTitle">Fit Childs</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Javascript fit children's height. Add parent lay <code>data-fit-children</code>.</p>
           <p>Adjust children heights equal to highest child.</p>
         </div>
@@ -1162,10 +1156,10 @@
     -->
       <div class="c-row">
         <h2 id="velocity-toggle" data-module-title class="utSectionTitle">Velocity toggle</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Add velocity FX to toggle in/out lays. This is how toggle buttons/link are labeled <code>data-toggle-velocity aria-expanded="true" aria-controls="velocityTogglerCt2" id="velocityToggler2" type="submit" class="c-btn btn-1"</code></p>
         </div>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <div class="c-row">
             <div class="bg-grey8 c-col-xs-3 p-0">
               <button data-toggle-velocity aria-expanded="true" aria-controls="velocityTogglerCt" id="velocityToggler" type="submit" class="c-btn btn-1">toggle Open 1</button>
@@ -1189,7 +1183,7 @@
     -->
       <div class="c-row bg-grey1 ct-light">
         <h2 id="jumbo" data-module-title class="utSectionTitle">Jumbo</h2>
-        <div class="c-container c-row-sm-12 p-lg-vert">
+        <div class="c-container c-boxv c-row-sm-12 p-lg-vert">
           <div class="is_v-center textcenter">
             <h2 class="jumbo">Jumbo example</h2>
             <p class="p-lg">Esta es la hoja única de desarrollo de elementos. Iremos enriqueciéndola con la experiencia. Que es la madre de la ciencia.</p>
@@ -1206,7 +1200,7 @@
     -->
       <div class="c-row">
         <h2 id="owl" data-module-title class="utSectionTitle">Slider Owl</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p>Using
             <a href="https://github.com/OwlFonk/OwlCarousel" target="_blank">OwlCarousel</a>.</p>
           <div id="owl-demo" class="owl-carousel slider-nav-prev owl-theme">
@@ -1249,7 +1243,7 @@
     -->
       <div class="c-row">
         <h2 id="animaciones" data-module-title class="utSectionTitle">Animate appear</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <p> Add <code>data-appear</code> animatable elemnt. Could also add <code>data-animation="animation duration delay stagger"</code> eg: <code>data-animation="slideLeftBigIn 550 500"</code>. </p>
           <p> Can also use <code>data-appear-children</code> to animate children. Same <code>data-animation="animation duration delay stagger"</code> would be applied to children. Eg: <code>data-animation="slideLeftBigIn 550 500"</code>. </p>
         </div>
@@ -1289,7 +1283,7 @@
     ******************************************************
     <div class="c-row">
       <h2 id="parallax-scene" data-module-title class="utSectionTitle">Parallax Scene</h2>
-      <div class="c-container">
+      <div class="c-container c-boxv">
         <p>Using <a href="http://matthew.wagerfield.com/parallax/" target="_blank">Parrallax Wagerfield</a>.</p>
       </div>
       <div id="sceneParallaxWrap" class="c-row c-row-xs-12 bg-grey11">
@@ -1315,7 +1309,7 @@
     -->
       <div class="c-row">
         <h2 id="bootstrap" data-module-title class="utSectionTitle">BootStrap (todo)</h2>
-        <div class="c-container">
+        <div class="c-container c-boxv">
           <!-- Tabs -->
           <div class="c-col-xs-12">
             <h2>Tabs</h2>
@@ -1411,7 +1405,7 @@
             </div>
           </div>
         </div>
-        <!-- .c-container -->
+        <!-- .c-container c-boxv -->
       </div>
       <!-- #bootstrap -->
       <!-- 

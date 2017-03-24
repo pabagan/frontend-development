@@ -9,30 +9,20 @@
 Style CRUD like list with click buttons inlined to de title.
 
 ```html
-<div class="c-row">
-  <div class="c-manager-header h3 is_upper">
-    Elemento 1 
-  </div>
-  <ul class="c-manager-list">
-    <li class="c-manager-wrap">
-      <a class="c-manager-item" href="#">
-        Elemento 1 
-      </a>
-      <div class="c-manager-controls">                
-        <a href="#"><span class="c-icon i-pencil" aria-hidden="true"></span></a>
-        <a href="#"><span class="c-icon i-eye" aria-hidden="true"></span></a>
+<div class="c-manager">
+  <div class="c-manager__header h3 is_upper"> Elemento 1 </div>
+  <ul class="c-manager__list">
+    <li class="c-manager-item">
+      <a class="c-manager-item__name" href="#"> Elemento 1 </a>
+      <div class="c-manager-item__controls">
+        <a class="c-manager-item__bt" href="#">
+          <span class="c-icon i-pencil" aria-hidden="true"></span>
+        </a>
+        <a class="c-manager-item__bt" href="#">
+          <span class="c-icon i-eye" aria-hidden="true"></span>
+        </a>
       </div>
-    </li> 
-
-    <li class="c-manager-wrap">
-      <a class="c-manager-item" href="#">
-        ...
-      </a>
-      <div class="c-manager-controls">                
-        <a href="#"><span class="c-icon i-pencil" aria-hidden="true"></span></a>
-        <a href="#"><span class="c-icon i-eye" aria-hidden="true"></span></a>
-      </div>
-    </li> 
+    </li>
   </ul>
 </div>
 ```

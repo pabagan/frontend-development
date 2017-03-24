@@ -19,15 +19,6 @@ $list-icons-sizes: (
 // 
 // Create font-sizes and line-height
 // 
-.#{$list-icons-class}{
-   	.#{$icons-class}{ 
-   		//float:left;
-   	}
-
-   	li{
-   		//@include clearfix();
-   	}
-}
 @each $size, $icon-config in $list-icons-sizes {
     .#{$list-icons-class}{
 	    &.is_#{$size} { 

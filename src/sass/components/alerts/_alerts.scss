@@ -13,6 +13,13 @@ $alert-class   : "c-alert";
 	margin: $space-md 0;
 	background-color: $grey7;
 	@include border-radius(4px);
+
+  &--error{
+    background-color: red;
+  }
+  &--success{
+    background-color: green;
+  }
 }
 
 // TODO: colors

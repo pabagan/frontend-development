@@ -109,7 +109,7 @@
                 // Toggle button
                 // Strart nav html
                 o += '<nav class="c-row">';
-                    o += '<ul class="c-nav-col ct-light">';
+                    o += '<ul class="c-l-block ct-light">';
                         // Loop links
                         $.each(jQuery('[data-module-title]'), function(i){
                             // Add order number to title
@@ -260,7 +260,7 @@
                 // Toggle button
                 // Strart nav html
                 o += '<nav class="c-row">';
-                    o += '<ul class="c-nav-col ct-light">';
+                    o += '<ul class="c-l-block ct-light">';
                         // Loop links
                         $.each(jQuery('[data-module-title]'), function(i){
                             // Add order number to title
