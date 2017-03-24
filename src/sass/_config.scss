@@ -235,10 +235,10 @@ $screen-sizes: (
 // 
 // Colors
 // --------------------------------------
-$color1 	: #FECB00; 	// amarillo carofile
-$color2 	: #831f82; 	// morado
-$color3 	: #e6007e; // magenta
-$color4 	: #169fdb; 	// cyan
+$color1 	: red;
+$color2 	: green;
+$color3 	: yellow;
+$color4 	: blue;
 
 
 $colorf 	: #ffffff;
@@ -266,9 +266,9 @@ $colors: (
 	"font":  	$colorf,
     "0":        $color0,
 	"1":		$color1,
-	//"2":		$color2,
-	//"3":		$color3,
-	//"4":		$color4,
+	"2":		$color2,
+	"3":		$color3,
+	"4":		$color4,
 	"grey1":  	$grey1,
 	"grey2":  	$grey2,
 	"grey3":  	$grey3,

@@ -1,3 +1,12 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   Includes and Configuration
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
 // Includes
 @import "inc/mixins/mixins";
 @import "inc/functions/functions";
@@ -6,28 +15,164 @@
 @import "config";
 
 // Shine overwrites
-//@import "sites-extras/shine-coaching/config";
+//@import "themes/shine-coaching/config";
 
-// SMACSS parts
-@import "base/base";
-@import "layout/layout";
-@import "components/components";
-@import "states/states";
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - Base rules
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+@import "base/resets/normalize";
+@import "base/resets/normalize-extended";
+//@import "base/fonts/fonts-percentage"; // declares percengage font
+@import "base/fonts/fonts-rem";
+//@import "base/fonts/font-face";
+//@import "base/colors/colors-shine";
+@import "base/colors/colors";
+// Default vertical rythm.
+// Is complemented via classes living in 
+// component/margins and component/paddings.
+@import "base/vertical-rythm/vertical-rythm";
 
-// Vendor Sass
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - Layout rules
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+ 
+//@import "layout/01-toggled-navigation"; 
+@import "layout/grid/grid-width";
+@import "layout/grid/grid-height";
+
+// testing
+//@import "layout/flex-3-cols";
+//@import "layout/flex-holy-grial-3-cols";
+
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - Components
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+//@import "components/alerts/alerts";
+@import "components/appear/appear";
+@import "components/borders/borders";
+@import "components/sizes/heights-rem";
+@import "components/sizes/widths-rem";
+@import "components/squares/squares";
+
+// margins & paddings
+@import "components/boxes/boxes";
+@import "components/paddings/paddings";
+@import "components/margins/margins";        
+@import "components/margins/margin-children";   
+
+
+@import "components/bars/bars";
+@import "components/backgrounds/backgrounds";
+@import "components/arrowed-lay/inner-arrow";
+//@import "components/arrowed-lay/outer-arrow";
+@import "components/forms/forms";
+@import "components/images/images";
+@import "components/embeds/embeds";
+@import "components/screen-readers/screen-readers";
+@import "components/icons/icons";
+@import "components/icons/bonicons-md";
+@import "components/lists/lists";
+@import "components/lists/lists-icons";
+@import "components/lists/list-adminUI";
+@import "components/buttons/button-bg";
+@import "components/buttons/button-ln";
+@import "components/shadows/shadows";
+@import "components/media/media";
+//@import "components/modals/modals";
+@import "components/navigation/navigation";
+@import "components/navbar/navbar";
+@import "components/navigation/superfish";
+//@import "components/slides/royal-slider";
+@import "components/separators/blank-space";
+@import "components/separators/separators";
+@import "components/sliders/owl-carousel2";
+@import "components/sliders/owl-theme2";
+@import "components/curtains/curtains";
+ 
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - base states
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+@import "states/z-index/z-index";
+@import "states/alignments/child-align";
+@import "states/alignments/block-align"; // floats
+@import "states/alignments/text-align";
+@import "states/display/display";
+@import "states/positions/positions";
+@import "states/scroll/scroll";
+@import "states/text/text-states";
+//@import "states/transitions/transitions";
+@import "states/visibility/visibility";
+
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - themes
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// shine
+@import "themes/carofile/carofile";
+
+// activate config at start of this 
+// file too
+//@import "themes/shine-coaching/shine"; 
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   Vendor CSSs
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
 //@import "vendor/animate-sass/animate";
 
 
-// tests
-//@import "tests";
-
-// WordPress Components
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   WordPress Components
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
 // @import "wordpress/wordpress";
-
-// shine
-@import "theme-extras";
 
 // Extras shine
 
 // Dev UI
 @import "../unitTest/unitTest";
+
+// tests
+//@import "tests";
