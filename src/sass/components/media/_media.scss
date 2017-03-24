@@ -8,20 +8,42 @@
  * --------------------------------------
  * -------------------------------------- */
 // cols: thumb / content
-.media-thumb, .media-ct{
-    display: table-cell;
-    vertical-align: top;
-    zoom: 1;
-  	overflow: hidden;
-}
-.media-thumb {
-    a{
-        display: block;
+$media-class      : "media";
+
+.#{$media-class}{
+    display: table;
+    @include clearfix();
+
+    &__thumb, &__ct{
+    
+        display: table-cell;
+        vertical-align: top;
+        zoom: 1;
+        overflow: hidden;
+
     }
-    img {
-        display: block;
+    
+    &__thumb{
+        &__link{
+            display: block;
+        }
+        &__img{
+            display: block;
+        }
     }
-}
-.media-ct{
-    padding: 0 $space-xs;
+    
+    &__ct{
+        padding: 0 $space-xs;
+        
+        &--mid{
+            vertical-align: middle;
+        }
+        &--top{
+            vertical-align: top;
+        }
+
+        &--bottom{
+            vertical-align: bottom;
+        }
+    }
 }

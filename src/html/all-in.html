@@ -6,49 +6,55 @@
     <meta name="googlebot" content="noindex">
     <title>Unit Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" id="geniux-google-fonts-css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C300italic%2C400%2C400italic%2C600%2C700%2C700italic%2C&#038;subset=latin%2Clatin-ext&#038;ver=1" type="text/css" media="all" />
     <link id="main-styles" type="text/css" href="assets/css/style.min.css" rel="stylesheet" /> </head>
   <body class="hd-space">
     <a class="skip-link sr-only" href="#gx-content">Skip to content</a>
-    <noscript>Hey! Javascript should be activated.</noscript>
-    <!-- noscript -->
-    <!-- 
-    ******************************************************
-    ******************************************************
-       HEADER & MAIN NAVIGATION
-    ******************************************************
-    ******************************************************
-  -->
-    <header id="app-topbar" class="site-header" role="banner">
-      <div id="app-logo" class="site-logo">
-        <a href="/" rel="home">
-          <span class="site-title sr-only"> Marca </span>
-          <img alt="" src="assets/img/unit-test-logo.png" /> </a>
-      </div>
-      <!-- #app-logo -->
-      <button id="nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="c-icon-sm" aria-hidden="true"></span>
+    
+    <noscript>Hey! Javascript should be activated.</noscript><!-- noscript -->
+    
+    <header class="app-header app-header--fixed" role="banner">
+      <div class="app-logo">
+        <a class="app-logo__link" href="/" rel="home">
+          <span class="site-title sr-only">Carofile</span>
+          <img class="app-logo__img"  alt="" src="assets/img/unit-test-logo.png" />
+        </a>
+        </a>
+      </div><!-- #app-logo -->
+
+      <button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-navigation">
+        <span class="app-nav-toggle__icon" aria-hidden="true"></span>
         <span class="sr-only"> Primary Menu </span>
-      </button>
-      <!--  #nav-toggle -->
-      <nav id="site-nav" class="site-navigation" role="navigation">
-        <div class="menu-monster-container">
-          <ul id="primary-menu" class="navbar-nav menu">
-            <li class="nav-item">
-              <a class="nav-link active" href="#home" data-scroll-to="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#profile" data-scroll-to="#profile">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#messages" data-scroll-to="#messages">Messages</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <!-- #site-navitation -->
-    </header>
-    <!-- #header -->
+      </button><!-- .nav-toggle -->
+
+      <nav id="app-navigation" class="app-nav" role="navigation">
+        <ul id="primary-menu" class="app-nav__list">
+          <li class="app-nav__item">
+            <a class="app-nav__link" href="#home" data-scroll-to="#home">Home</a>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__link app-nav__link--active" href="#home" data-scroll-to="#home">About</a>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__link" href="#home" data-scroll-to="#home">Item 2</a>
+            <ul class="app-subnav">
+              <li class="app-subnav__item">
+                <a class="app-subnav__link app-subnav-item__link--active" href="#home">
+                  Home hello
+                </a>
+              </li>
+              <li class="app-subnav__item">
+                <a class="app-subnav__link" href="#home">
+                  Item 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__link" href="#home" data-scroll-to="#home">About</a>
+          </li>
+        </ul><!-- .app-nav__list -->
+      </nav><!-- .app-nav -->
+    </header><!-- .app-header -->
   <!-- 
   ******************************************************
   ******************************************************
@@ -57,10 +63,10 @@
   ******************************************************
   -->
     <div id="unitTestBar" class="is_fixed l-window">
-      <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-grey0 color-f"></button>
+      <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-0 color-f"></button>
       <!-- Unit Test Navigation JS populated-->
-      <div id="utNavWrap" class="c-bar-right c-w-xl p-xs is_off bg-grey0">
-        <div id="unitTestBarNav" class="c-row bg-grey0 hd-space p-sm"></div>
+      <div id="utNavWrap" class="c-bar-right c-w-xl p-xs is_off bg0">
+        <div id="unitTestBarNav" class="c-row bg-0 hd-space p-sm"></div>
       </div>
     </div>
     <main id="unitTest">
@@ -156,14 +162,14 @@
           </div>
         </div>
         <div class="c-row">
-          <div class="c-col-xs-12 c-col-sm-6 textcenter">
+          <div class="c-col-xs-12 c-col-sm-6 c-box-lg textcenter">
             <p>
               <span class="c-icon-xl i-face-smile" aria-hidden="true"></span>
             </p>
             <h2>Form sent!</h2>
             <p>It goes well</p>
           </div>
-          <div class="c-col-xs-12 c-col-sm-6 textcenter">
+          <div class="c-col-xs-12 c-col-sm-6 c-box-lg textcenter">
             <p>
               <span class="c-icon-xl i-face-sad" aria-hidden="true"></span>
             </p>
@@ -212,6 +218,48 @@
             </ul>
         </div>
       </div>
+    
+      <div class="c-row">
+        <h2 id="Media content" data-module-title class="utSectionTitle">Media content</h2>
+        
+        <div class="c-container c-boxv-lg">
+          <p>
+            Class <code>media__thumb</code> and <code>media__ct</code>. Align content adding extra class with modifier <code>media__ct--[bottom,mid, top]</code>.
+          </p>
+          
+          <ul class="media c-l-block">
+            <li class="media">
+              <div class="media__thumb">
+                <img class="media__thumb__img c-w-lg" src="assets/img/640x640.jpg">
+              </div>
+              <div class="media__ct">
+                <span>Media default align to top just <code>media__ct</code></span> or overwrite with <code> media__ct--top</code>
+              </div>      
+            </li>
+
+            <li class="media">
+              <div class="media__thumb">
+                <img class="c-w-lg" src="assets/img/640x640.jpg">
+              </div>
+              <div class="media__ct media__ct--mid">
+                <span>Content at middle with <code>media__ct media__ct--mid</code></span>
+              </div>      
+            </li>
+
+            <li class="media">
+              <div class="media__thumb">
+                <a class="media__thumb__link" href="#">
+                  <span class="c-icon-xl c-sq-lg bg-grey8 i-twitter" aria-hidden="true"></span>
+                </a>
+              </div>
+              <div class="media__ct media__ct--bottom">
+                <span>Content at bottom with <code>media__ct media__ct--bottom</code> with clickable media.</span>
+              </div>      
+            </li>
+          </ul>
+        </div>
+      </div>
+    
       <!-- 
     ******************************************************
     ******************************************************
@@ -272,8 +320,12 @@
           <p>Add <code>class="c-l-icons is_[sm,md,lg,xl]"</code> con iconos.</p>
           <ul class="c-l-icons is_sm">
             <li>
-              <span class="c-icon i-twitter" aria-hidden="true"></span>
-              <span>this is a list item.</span>
+              <div class="media-thumb">
+                <span class="c-icon-md i-twitter" aria-hidden="true"></span>
+              </div>
+              <div class="media-ct">
+                <span>this is a list item.</span>
+              </div>
             </li>
             <li>
               <span class="c-icon i-facebook" aria-hidden="true"></span>
@@ -854,7 +906,7 @@
           <p>Height grid needs a html and body to be relative and 100% height.</p>
         </div>
         <div class="c-container">
-          <div class="c-row-xs-1 bg-grey0 color-f">1/12</div>
+          <div class="c-row-xs-1 bg0 color-f">1/12</div>
           <div class="c-row-xs-2 bg-grey1 color-f">2/12</div>
           <div class="c-row-xs-3 bg-grey2 color-f">3/12</div>
           <div class="c-row-xs-4 bg-grey3 color-f">4/12</div>
@@ -1370,7 +1422,7 @@
     ******************************************************
     -->
       <h2 id="footer-secc" data-module-title class="utSectionTitle">Footer</h2>
-      <footer id="footer" class="c-row bg-grey0">
+      <footer id="footer" class="c-row bg0">
         <div class="c-col-xs-12 c-col-md-6 ct-light">
           <h2>Hey!</h2>
           <p>Aenean posuere laoreet tristique. Vivamus eu tempus nibh. Integer vehicula tellus vel nisi volutpat, a egestas enim aliquet. Duis condimentum massa metus, quis cursus quam maximus quis.</p>
