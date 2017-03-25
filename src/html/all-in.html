@@ -12,56 +12,64 @@
     
     <noscript>Hey! Javascript should be activated.</noscript><!-- noscript -->
     
-    <header class="app-header app-header--fixed bg-grey12" role="banner">
-      <div class="app-logo">
-        <a class="app-logo__link" href="/" rel="home">
-          <span class="site-title sr-only">Carofile</span>
-          <img class="app-logo__img"  alt="" src="assets/img/unit-test-logo.png" />
-        </a>
-        </a>
-      </div><!-- #app-logo -->
+    <header class="app-header app-header--fixed app-header--shadow bg-grey12" role="banner">
+      <a class="app-logo" href="/" rel="home">
+        <span class="app-logo__txt sr-only">Brand</span>
+        <img class="app-logo__img"  alt="" src="assets/img/unit-test-logo.png" />
+      </a><!-- #app-logo -->
+    
 
-      <button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-navigation">
-        <span class="app-nav-toggle__icon" aria-hidden="true"></span>
-        <span class="sr-only"> Primary Menu </span>
-      </button><!-- .nav-toggle -->
+      <nav role="navigation">
+        <button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-nav">
+          <span class="sr-only">Primary Menu</span>
+        </button><!-- .nav-toggle -->
 
-      <nav id="app-navigation" class="app-nav" role="navigation">
-        <ul id="primary-menu" class="app-nav__list">
+        <ul id="app-nav" class="app-nav">
           <li class="app-nav__item">
-            <a class="app-nav__link" href="#home" data-scroll-to="#home">Home</a>
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">Home</a>
           </li>
           <li class="app-nav__item">
-            <a class="app-nav__link app-nav__link--active" href="#home" data-scroll-to="#home">About</a>
+            <a class="app-nav__item__link app-nav__item__link--active" href="#home" data-scroll-to="#home">About</a>
           </li>
           <li class="app-nav__item">
-            <a class="app-nav__link" href="#home" data-scroll-to="#home">Item 2</a>
-            <ul class="app-subnav">
-              <li class="app-subnav__item">
-                <a class="app-subnav__link app-subnav-item__link--active" href="#home">
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">Item 2</a>
+            <ul class="app-nav__subnav">
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link app-nav__subnav__link--active" href="#home">
                   Home hello
                 </a>
               </li>
-              <li class="app-subnav__item">
-                <a class="app-subnav__link" href="#home">
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link" href="#home">
                   Item 2
                 </a>
               </li>
             </ul>
           </li>
           <li class="app-nav__item">
-            <a class="app-nav__link" href="#home" data-scroll-to="#home">About</a>
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">About</a>
+            <ul class="app-nav__subnav--r">
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link app-nav__subnav__link--active" href="#home">
+                  Home hello
+                </a>
+              </li>
+            </ul>
           </li>
-        </ul><!-- .app-nav__list -->
+        </ul><!-- .app-nav -->
       </nav><!-- .app-nav -->
     </header><!-- .app-header -->
-  <!-- 
-  ******************************************************
-  ******************************************************
-    Unit Test Sidebar
-  ******************************************************
-  ******************************************************
-  -->
+
+    <div class="c-row">
+      <h2 id="headers" data-module-title class="utSectionTitle">Headers</h2>
+    </div>
+    <!-- 
+    ******************************************************
+    ******************************************************
+      Unit Test Sidebar
+    ******************************************************
+    ******************************************************
+    -->
     <div id="unitTestBar" class="is_fixed l-window">
       <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="c-icon c-icon-xs i-menu-4 bg-0 color-f"></button>
       <!-- Unit Test Navigation JS populated-->
@@ -148,8 +156,15 @@
           </div>
         </div>
       </div>
-      <!-- About Co-active -->
-      
+
+      <!-- 
+      ******************************************************
+      ******************************************************
+        IMAGES AND TEXT MODULE
+      ******************************************************
+      ******************************************************
+      -->
+      <div class="c-row">
         <h2 id="image-text-module" data-module-title class="utSectionTitle">Images and Text Module</h2>
         <div id="business-active" class="c-row" data-fit-children>
           <div class="c-col-xs-12 c-col-md-6 p-0 c-bg" style="background-image: url(/assets/img/shine/empresas/shine-coaching-empresas.jpg)">
@@ -162,12 +177,12 @@
         </div>
       </div>
       <!-- 
-    ******************************************************
-    ******************************************************
-      FORMS
-    ******************************************************
-    ******************************************************
-    -->
+      ******************************************************
+      ******************************************************
+        FORMS
+      ******************************************************
+      ******************************************************
+      -->
       <div class="c-row">
         <h2 id="formularios" data-module-title class="utSectionTitle">Forms</h2>
         <div class="c-container c-boxv">
@@ -619,7 +634,7 @@
             <button type="submit" class="c-btn c-btn-sm btn-1">Button SM</button>
           </p>
           <p>
-            <button type="submit" class="c-btn btn-1">Button</button>
+            <button type="submit" class="c-btn c-btn-md btn-1">Button</button>
           </p>
           <p>
             <button type="submit" class="c-btn c-btn-lg btn-1">Button LG</button>
@@ -661,7 +676,7 @@
             <h3>Title</h3>
             <p>For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us.</p>
             <p>
-              <button type="submit" class="c-btn btn-1">Button MD</button>
+              <button type="submit" class="c-btn c-btn-md btn-1">Button MD</button>
             </p>
           </div>
           <div class="c-col-xs-12 c-col-sm-4">
@@ -856,41 +871,6 @@
       <!-- 
       ******************************************************
       ******************************************************
-        Child margins
-      ******************************************************
-      ******************************************************
-      -->
-      <div class="c-row">
-        <h2 id="child-margin-secc" data-module-title class="utSectionTitle">Children spacing</h2>
-        <div class="c-container c-boxv">
-          <p>Class <code>c-m-child-[size]-[left,right]</code> applies side/bottom margins.</p>
-          <div class="c-row">
-            <div class="p-vert">
-              <p>Applying right margin to children <code>c-m-child-lg-left</code>.</p>
-            </div>
-            <ul class="c-m-child-lg-left c-l-float">
-              <li class="c-sq-sm bg-grey3">Item 1</li>
-              <li class="c-sq-sm bg-grey3">Item 2</li>
-              <li class="c-sq-sm bg-grey3">Item 3</li>
-              <li class="c-sq-sm bg-grey3">Item 4</li>
-            </ul>
-          </div>
-          <div class="c-row">
-            <div class="p-vert">
-              <p>Applying right margin to children <code>c-m-child-lg-right</code>.</p>
-            </div>
-            <ul class="c-m-child-lg-right c-l-float">
-              <li class="c-sq-sm bg-grey3">Item 1</li>
-              <li class="c-sq-sm bg-grey3">Item 2</li>
-              <li class="c-sq-sm bg-grey3">Item 3</li>
-              <li class="c-sq-sm bg-grey3">Item 4</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- 
-      ******************************************************
-      ******************************************************
          Entry Boxes
       ******************************************************
       ******************************************************
@@ -940,9 +920,11 @@
         </div>
         <div class="c-row">
           <div class="c-col-xs-12 c-col-sm-4">
-            <p>c-col-xs-12 c-col-sm-4</p>
+            c-col-xs-12 c-col-sm-4
           </div>
-          <div class="c-col-xs-12 c-col-sm-8">c-col-xs-12 c-col-sm-8</div>
+          <div class="c-col-xs-12 c-col-sm-8">
+            c-col-xs-12 c-col-sm-8
+          </div>
         </div>
         <div class="c-row">
           <div class="c-col-xs-12">c-col-xs-12</div>
@@ -973,7 +955,7 @@
           <p>Height grid needs a html and body to be relative and 100% height.</p>
         </div>
         <div class="c-container c-boxv">
-          <div class="c-row-xs-1 bg0 color-f">1/12</div>
+          <div class="c-row-xs-1 bg-0 color-f">1/12</div>
           <div class="c-row-xs-2 bg-grey1 color-f">2/12</div>
           <div class="c-row-xs-3 bg-grey2 color-f">3/12</div>
           <div class="c-row-xs-4 bg-grey3 color-f">4/12</div>
@@ -1131,59 +1113,6 @@
         <div class="c-curtain-ct c-col-xs-6 c-col-lg-3 bg-grey10 p-xl">
           <div class="c-curtain c-curtain--l bg-4 ct-light textcenter">
             <h3 class="is_v-center">Curtain left</h3>
-          </div>
-        </div>
-      </div>
-      <!-- 
-    ******************************************************
-    ******************************************************
-      Curtains closable
-    ******************************************************
-    ******************************************************
-    -->
-      <div class="c-row">
-        <h2 id="curtain-lays-closable" data-module-title class="utSectionTitle">Curtain Lays (close)</h2>
-        <div class="c-container c-boxv">
-          <p>Add inner lay with <code>c-curtain-[top,right,bottom,left]</code> and a button child with <code>close-parent-link</code> class</p>
-        </div>
-        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
-          <h4>Curtain amazing content</h4>
-          <div class="c-curtain c-curtain--top is_on bg-3 ct-light p-md-lat pr-sm-vert">
-            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
-              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
-              <span class="sr-only"> Close </span>
-            </button>
-            <h5>Closeable Curtain top</h5>
-          </div>
-        </div>
-        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
-          <h4>Curtain amazing content</h4>
-          <div class="c-curtain c-curtain--left is_on bg-3 ct-light p-md-lat pr-sm-vert">
-            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
-              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
-              <span class="sr-only"> Close </span>
-            </button>
-            <h5>Closeable Curtain left</h5>
-          </div>
-        </div>
-        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
-          <h4>Curtain amazing content</h4>
-          <div class="c-curtain c-curtain--bottom is_on bg-3 ct-light p-md-lat pr-sm-vert">
-            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
-              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
-              <span class="sr-only"> Close </span>
-            </button>
-            <h5>Closeable Curtain bottom</h5>
-          </div>
-        </div>
-        <div class="c-col-xs-6 c-col-lg-3 bg-grey7 no_overflow">
-          <h4>Curtain amazing content</h4>
-          <div class="c-curtain c-curtain--right is_on bg-3 ct-light p-md-lat pr-sm-vert">
-            <button class="close-parent-link c-sq-sm bg-transparent is_abs is_top-right color-f" type="button" aria-expanded="true">
-              <span class="c-icon-sm i-cross" aria-hidden="true"></span>
-              <span class="sr-only"> Close </span>
-            </button>
-            <h5>Closeable Curtain right</h5>
           </div>
         </div>
       </div>
@@ -1490,8 +1419,8 @@
     ******************************************************
     -->
       <h2 id="footer-secc" data-module-title class="utSectionTitle">Footer</h2>
-      <footer id="footer" class="c-row bg0">
-        <div class="c-col-xs-12 c-col-md-6 ct-light">
+      <footer id="footer" class="c-row bg-0">
+        <div class="c-col-xs-12 c-col-md-6 c-box ct-light">
           <h2>Hey!</h2>
           <p>Aenean posuere laoreet tristique. Vivamus eu tempus nibh. Integer vehicula tellus vel nisi volutpat, a egestas enim aliquet. Duis condimentum massa metus, quis cursus quam maximus quis.</p>
           <div class="c-row">
@@ -1505,7 +1434,7 @@
             </ul>
           </div>
         </div>
-        <div class="c-col-xs-12 c-col-md-6 ct-light">
+        <div class="c-col-xs-12 c-col-md-6 c-box ct-light">
           <h2>Contact</h2>
           <p>Así es como puedes contactar con nosotros.</p>
           <ul class="c-l-block">
@@ -1517,7 +1446,7 @@
               <a href="tel:+346060606060">+34 405 303 116</a>
             </li>
           </ul>
-          <ul class="c-l-inline">
+          <ul class="c-l-inline mt-xl">
             <li>
               <a href="#" target="_blank" title="LinkedIn">
                 <span class="c-icon c-icon-sm i-linkedin" aria-hidden="true"></span>
@@ -1566,9 +1495,6 @@
       </div>
     </main>
     <!-- #unitTest -->
-    <script>
-      window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')
-    </script>
     <script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/main.min.js"></script>
   </body>

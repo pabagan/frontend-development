@@ -1,8 +1,11 @@
 .flex {
   display: flex;
-  background-color: lightgrey;
-  width: 400px;
-  height: 250px;
+}
+.flex {
+  display: flex;
+  //background-color: lightgrey;
+  //width: 400px;
+  //height: 250px;
   
   &--fit{
     // The align-items Property

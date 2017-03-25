@@ -165,10 +165,10 @@ $padding-xl     : 16.64%;
 $base-padding      : 0.625;
 $base-padding-u    : $base-padding + rem;
 
-$padding-xs     : 0.6rem;
-$padding-sm     : 1.2rem;
-$padding-md     : 1.8rem;
-$padding-lg     : 4rem;
+$padding-xs     : $base-padding-u;
+$padding-sm     : 1.250rem;
+$padding-md     : 1.875rem;
+$padding-lg     : 4.125rem;
 $padding-xl     : 9.2rem;
 
 $paddings-mobile:(

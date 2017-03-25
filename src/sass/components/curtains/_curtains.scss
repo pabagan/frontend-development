@@ -9,6 +9,7 @@ $curtain-class: 'c-curtain';
 
 // Curtain wrappert
 .#{$curtain-class}-ct{
+    position:relative;
     overflow: hidden;
 }
 

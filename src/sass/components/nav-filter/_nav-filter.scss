@@ -1,0 +1,28 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Nav filter
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+.nav-filter{
+  display: flex;
+  padding: $padding-sm;
+
+  &__title{
+    padding: 0.333em 0;
+  }
+  &__nav{
+  }
+  
+  &__list{
+    @include l-reset();
+    align-self: center;
+  }
+  &__list,
+  &__item{
+    @include border-radius(0.666em);
+    display: inline-block;
+    padding: 0.1em 0.666em;
+  }
+}

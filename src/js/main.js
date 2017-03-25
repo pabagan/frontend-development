@@ -76,7 +76,7 @@ jQuery(document).ready(function ($) {
     
 
     // Superfish
-    $('.app-nav__list, .menu, .nav, .c-nav-bar, .c-nav-col').superfish({
+    $('.app-nav, .menu, .nav, .c-nav-bar, .c-nav-col').superfish({
         animation: { height:'show' },
         animationOut: { height:'hide' },
         delay:       1200,

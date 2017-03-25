@@ -26,7 +26,7 @@ $button-styles: (
 
 // TODO: remove padding element if same value...
 $button-sizes: (
-    "sm" : ( padding: $btn-padding, font-size: $p-sm ),
+    "sm" : ( padding: .8em, font-size: $p-xs ),
     "md" : ( padding: $btn-padding, font-size: $p-sm ),
     "lg" : ( padding: $btn-padding, font-size: $p-sm ),
 );
@@ -50,8 +50,7 @@ $button-sizes: (
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     white-space: nowrap;
     box-shadow: none !important;
-    padding: $btn-padding;    
-
+    //padding: $btn-padding;
     // 
     // Button Style
     // 
@@ -87,12 +86,7 @@ $button-sizes: (
 /* Button sizes */
 // 
 @each $size, $value-list in $button-sizes {
-    // Set class sizes
-    $size-filter: '';
-    @if $size != 'md' {
-        $size-filter: '-#{$size}';
-    }
-    .#{$button-class}#{$size-filter} { 
+    .#{$button-class}-#{$size} { 
         // Build properties
         @each $property, $value in $value-list {
             #{$property}: #{$value}; 
