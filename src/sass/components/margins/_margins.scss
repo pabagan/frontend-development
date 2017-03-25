@@ -16,7 +16,7 @@ $margin-class: "m";
     }
     
     // lateral
-    .#{$margin-class}l-#{$size}{
+    .#{$margin-class}s-#{$size}{
         margin-left: $value;
         margin-right: $value;
     }
@@ -35,6 +35,30 @@ $margin-class: "m";
             margin-#{$position}: map-get($spaces, $size);
         }
     }
+}
+
+/**
+ * Margin Auto.
+ * speciall help for Flexbox
+ */
+@each $position in $positions {    
+    $position-minified: short-position($position); 
+    
+    .#{$margin-class}#{$position-minified}{
+        margin-#{$position}: auto;
+    }
+}
+
+// lateral
+.#{$margin-class}s-#{$size}{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// vertical
+.#{$margin-class}v-#{$size}{
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /**
@@ -58,7 +82,7 @@ $margin-class: "m";
     margin-bottom: 0 !important;
 }
 
-.#{$margin-class}l-0 { 
+.#{$margin-class}s-0 { 
     margin-right: 0 !important;
     margin-left: 0 !important;
 }

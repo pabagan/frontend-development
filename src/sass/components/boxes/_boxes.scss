@@ -8,25 +8,6 @@
  * --------------------------------------
  * -------------------------------------- */
 $box-class      : "c-box";
-
-// Reset last child spacing
-[class*="#{$box-class}"] {
-	// top margin reset
-	:first-child{
-		margin-top: 0 !important;
-	}
-	
-	// bottom margin reset
-	:last-child{
-		margin-bottom: 0 !important;
-	}
-	
-	p:last-child{
-		padding-bottom: 0 !important;
-	}
-}
-
-
 // mobile paddings, just 1 size
 $box-xs 	  : $base-padding;
 $box-xs-u	  : $base-padding-u; // with units

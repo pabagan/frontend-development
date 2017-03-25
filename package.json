@@ -17,6 +17,7 @@
     "bower": "*",
     "browser-sync": "*",
     "gulp": "*",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-cached": "^1.1.0",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.13",

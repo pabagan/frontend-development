@@ -1,0 +1,64 @@
+.flex {
+  display: flex;
+  background-color: lightgrey;
+  width: 400px;
+  height: 250px;
+  
+  &--fit{
+    // The align-items Property
+    // stretch, flex-start,  flex-end, center, baseline
+     align-items: stretch; 
+  }
+
+
+  // if items eceeds wrap size
+  &--wrap{
+    // The flex-wrap Property
+    // nowrap, wrap, wrap-reverse
+    flex-wrap: wrap;
+  }
+
+  &--align{
+    // Align content property has: 
+    // stretch, flex-start, flex-end, center, space-between, space-around
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  &--fit-space{
+    // The justify-content Property
+    // stretch, flex-start, flex-end, center, space-between, space-around
+    justify-content: space-around;
+  }
+
+
+  &--reverse{
+    // Flex Direction: 
+    // row-reverse, column, column-reverse
+    flex-direction: row-reverse;
+  }
+
+
+  
+
+  &--column{
+    flex-direction: column;
+  }
+
+}
+.flex-item{
+  background-color: cornflowerblue;
+  
+  &--center{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &--left{
+    margin-right: auto;
+  }
+
+  &--right{
+    margin-left: auto;
+  }
+  
+}

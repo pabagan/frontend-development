@@ -3,8 +3,6 @@
  */
 
 $c-admin-base-height: $size-rem-sm;
-$c-admin-list-bt-width: 120px;    // buttons width
-$c-admin-list-button-n: 2;    // buttons width
 
 .c-manager {
   @include clearfix;
@@ -26,28 +24,31 @@ $c-admin-list-button-n: 2;    // buttons width
 
 }
 .c-manager-item {
+  display: flex;
+  height: $c-admin-base-height;
+  overflow: hidden;
+  border-bottom: 1px solid $grey7;
+
   &__name{
-    float: left;
-    width: calc(100% - #{$c-admin-list-button-n * $c-admin-base-height });
     line-height: $c-admin-base-height;
-  }
-  &__controls{
-    float: right;
-    height: $c-admin-base-height;
   }
 
   &__bt {
     //@include border-radius(50%);
-    float: left;
+    display: inline-block;
     text-align: center;
-    display: block;
     //height: $c-admin-base-height;
     line-height: $c-admin-base-height;
     width: $c-admin-base-height;
+    height: $c-admin-base-height;
     color: $bodyFontColor;
     
     &:hover{
       background-color: $grey9;
     }
   }
+}
+
+.ml-auto{
+  margin-left: auto;
 }

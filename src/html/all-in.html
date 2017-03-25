@@ -71,8 +71,70 @@
     </div>
     <main id="unitTest">
       <div class="c-row">
+        <h2 id="flex" data-module-title class="utSectionTitle">Flexbox layouts</h2>
+        <div class="c-container c-boxv">
+          
+          <p>Class <code>flex</code> container and <code>flex-item</code> child.</p>
+
+          <div class="mv-md flex">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--reverse</code> container and <code>flex-item</code> child.</p>
+          
+          <div class="mv-md flex flex--reverse">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--fit</code> container and <code>flex-item</code> child.</p>
+
+          <div class="mv-md c-h-xl flex flex--fit">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--column</code> container and <code>flex-item</code> child.</p>
+
+          <div class="mv-md flex flex--column">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--wrap</code> container and <code>flex-item</code> child.</p>
+
+          <div style="width: 240px;" class="mv-md flex flex--wrap">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--align</code> container and <code>flex-item</code> child.</p>
+
+          <div class="mv-md flex flex--align">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item">flex item 2</div>
+            <div class="flex-item">flex item 3</div>  
+          </div>
+
+          <p>Class <code>flex flex--align</code> container and <code>flex-item flex-item--center </code> child.</p>
+
+          <div class="mv-md flex">
+            <div class="flex-item flex-item--left">flex left </div>
+            <div class="flex-item flex-item--center">flex center</div>
+            <div class="flex-item flex-item--right">flex right</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="c-row">
         <h2 id="presentation" data-module-title class="utSectionTitle">Presentation</h2>
-        <!-- Presentacion Coaching Empresas -->
         <div class="c-row ct-light c-row-sm-12 c-bg c-bg--fix hd-space" style="background-image: url(/assets/img/1920x1080.jpg)">
           <div class="c-container is_v-center p-lg-vert textcenter">
             <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">This is a presentation lay</h1>
@@ -87,7 +149,7 @@
         </div>
       </div>
       <!-- About Co-active -->
-      <div class="c-row">
+      
         <h2 id="image-text-module" data-module-title class="utSectionTitle">Images and Text Module</h2>
         <div id="business-active" class="c-row" data-fit-children>
           <div class="c-col-xs-12 c-col-md-6 p-0 c-bg" style="background-image: url(/assets/img/shine/empresas/shine-coaching-empresas.jpg)">
@@ -222,13 +284,14 @@
       <div class="c-row">
         <h2 id="Media content" data-module-title class="utSectionTitle">Media content</h2>
         
-        <div class="c-container c-boxv c-boxv-lg">
+        <div class="c-container c-boxv">
           <p>
             Class <code>media__thumb</code> and <code>media__ct</code>. Align content adding extra class with modifier <code>media__ct--[bottom,mid, top]</code>.
           </p>
-          
+        </div>          
+        <div class="c-container c-boxv">
           <ul class="media c-l-block">
-            <li class="media">
+            <li class="media mv-sm">
               <div class="media__thumb">
                 <img class="media__thumb__img c-w-lg" src="assets/img/640x640.jpg">
               </div>
@@ -237,7 +300,7 @@
               </div>      
             </li>
 
-            <li class="media">
+            <li class="media mv-sm">
               <div class="media__thumb">
                 <img class="c-w-lg" src="assets/img/640x640.jpg">
               </div>
@@ -246,7 +309,7 @@
               </div>      
             </li>
 
-            <li class="media">
+            <li class="media mv-sm">
               <div class="media__thumb">
                 <a class="media__thumb__link" href="#">
                   <span class="c-icon-xl c-sq-lg bg-grey8 i-twitter" aria-hidden="true"></span>
@@ -315,38 +378,6 @@
             </li>
           </ul>
         </div>
-        <div class="c-container c-boxv">
-          <h2>List icons</h2>
-          <p>Add <code>class="c-l-icons is_[sm,md,lg,xl]"</code> con iconos.</p>
-          <ul class="c-l-icons is_sm">
-            <li>
-              <div class="media-thumb">
-                <span class="c-icon-md i-twitter" aria-hidden="true"></span>
-              </div>
-              <div class="media-ct">
-                <span>this is a list item.</span>
-              </div>
-            </li>
-            <li>
-              <span class="c-icon i-facebook" aria-hidden="true"></span>
-              <span>this is a list item.</span>
-            </li>
-            <li>
-              <span class="c-icon i-google" aria-hidden="true"></span>
-              <span>this is a list item.</span>
-            </li>
-            <li>
-              <span class="c-icon i-linkedin" aria-hidden="true"></span>
-              <span>this is a list item.</span>
-            </li>
-            <li>
-              <span class="c-icon i-rss" aria-hidden="true"></span>
-              <span>this is a list item.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <!-- 
       ******************************************************
       ******************************************************
@@ -364,7 +395,8 @@
             <div class="c-manager__header h3 is_upper"> Elemento 1 </div>
             <ul class="c-manager__list">
               <li class="c-manager-item">
-                <a class="c-manager-item__name" href="#"> Elemento 1 </a>
+                <a class="c-manager-item__name" href="#"> Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1 
+                </a>
                 <div class="c-manager-item__controls">
                   <a class="c-manager-item__bt" href="#">
                     <span class="c-icon i-pencil" aria-hidden="true"></span>
@@ -373,6 +405,48 @@
                     <span class="c-icon i-eye" aria-hidden="true"></span>
                   </a>
                 </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 
+      ******************************************************
+      ******************************************************
+        LISTS ADMIN UI FLEX
+      ******************************************************
+      ******************************************************
+      -->
+      <div class="c-row">
+        <h2 id="admin-UI-flex" data-module-title class="utSectionTitle">Admin UI flex</h2>
+        <div class="c-container c-boxv">
+          <h2>List admin</h2>
+          <p>Class <code>c-manager-list</code>. And many more. See and copy the code at console.</p>
+          <p>Add <code>c-l-admin</code> over list element.</p>
+          <div class="c-manager">
+            <div class="c-manager__header h3 is_upper">   CRUD UI LIST HEADER
+            </div>
+            <ul class="c-manager__list">
+              <li class="c-manager-item">
+                <a class="c-manager-item__name" href="#"> Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1 Elemento 1 Elemento 1 Elemento 1 Elemento 1 Elemento 1 Elemento 1 
+                </a>
+                <a class="c-manager-item__bt ml-auto" href="#">
+                  <span class="c-icon i-pencil" aria-hidden="true"></span>
+                </a>
+                <a class="c-manager-item__bt" href="#">
+                  <span class="c-icon i-eye" aria-hidden="true"></span>
+                </a>
+              </li>
+              <li class="c-manager-item">
+                <a class="c-manager-item__bt ml-auto" href="#">
+                  <span class="c-icon i-pencil" aria-hidden="true"></span>
+                </a>
+                <a class="c-manager-item__bt" href="#">
+                  <span class="c-icon i-eye" aria-hidden="true"></span>
+                </a>
+                <a class="c-manager-item__name" href="#"> Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1  Elemento 1 Elemento 1 Elemento 1 Elemento 1 
+                </a>
               </li>
             </ul>
           </div>
@@ -1421,7 +1495,7 @@
           <h2>Hey!</h2>
           <p>Aenean posuere laoreet tristique. Vivamus eu tempus nibh. Integer vehicula tellus vel nisi volutpat, a egestas enim aliquet. Duis condimentum massa metus, quis cursus quam maximus quis.</p>
           <div class="c-row">
-            <ul class="c-l-float mcr-sm">
+            <ul class="c-l-float">
               <li>
                 <img class="c-h-sm" src="assets/img/logo-acc.png" /> </li>
               <li>

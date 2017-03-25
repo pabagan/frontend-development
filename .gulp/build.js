@@ -4,6 +4,7 @@
  * plugins
  */
 var g = require('gulp'),
+  autoprefixer = require('gulp-autoprefixer'),
   gutil = require('gulp-util'),
   cache = require('gulp-cached'),
   htmlhint = require('gulp-htmlhint'),
@@ -198,6 +199,10 @@ g.task('styles', function () {
     // under ./assets/css and rename to .min.css
     .pipe(rename({
       suffix: '.min'
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
     }))
     .pipe(g.dest(temp.css))
     

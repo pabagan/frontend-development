@@ -53,6 +53,7 @@
 @import "layout/grid/grid-height";
 
 // testing
+//@import "layout/flex/flex";
 //@import "layout/flex-3-cols";
 //@import "layout/flex-holy-grial-3-cols";
 
@@ -76,8 +77,7 @@
 // margins & paddings
 @import "components/boxes/boxes";
 @import "components/paddings/paddings";
-@import "components/margins/margins";        
-@import "components/margins/margin-children";   
+@import "components/margins/margins";
 
 
 @import "components/bars/bars";
@@ -91,8 +91,8 @@
 @import "components/icons/icons";
 @import "components/icons/bonicons-md";
 @import "components/lists/lists";
-@import "components/lists/lists-icons";
 @import "components/lists/list-adminUI";
+@import "components/lists/list-adminUI-flex";
 @import "components/buttons/button-bg";
 @import "components/buttons/button-ln";
 @import "components/shadows/shadows";
@@ -129,23 +129,6 @@
 //@import "states/transitions/transitions";
 @import "states/visibility/visibility";
 
-
-/**--------------------------------------
- * --------------------------------------
- *
- *
- *   SMACSS - themes
- *
- *
- * --------------------------------------
- * -------------------------------------- */
-// shine
-@import "themes/carofile/carofile";
-
-// activate config at start of this 
-// file too
-//@import "themes/shine-coaching/shine"; 
-
 /**--------------------------------------
  * --------------------------------------
  *
@@ -169,10 +152,40 @@
  * -------------------------------------- */
 // @import "wordpress/wordpress";
 
-// Extras shine
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   SMACSS - themes
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+// shine
+@import "themes/carofile/carofile";
 
-// Dev UI
+// activate config at start of this 
+// file too
+//@import "themes/shine-coaching/shine"; 
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   Frontend tools UI
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
 @import "../unitTest/unitTest";
 
-// tests
-//@import "tests";
+/**--------------------------------------
+ * --------------------------------------
+ *
+ *
+ *   Exploratory code
+ *
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+@import "exploratory";
