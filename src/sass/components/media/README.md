@@ -1,5 +1,5 @@
 # Media
-Build images + content floated with `media__thumb` and `media__ct`. Align content adding extra class with modifier `media__ct--[bottom,mid, top]`.
+Build images + content floated with `media__thumb` and `media__ct`. Align content adding extra class with modifier `media__ct--[b,m,t]`.
 
 ```html
 <li class="media">

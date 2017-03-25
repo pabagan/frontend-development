@@ -50,13 +50,13 @@ $margin-class: "m";
 }
 
 // lateral
-.#{$margin-class}s-#{$size}{
+.#{$margin-class}s-auto{
     margin-left: auto;
     margin-right: auto;
 }
 
 // vertical
-.#{$margin-class}v-#{$size}{
+.#{$margin-class}v-auto{
     margin-top: auto;
     margin-bottom: auto;
 }

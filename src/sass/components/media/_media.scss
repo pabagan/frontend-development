@@ -35,14 +35,14 @@ $media-class      : "media";
     &__ct{
         padding: 0 $space-xs;
         
-        &--mid{
+        &--m{
             vertical-align: middle;
         }
-        &--top{
+        &--t{
             vertical-align: top;
         }
 
-        &--bottom{
+        &--b{
             vertical-align: bottom;
         }
     }
