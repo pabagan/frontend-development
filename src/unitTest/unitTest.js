@@ -158,7 +158,7 @@
                 // keeps state local to maintain 
                 // borders at refresh
                 if (typeof(Storage) !== 'undefined') {
-                    localStorage.borders = state;
+                    localStorage.setItem('borders',state);
                 } 
             };
 
@@ -176,7 +176,7 @@
                 addBorders.clickItem();
 
                 // add borders if previously added
-                if(localStorage.borders === 'on'){
+                if(localStorage.getItem('borders') === 'on'){
                     addBorders.borderize();                    
                 }
             })();
@@ -213,13 +213,14 @@
                 // keeps state local to maintain 
                 // borders at refresh
                 if (typeof(Storage) !== 'undefined') {
-                    localStorage.borders = state;
+                    localStorage.setItem('secTitles',state);
                 } 
             };
 
             // Create toogle button click
             hideSeccTitles.clickItem = function(){
                 $(document).on('click', '#'+btId, function(){
+                    $(this).toggleClass('is_on');
                     hideSeccTitles.hideTitles();
                 });
             };
@@ -230,11 +231,67 @@
                 hideSeccTitles.clickItem();
 
                 // add borders if previously added
-                if(localStorage.borders === 'on'){
+                if(localStorage.getItem('secTitles') === 'on'){
                     hideSeccTitles.hideTitles();                    
                 }
             })();
         },
+
+        hideScreens: function(){   
+            var hideScreens = this,
+                btId = 'ut-hide-screens',
+                state = 'off'; // use string since localStorage is String
+            
+            // Create html link element
+            hideScreens.addCtrl = function(){
+                var o = '';
+                
+                o += '<a class="ut-ctrl" href="javascript:void(0)" id="'+btId+'">';
+                    o += '<span class="i-state"></span>';
+                    o += 'hide design';
+                o += '</a>';
+
+                // add to body
+                $('body').append(o);
+            };
+
+            // Create html link element
+            hideScreens.hideScreens = function(){
+                $('.design-screens').toggleClass('design-screens--hide is_on');
+                hideScreens.stateToggle();
+            };
+
+
+            hideScreens.stateToggle = function(){
+                state = (state === 'on') ? 'off': 'on';
+
+                // keeps state local to maintain 
+                // borders at refresh
+                if (typeof(Storage) !== 'undefined') {
+                    localStorage.setItem('hideScreens', state);
+                } 
+            };
+
+            // Create toogle button click
+            hideScreens.clickItem = function(){
+                $(document).on('click', '#'+btId, function(){
+                    hideScreens.hideScreens();
+                });
+            };
+
+            // Navigation Constructor
+            hideScreens.init = (function(){
+                hideScreens.addCtrl();
+                hideScreens.clickItem();
+
+                // add borders if previously added
+                if(localStorage.getItem('hideScreens') === 'on'){
+                    hideScreens.hideScreens();                    
+                }
+            })();
+        },
+
+
         // Crear navegación a partir de los Heading
         // con el atributo data-module-title
         navigation: function(){
@@ -598,6 +655,7 @@ jQuery(document).ready(function ($) {
         unitTest.crearListas(); 
         unitTest.addBorders(); 
         unitTest.hideSeccTitles(); 
+        unitTest.hideScreens(); 
         //unitTest.printHeadingInfo();               // Imprime información sobre elementos html
         //unitTest.printSizeColors();
         unitTest.printScreenSize();
