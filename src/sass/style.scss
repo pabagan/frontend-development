@@ -58,6 +58,11 @@
 @import "layout/flex/flex";
 //@import "layout/flex-3-cols";
 
+@import "layout/squares/squares";
+@import "layout/separators/separators";
+@import "layout/sizes/heights-rem";
+@import "layout/sizes/widths-rem";
+@import "layout/separators/blank-space";
 
 /**--------------------------------------
  * --------------------------------------
@@ -71,9 +76,6 @@
 //@import "components/alerts/alerts";
 @import "components/appear/appear";
 @import "components/borders/borders";
-@import "components/sizes/heights-rem";
-@import "components/sizes/widths-rem";
-@import "components/squares/squares";
 
 // margins & paddings
 @import "components/boxes/boxes";
@@ -106,8 +108,6 @@
 @import "components/nav-filter/nav-filter";
 @import "components/navigation/superfish";
 //@import "components/slides/royal-slider";
-@import "components/separators/blank-space";
-@import "components/separators/separators";
 @import "components/sliders/owl-carousel2";
 @import "components/sliders/owl-theme2";
 @import "components/curtains/curtains";
