@@ -52,7 +52,7 @@ g.task('scripts-deps', function() {
     base.bower + '/jquery/dist/jquery.min.js',
     
     base.bower + '/imagesloaded/imagesloaded.pkgd.min.js',          // Images loaded --> 5.4 kb
-    // base.bower + '/isotope/dist/isotope.pkgd.min.js',            // Isotope
+    base.bower + '/isotope/dist/isotope.pkgd.min.js',            // Isotope
     base.bower + '/masonry/dist/masonry.pkgd.min.js',               // Masonry --> 6.4 kb
     base.bower + '/superfish/dist/js/superfish.min.js',             // Superfish --> 4.5 kb
     base.bower + '/owl.carousel/dist/owl.carousel.min.js',          // Owl Carousel 2 --> 42.9 kb
@@ -92,6 +92,9 @@ g.task('scripts-deps', function() {
     //base.bower + '/bootstrap/js/dist/tooltip.js',
     //base.bower + '/bootstrap/js/dist/popover.js',
     
+    // fake content
+    src.scripts + '/fake-content/**/*.js',
+
     // Unit Test -->  30 kb
     base.unitTest + '/unitTest.js',
   ];

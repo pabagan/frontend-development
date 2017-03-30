@@ -15,7 +15,7 @@ Apply to a lay:
 * `data-animation="animation duration delay stagger"` apply any VelocityUI fx.
 
 ```html
-<div class="c-container is_v-center pv-lg textcenter">
+<div class="container is_v-center pv-lg textcenter">
   <h1 class="jumbo c-appear" data-appear data-offset="100%" data-animation="slideDownBigIn 500 750">
     Hey there! Look how cool we do!
   </h1>
@@ -29,7 +29,7 @@ Apply to a parent lay:
 * `data-animation="animation duration delay stagger"` apply any VelocityUI fx.
 
 ```html
-<div class="c-row-sm-12 c-p bg-grey6">
+<div class="row-sm-12 c-p bg-grey6">
   <div class="is_v-center ct-light" data-appear-children data-animation="flipBounceXIn 500 0 250">
     <h3>Animate Children</h3>
     <p>Child 1</p>

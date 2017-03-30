@@ -13,7 +13,7 @@
 
 
 ```html
-<div class="c-row">
+<div class="row">
   <ul class="c-l-block">
     <li><img class="mb-md" src="assets/img/logo-acc.png" /></li>
     <li><img class="mb-md" src="assets/img/logo-acc.png" /></li>

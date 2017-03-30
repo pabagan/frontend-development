@@ -1,6 +1,44 @@
 // 
 // Width grid
 // 
+@mixin grid-flex-colums( $grid_class, $size,$total_cols ){
+    @for $i from 1 through $total_cols {
+        .#{$grid_class}-#{$size}-#{$i} {
+            flex: 0 0 percentage(($i) / $total_cols);
+            max-width: percentage(($i) / $total_cols);
+        }
+    }
+    
+    .#{$grid_class}-#{$size}-1-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    // Pull
+    @for $i from 1 through $total_cols {
+        .pull-#{$size}-#{$i} {
+            right: percentage(($i) / $total_cols) ; 
+        }
+    }
+    // Push
+    @for $i from 1 through $total_cols {
+        .push-#{$size}-#{$i} {
+            left: percentage(($i) / $total_cols) ; 
+        }
+    }
+
+    // Offset
+    @for $i from 1 through $total_cols {
+        .offset-#{$size}-#{$i} {
+            margin-left: percentage(($i) / $total_cols) ; 
+        }
+    }
+
+}
+
+// 
+// Width grid
+// 
 @mixin grid-width( $grid_class, $size,$total_cols ){
     @for $i from 1 through $total_cols {
         .#{$grid_class}-#{$size}-#{$i} {
@@ -41,9 +79,9 @@
     @for $i from 1 through $total_cols {
         .#{$grid_class}-#{$size}-#{$i} {
             // % units fallback
-            height: percentage(($i) / $total_cols) ; 
+            min-height: percentage(($i) / $total_cols) ; 
             // vh units
-            height: #{ceil(($i / $total_cols) * 100)}vh; 
+            min-height: #{ceil(($i / $total_cols) * 100)}vh; 
         }
     }
 }

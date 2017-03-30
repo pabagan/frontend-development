@@ -18,10 +18,10 @@ $button-font-style              : uppercase;
 $btn-padding                    : 1em 1.4em; // all buttons has same padding
 
 $button-styles: (
-    "1" : ( bg: $button-bg-default, bg-hover: $button-bg-default-hover, color: $button-color-default, color-hover: $button-color-default-hover),
-    "2" : ( bg: $color1, bg-hover: $color1, color: $colorf, color-hover: $color2),
-    "3" : ( bg: $color3, bg-hover: $colorf, color: $colorf, color-hover: $color3),
-    "f" : ( bg: $colorf, bg-hover: $color1, color: $grey1, color-hover: $color0),
+    "1" : ( bg: $color1, color: $colorf, bg-hover: $color1, color-hover: $button-color-default-hover),
+    "2" : ( bg: $color2, color: $colorf, bg-hover: $color1, color-hover: $color1),
+    "3" : ( bg: $color3, color: $colorf, bg-hover: $color3, color-hover: $colorf),
+    "f" : ( bg: $colorf, color: $grey1,  bg-hover: $colorf,  color-hover: $grey1),
 );
 
 // TODO: remove padding element if same value...

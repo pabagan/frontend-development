@@ -108,7 +108,7 @@
                 // Strart unit nav Wrap
                 // Toggle button
                 // Strart nav html
-                o += '<nav class="c-row">';
+                o += '<nav class="row">';
                     o += '<ul class="c-l-block ct-light">';
                         // Loop links
                         $.each(jQuery('[data-module-title]'), function(i){
@@ -259,7 +259,7 @@
                 // Strart unit nav Wrap
                 // Toggle button
                 // Strart nav html
-                o += '<nav class="c-row">';
+                o += '<nav class="row">';
                     o += '<ul class="c-l-block ct-light">';
                         // Loop links
                         $.each(jQuery('[data-module-title]'), function(i){
@@ -599,7 +599,7 @@ jQuery(document).ready(function ($) {
         unitTest.addBorders(); 
         unitTest.hideSeccTitles(); 
         //unitTest.printHeadingInfo();               // Imprime información sobre elementos html
-        unitTest.printSizeColors();
+        //unitTest.printSizeColors();
         unitTest.printScreenSize();
 
         // 
@@ -619,16 +619,16 @@ jQuery(document).ready(function ($) {
         
         // archive posts
         var postsWrapClass = 'c-masonry';
-        var postBoxClass = 'c-masonry-item c-entry c-col-xs-12 c-col-sm-6 c-col-md-4 c-col-lg-3 c-col-xl-2 c-p-sm';
+        var postBoxClass = 'c-masonry-item c-entry col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 c-p-sm';
         var archivePosts = crearPosts.archive(postsWrapClass, 12, postBoxClass);
-        var relatedBoxClass = 'c-masonry-item c-entry c-col-xs-12 c-col-md-6 c-col-lg-6 c-col-xl-3c-p-sm';
+        var relatedBoxClass = 'c-masonry-item c-entry col-xs-12 col-md-6 col-lg-6 col-xl-3c-p-sm';
         var relatedPosts = crearPosts.archive(postsWrapClass, 4, relatedBoxClass);
         
         $('#ut-post-archives').html(archivePosts);
         $('#ut-related-post').html(relatedPosts);
 
         // single post
-        var singleWrapClass = 'c-container';
+        var singleWrapClass = 'container';
         var singleClass = 'c-single entry-single';
         var singlePosts = crearPosts.single(singleWrapClass, singleClass);
         

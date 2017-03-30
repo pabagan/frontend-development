@@ -5,24 +5,23 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-.nav-filter{
+.nav-filter-wrap{
   display: flex;
-  padding: $padding-sm;
-
+  align-items: center;
+  padding: $padding-md $padding-xs;
+}
+.nav-filter-nav{
+  @include l-inline();
+  padding-left: $space-xs;
+  
+  &__nav,
   &__title{
-    padding: 0.333em 0;
-  }
-  &__nav{
   }
   
-  &__list{
-    @include l-reset();
-    align-self: center;
-  }
-  &__list,
   &__item{
-    @include border-radius(0.666em);
-    display: inline-block;
-    padding: 0.1em 0.666em;
+    &__label,
+    &__checkbox {
+      vertical-align: middle;
+    }
   }
 }

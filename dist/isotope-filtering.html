@@ -1,0 +1,114 @@
+<!DOCTYPE html><html class="no-js"><head><meta charset="utf-8"><title>Frontend Task - Pabagan</title><meta name="googlebot" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><link id="main-styles" type="text/css" href="assets/css/style.min.css?0.1" rel="stylesheet"><!-- SEO tags --><meta name="description" content="Site desc"><meta name="robots" content="noodp"><meta name="keywords" content="key1, key2, "><link rel="canonical" href="http://xxx.com/"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Frontend Task - Pabagan"><meta property="og:description" content="Task description"><meta property="og:url" content="http://xxx.com/es/"><meta property="og:site_name" content="Shine Coaching Barcelona"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Task description"><meta name="twitter:title" content="Frontend Task - Pabagan"><meta name="twitter:creator" content="@xxx"><!-- / end SEO metas --></head><body class="bg-grey9"><div id="site-wrap" class="container p-0"><a class="skip-link sr-only" href="#gx-content">Skip to content</a><noscript>Hey! Javascript should be activated.</noscript><!-- noscript --><header class="app-header pt-md pb-lg" role="banner"><a class="app-logo" href="/" rel="home"><span class="app-logo__txt">Brandname</span> </a><!-- #app-logo --><nav class="app-nav-wrap" role="navigation"><button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-nav"><span class="sr-only">Primary Menu</span></button><!-- .nav-toggle --><ul id="app-nav" class="app-nav"><li class="app-nav__item"><a class="app-nav__item__link app-nav__item__link--active" href="#">Menu item 1</a></li><li class="app-nav__item"><a class="app-nav__item__link" href="#">Menu item 2</a></li><li class="app-nav__item"><a class="app-nav__item__link" href="#">Menu item 3</a></li><li class="app-nav__item"><a class="app-nav__item__link" href="#">Menu item 4</a></li><li class="app-nav__item"><a class="app-nav__item__link" href="#">Menu item 5</a></li><li class="app-nav__item"><a class="app-nav__item__link" href="#">Menu item 6</a></li></ul><!-- .app-nav --></nav><!-- .app-nav-wrap --></header><!-- .app-header --><main class="c-boxv ps-0"><div class="nav-filter-wrap"><span class="nav-filter__title">Filter:</span><ul class="nav-filter-nav"><li class="flexbox--center nav-filter-nav__item form-checkbox c-btn c-btn-sm c-btn-1"><input type="checkbox" class="nav-filter-nav__item__checkbox" name="filter-meat" id="filter-meat" value=".meat" checked="checked"><label class="nav-filter-nav__item__label-0" for="filter-meat">Meat</label></li><li class="nav-filter-nav__item c-btn c-btn-sm c-btn-2"><input type="checkbox" class="nav-filter-nav__item__checkbox" name="filter-vegs" id="filter-vegetable" value=".vegetable" checked="checked"><label class="nav-filter-nav__item__label-0" for="filter-vegetable">Vegetable</label></li><li class="nav-filter-nav__item c-btn c-btn-sm c-btn-3"><input type="checkbox" class="nav-filter-nav__item__checkbox" name="filter-fruit" id="filter-fruit" value=".fruit" checked="checked"><label class="nav-filter-nav__item__label-0" for="filter-fruit">Fruit</label></li></ul><!-- .app-nav__list --></div><div id="entry-list"><!--
+            ** Loaded via JS 
+          
+          <div class="isotope-item fruit col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+              
+            <article class="c-card bg-f p-xs">
+              <header class="c-card__header">
+                <img class="c-card__thumb" src="/assets/img/760-429.png">
+                <div class="c-card__subheader">
+                  <h2 class="c-card__title">Apple</h2>
+                  <div class="c-card__metas">
+                    <a class="c-card__category c-btn c-btn-sm c-btn-3">Fruit</a>
+                  </div>
+                </div>
+              </header>  
+              <main class="c-card__content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id elementum orci. Quisque facilisis consequat sem, sed scelerisque lorem viverra at. Integer a tristique metus, a hendrerit massa. Ut bibendum mollis arcu.
+              </main>
+              <footer class="c-card__footer">
+                <a class="c-card__infolink color-grey3">
+                  <span class="media__thumb color-3 zc-icon-sm i-arrow-right" aria-hidden="true">
+                  </span>
+                  <span class="media__ct media__ct--m c-h-xs">
+                    More Info
+                  </span>
+                </a>
+              </footer>
+            </article>
+
+            //...
+
+          </div>
+          --></div><!-- #entry-list --></main><!-- JS --><script src="assets/js/plugins.min.js"></script><script src="assets/js/main.min.js"></script><script type="text/javascript">jQuery(document).ready(function ($) {
+
+          // Fake HTML isotope
+          var isotopeFakeItems = new $.gx.IsotopeItems('#entry-list');
+          
+          // Window load loads.
+          // fake content to html
+          isotopeFakeItems.init();
+  
+          /**
+           * Filter Isotope filterable with 
+           * checkbox.
+           */
+          $(function(){
+            // isotope items wrap
+            var $container = $('#entry-list');
+            // checkboxes doing filters
+            var $filterCheckbox = $('.nav-filter-nav__item__checkbox');
+
+            /**
+             * Build isotope selectors string 
+             * from checkbox checked state.
+             * 
+             * @return string '.selector1,.selector2, ...'
+             */
+            var getCheckedSelectorString = function(){
+              var checked = [];
+              // add checked to array
+              $.each($filterCheckbox, function(i){
+                if($filterCheckbox[i].checked){
+                  checked.push($filterCheckbox[i].value);
+                }
+              });
+
+              return checked.join(',');
+            };
+
+            // Activate isotope
+            $container.imagesLoaded(function(){
+              $container.isotope({
+                itemSelector : '.isotope-item ',
+                animationEngine: 'best-available',
+                layoutMode : 'fitRows',
+                filter: getCheckedSelectorString()
+              });
+            });
+
+            // Filtering checkbox click
+            $filterCheckbox.change(function(){
+              $container.isotope({ filter: getCheckedSelectorString() });
+            });
+          });
+
+          /**
+           * Isotope item hover animation
+           * 
+           * @return string '.selector1,.selector2, ...'
+           */
+          $(function () {
+            var $element = $('.isotope-item');
+
+            // Use the loop option.
+            $element.on({
+                mouseenter: function () {
+                    console.log('mouse enter');
+                    $(this).find('.c-img-bg, .c-card__thumb')
+                        .velocity({
+                            scale: 1.1,
+                        }, {
+                            duration: 300,
+                        });
+                },
+
+                mouseleave: function () {
+                    //stuff to do on mouse leave
+                    console.log('mouse leave');
+                    $(this).find('.c-img-bg, .c-card__thumb')
+                        .velocity('reverse');
+                }
+            });
+          });          
+        });</script></div><!-- #site-wrap --></body></html>

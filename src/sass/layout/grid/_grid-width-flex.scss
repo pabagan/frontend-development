@@ -1,0 +1,107 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Grid Width
+ * credit: based on Bootstrap v4 but 
+ * a bit small.
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$row-class          : 'row';
+$col-class          : 'col';
+$container-class    : 'container';
+$grid-item-padding  : $base-padding-u;
+$total-colums       : 12;
+
+// Container sizes
+// False makes   no container
+$container-sizes: (
+    'sm': 100%,
+    'md': 90%,
+    'lg': 960px,
+    'xl': 1160px,
+    'xxl': 1360px,
+);
+
+// 
+// Row is parent class for 
+// grid/containers
+// 
+.#{$row-class}{ 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// 
+// Container class
+// 
+[class*="#{$container-class}"]{ 
+    padding: $grid-item-padding;
+    position: relative;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    @include clearfix;
+}
+
+// 
+// Col class
+// 
+[class*="#{$col-class}"] {
+    padding: $grid-item-padding;
+    -webkit-box-flex: 0;
+    position: relative;
+    width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+[class*="#{$col-class}"]-auto {
+  box-flex: 0;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+// 
+// Container sizes responsive
+// 
+/* Main container sizes */
+@each $size, $value in $container-sizes {
+    @include media-query($size){
+        .#{$container-class}{
+            width: $value;
+        }
+    }
+}
+
+/**
+ * Grid 12 Colums
+ */
+@include grid-flex-colums($col-class, 'xs', $total-colums);
+
+
+/* Grid SM */
+@media screen and (min-width: $screen-sm-min) { // 639px
+    @include grid-flex-colums($col-class, 'sm', $total-colums);
+}
+
+
+/* Grid MD */
+@media screen and (min-width: $screen-md-min) { // 992px
+    @include grid-flex-colums($col-class, 'md', $total-colums);
+}
+
+/* Grid LG */
+@media screen and (min-width: $screen-lg-min) { // 1200px <
+    @include grid-flex-colums($col-class, 'lg', $total-colums);
+}
+
+/* Grid XL */
+@media screen and (min-width: $screen-xl-min) { // 1200px <
+    @include grid-flex-colums($col-class, 'xl', $total-colums);
+}
+
+
+
+
+

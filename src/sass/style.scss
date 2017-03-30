@@ -15,7 +15,7 @@
 @import "config";
 
 // Shine overwrites
-//@import "themes/shine-coaching/config";
+@import "themes/carofile/config";
 
 /**--------------------------------------
  * --------------------------------------
@@ -48,14 +48,15 @@
  * --------------------------------------
  * -------------------------------------- */
  
+ 
 //@import "layout/01-toggled-navigation"; 
-@import "layout/grid/grid-width";
+//@import "layout/grid/grid-width";
+@import "layout/grid/grid-width-flex";
 @import "layout/grid/grid-height";
 
 // testing
-//@import "layout/flex/flex";
+@import "layout/flex/flex";
 //@import "layout/flex-3-cols";
-//@import "layout/flex-holy-grial-3-cols";
 
 
 /**--------------------------------------
@@ -94,6 +95,7 @@
 @import "components/lists/lists";
 @import "components/lists/list-adminUI";
 @import "components/lists/list-adminUI-flex";
+@import "components/navbar/navbar";
 @import "components/buttons/button-bg";
 @import "components/buttons/button-ln";
 @import "components/shadows/shadows";

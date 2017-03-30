@@ -27,49 +27,60 @@
   </head>
 
   <body>
-    <div id="site-wrap" class="c-container-lg p-0">
+    <div id="site-wrap" class="container-lg p-0">
       
       <a class="skip-link sr-only" href="#gx-content">Skip to content</a>
       
       <noscript>Hey! Javascript should be activated.</noscript><!-- noscript -->
       
-      <header class="app-header bgf" role="banner">
-        <div class="app-logo">
-          <a class="app-logo__link h4 w400" href="/" rel="home">
-            Brand name
-          </a>
-          </a>
-        </div><!-- #app-logo -->
+    <header class="app-header app-header--shadow bg-grey12" role="banner">
+      <a class="app-logo" href="/" rel="home">
+        <span class="app-logo__txt">Brand</span>
+      </a><!-- #app-logo -->
+    
 
-        <button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-navigation">
-          <span class="app-nav-toggle__icon" aria-hidden="true"></span>
-          <span class="sr-only"> Primary Menu </span>
+      <nav role="navigation">
+        <button class="app-nav-toggle" data-toggle-classes type="button" aria-expanded="false" aria-controls="app-nav">
+          <span class="sr-only">Primary Menu</span>
         </button><!-- .nav-toggle -->
 
-        <nav id="app-navigation" class="app-nav" role="navigation">
-          <ul id="primary-menu" class="app-nav__list">
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 1</a>
-            </li>
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 2</a>
-            </li>
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 3</a>
-            </li>
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 4</a>
-            </li>
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 5</a>
-            </li>
-            <li class="app-nav__item">
-              <a class="app-nav__link" href="#">Menu item 6</a>
-            </li>
-          </ul><!-- .app-nav__list -->
-        </nav><!-- .app-nav -->
-      </header><!-- .app-header -->
-      <main class="c-container c-boxv ps-0">
+        <ul id="app-nav" class="app-nav">
+          <li class="app-nav__item">
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">Home</a>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__item__link app-nav__item__link--active" href="#home" data-scroll-to="#home">About</a>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">Item 2</a>
+            <ul class="app-nav__subnav">
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link app-nav__subnav__link--active" href="#home">
+                  Home hello
+                </a>
+              </li>
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link" href="#home">
+                  Item 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="app-nav__item">
+            <a class="app-nav__item__link" href="#home" data-scroll-to="#home">About</a>
+            <ul class="app-nav__subnav--r">
+              <li class="app-nav__subnav__item">
+                <a class="app-nav__subnav__link app-nav__subnav__link--active" href="#home">
+                  Home hello
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul><!-- .app-nav -->
+      </nav><!-- .app-nav -->
+    </header><!-- .app-header -->
+
+      <main class="container c-boxv ps-0">
         <div class="nav-filter">
           <span class="nav-filter__title">
             Filter: 
@@ -98,7 +109,7 @@
           </nav><!-- #nav-filter -->      
         </div>
 
-        <div class="c-col-xs-12 c-col-sm-6 c-col-lg-4 c-col-xl-3">
+        <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3">
           <article class="c-card">
             <header class="c-card__header">
               <img class="c-card__thumb" src="/assets/img/1920x1080.jpg">
@@ -123,7 +134,7 @@
             </div>
           </article>
         </div>
-        <article class="c-col-xs-12 c-col-sm-6">
+        <article class="col-xs-12 col-sm-6">
           hola
         </article>
       </main>

@@ -6,17 +6,17 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-$row-class          : 'c-row';
-$col-class          : 'c-col';
-$container-class    : 'c-container';
+$row-class          : 'row';
+$col-class          : 'col';
+$container-class    : 'container';
 $grid-item-padding  : $base-padding-u;
 $total-colums       : 12;
 
 // Container sizes
 // False makes   no container
 $container-sizes: (
-    'sm': 540px,
-    'md': 720px,
+    'sm': 100%,
+    'md': 90%,
     'lg': 960px,
     'xl': 1160px,
     'xxl': 1360px,

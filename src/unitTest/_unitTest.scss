@@ -173,3 +173,44 @@ $ut-bar-width:260px;
     background-color: #00ffff; }
   .size-color.color-xxl {
     background-color: #ff00ff; }
+
+
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Add design as body background to draw 
+ * hover
+ *
+ * --------------------------------------
+ * -------------------------------------- */
+$screen-test: (
+  'xs'  : 'screen-xs.png',
+  'sm'  : 'screen-sm.png',
+  'md'  : 'screen-md.png',
+  'lg'  : 'screen-lg.jpg',
+  'xl'  : 'screen-xl.jpg',
+);
+
+
+.test-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  border: 4px solid green !important;
+  min-height: 4000px;
+  width: 100%;
+  opacity: .2;
+  background-image: center center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-image: url(../img/screens/screen-xs.png);
+  // change images per screen size
+  @each $size, $value in $screen-test {
+    @include media-query($size){
+      background-image: url(../img/screens/#{$value});
+    }
+  }
+
+}

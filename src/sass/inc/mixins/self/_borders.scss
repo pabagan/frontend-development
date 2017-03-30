@@ -22,7 +22,7 @@
 //
 @mixin grid-borders(){
     $grid_width_elem_class: 'gx-col';
-    .c-container,
+    .container,
 	[class*="#{$grid_width_elem_class}-xs"],
 	[class*="#{$grid_width_elem_class}-sm"],
 	[class*="#{$grid_width_elem_class}-md"],

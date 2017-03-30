@@ -96,7 +96,7 @@ g.task('rsync', function() {
     'flags': 'avz',
     'shell': 'ssh',
     'source': './.dist/',
-    'destination': process.env.CAROFILE_WEBSITE,
+    'destination': process.env.UT_SERVER,
   })
 
   cmd.execute(function(error, code, cmd) {

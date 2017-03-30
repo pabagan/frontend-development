@@ -35,7 +35,7 @@ Showed in/out content managed via toggle-button `aria-controls="element-id"` htm
 
 ```html 
 <!-- Toggled content -->
-<div id="velocityTogglerCt" class="bg-grey2 c-col-xs-9">
+<div id="velocityTogglerCt" class="bg-grey2 col-xs-9">
     Toggle Velocity Content
 </div>
 ```

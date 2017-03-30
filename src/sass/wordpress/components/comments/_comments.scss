@@ -164,7 +164,7 @@ $item_pecentage: 100 / $item_per_row - ( $form-gutter ) + ( $form-gutter / $item
 
 // Comment Header Wrap
 .comment-meta{
-    @extend .c-row;
+    @extend .row;
     margin-bottom: $space-sm;
 }
 
