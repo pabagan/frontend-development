@@ -10,15 +10,15 @@ $button-class : "c-btn";
 $button-bg-default              : $color1;
 $button-color-default           : $colorf;
 $button-bg-default-hover        : $button-color-default;
-$button-color-default-hover     : $button-bg-default;
+$button-color-default-hover     : $color0;
 $button-opacity                 : 0.80;
-$button-border-radius           : $p-lg;
+$button-border-radius           : 70px;
 $button-font-weigth             : 700;
 $button-font-style              : uppercase;
-$btn-padding                    : 1em 1.4em; // all buttons has same padding
+$btn-padding                    : 1em 2.5em; // all buttons has same padding
 
 $button-styles: (
-    "1" : ( bg: $color1, color: $colorf, bg-hover: $color1, color-hover: $button-color-default-hover),
+    "1" : ( bg: $color1, color: $bodyFontColor, bg-hover: $color1, color-hover: $button-color-default-hover),
     "2" : ( bg: $color2, color: $colorf, bg-hover: $color1, color-hover: $color1),
     "3" : ( bg: $color3, color: $colorf, bg-hover: $color3, color-hover: $colorf),
     "f" : ( bg: $colorf, color: $grey1,  bg-hover: $colorf,  color-hover: $grey1),
@@ -26,9 +26,9 @@ $button-styles: (
 
 // TODO: remove padding element if same value...
 $button-sizes: (
-    "sm" : ( padding: .8em, font-size: $p-xs ),
+    "sm" : ( padding: .8em, font-size: $p-sm ),
     "md" : ( padding: $btn-padding, font-size: $p-sm ),
-    "lg" : ( padding: $btn-padding, font-size: $p-sm ),
+    "lg" : ( padding: $btn-padding, font-size: $p-lg ),
 );
 
 
@@ -41,7 +41,7 @@ $button-sizes: (
     box-shadow: none !important;
     display: inline-block;
     text-align: center;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     text-decoration: none;
     vertical-align: middle;
     touch-action: manipulation;
@@ -60,7 +60,7 @@ $button-sizes: (
     font-weight: $button-font-weigth;
     background-color: $button-bg-default;
     color: $button-color-default;
-    letter-spacing: .1em;
+    //letter-spacing: .1em;
     @include shadow( 5px 0px 5px rgba(0,0,0,1));
     
     &:active,

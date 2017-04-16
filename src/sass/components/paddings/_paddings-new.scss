@@ -1,0 +1,100 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Paddings
+ *
+ * TODO: delete. Ahora necesario
+ * para sobreescribir el padding del grid.
+ * joda!@
+ * --------------------------------------
+ * -------------------------------------- */
+$padding-class      : "pn";
+
+// 
+/* Padding sizes mobile */
+// 
+@each $size, $value in $paddings-mobile {
+    // everywhere
+    .#{$padding-class}-#{$size} { 
+        padding: (map-get($paddings-mobile, $size)*3) map-get($paddings-mobile, $size);
+    }
+
+    // Positions
+    @each $position in $positions {    
+        $position-minified: short-position($position); 
+        
+        .#{$padding-class}#{$position-minified}-#{$size}{
+            padding-#{$position}: map-get($paddings-mobile, $size);
+        }
+    }
+
+    // lateral
+    .#{$padding-class}s-#{$size}{
+        padding-left: map-get($paddings-mobile, $size);
+        padding-right: map-get($paddings-mobile, $size); 
+    }
+
+    // vertical
+    .#{$padding-class}v-#{$size}{
+        padding-top: map-get($paddings-mobile, $size) * 3;
+        padding-bottom: map-get($paddings-mobile, $size) * 3;
+    }
+}
+
+/* Padding from small devices. Usually tablets */
+@include media-query('sm'){
+
+    @each $size, $value in $paddings-new {    
+        // everywhere
+        .#{$padding-class}-#{$size} { 
+            padding: map-get($paddings-new, $size);
+        }
+        
+        // Positions
+        @each $position in $positions {    
+            $position-minified: short-position($position); 
+            
+            .#{$padding-class}#{$position-minified}-#{$size}{
+                padding-#{$position}: map-get($paddings-new, $size);
+            }
+        }
+        
+        // lateral
+        .#{$padding-class}s-#{$size}{
+            padding-left: map-get($paddings-new, $size);
+            padding-right: map-get($paddings-new, $size);
+        }
+
+        // vertical
+        .#{$padding-class}v-#{$size}{
+            padding-top: map-get($paddings-new, $size);
+            padding-bottom: map-get($paddings-new, $size);
+        }
+    }
+}
+
+/**
+ * Padding reset
+ */
+.#{$padding-class}-0 { 
+    padding: 0;
+}
+
+// Positions
+@each $position in $positions {    
+    $position-minified: short-position($position); 
+    
+    .#{$padding-class}#{$position-minified}-0{
+        padding-#{$position}: 0;
+    }
+}
+
+.#{$padding-class}v-0 { 
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.#{$padding-class}s-0 { 
+    padding-right: 0;
+    padding-left: 0;
+}

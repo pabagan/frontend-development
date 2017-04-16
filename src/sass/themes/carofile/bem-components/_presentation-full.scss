@@ -1,0 +1,44 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Full height presentation module
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+$full-height-presentation-class      : "p-full";
+
+.#{$full-height-presentation-class} { 
+  //min-height: 575px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__ct{
+    padding: 110px $base-padding-u;
+  }
+}
+
+@include media-query('sm'){
+  .#{$full-height-presentation-class} { 
+    min-height: 100vh;
+    &__ct{
+      padding: 110px $padding-4;
+    }
+  }
+}
+@include media-query('md'){
+  .#{$full-height-presentation-class} { 
+    &__ct{
+      max-width: 85%;
+      padding: 12px;
+    }
+  }
+}
+
+@include media-query('lg'){
+  .#{$full-height-presentation-class} { 
+    &__ct{
+      max-width: 740px;
+    }
+  }
+}

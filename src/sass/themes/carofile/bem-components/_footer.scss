@@ -1,0 +1,39 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Footer
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+$footer-class      : "site-footer";
+
+.#{$footer-class}{
+  padding-bottom: 0 !important;
+  // content
+  &__ct{
+    padding-top: $padding-3;
+    padding-bottom: 0;
+    @include media-query('md'){
+      padding-top: $padding-4;
+    }
+  },
+
+  // cols
+  &__col1{
+    padding: 0;
+    padding-bottom: $padding-3;
+    @include media-query('md'){
+      padding-right: $padding-4;
+    }
+  }
+  &__col2{
+    padding: 0;
+  }
+}
+
+.footer-logo{  
+  &__img{
+    display: block;
+    height: 32px;
+  }
+}

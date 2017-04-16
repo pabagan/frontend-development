@@ -12,10 +12,11 @@
 @import "inc/functions/functions";
 
 // Config vars
-@import "config";
+//@import "config";
 
 // Shine overwrites
-@import "themes/carofile/config";
+//@import "themes/shine-coaching/shine-config";
+@import "themes/carofile/carofile-config";
 
 /**--------------------------------------
  * --------------------------------------
@@ -46,9 +47,7 @@
  *
  *
  * --------------------------------------
- * -------------------------------------- */
- 
- 
+ * -------------------------------------- */ 
 //@import "layout/01-toggled-navigation"; 
 //@import "layout/grid/grid-width";
 @import "layout/grid/grid-width-flex";
@@ -78,6 +77,7 @@
 // margins & paddings
 @import "components/boxes/boxes";
 @import "components/paddings/paddings";
+@import "components/paddings/paddings-new";
 @import "components/margins/margins";
 
 

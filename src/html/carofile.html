@@ -18,10 +18,7 @@
     <header class="app-header app-header--fixed" role="banner">
       <a class="app-logo" href="/" rel="home">
         <span class="site-title sr-only">Carofile</span>
-          <!--
-          <img class="app-logo__img" alt="" src="assets/img/carofile-logo-dark.png" />
-          -->
-          <img class="app-logo__img"  alt="" src="assets/img/unit-test-logo.png" />
+        <img class="app-logo__img" alt="Carofile" src="assets/img/carofile/logo/carofile-logo-dark.svg" />
       </a><!-- #app-logo -->
     
       <nav class="app-nav-wrap" role="navigation">
@@ -70,12 +67,36 @@
       </nav><!-- .app-nav-wrap -->
     </header><!-- .app-header -->
     
-    <div id="home-opening" class="home-opening row hd-space ct-dark row-sm-12 bg-1 c-img-bg-fix" style="background-image: url(assets/img/home/carofile-splashsssssssssssssssss.jpg)">
-      <div class="container c-boxv is_v-center">
+    <!-- 
+    ******************************************************
+    ******************************************************
+      Unit Test Sidebar
+    ******************************************************
+    ******************************************************
+    -->
+    <div id="unitTestBar" class="is_fixed l-window">
+      <button data-toggle-classes aria-expanded="false" aria-controls="utNavWrap" id="utNavToggler" type="submit" class="utNavToggler c-icon c-icon-xs i-menu-4 bg-0 color-f"></button>
+      <!-- Unit Test Navigation JS populated-->
+      <div id="utNavWrap" class="c-bar c-bar--right is_off bg-0">
+        <div id="unitTestBarNav" class="row p-md"></div>
+      </div>
+    </div>
+    
+    <!-- 
+    ******************************************************
+    ******************************************************
+      Home
+    ******************************************************
+    ******************************************************
+    -->    
+    <h2 id="home-title" data-module-title class="utSectionTitle">Home</h2>
+
+    <div id="home-opening" class="p-full bg-1 c-img-bg-fix" style="background-image: url(assets/img/home/carofile-splashsssssssssssssssss.jpg)">
+      <div class="p-full__ct">
         <h1 class="mt-0">
           <span class="underline">
             We’re putting drivers back in the driver’s seat.<br>
-            <span class="w400">We are Carofile.</span>
+            <span class="w700">We are Carofile.</span>
           </span>
         </h1>
         
@@ -83,62 +104,70 @@
       </div>
     </div><!-- #home-opening -->
     
-    <div class="subscribe-row row bg-grey5 ct-light c-boxs">
-      <div class="container container-xl row-md-6 subscribe-row__ct c-boxv">
-        <div class="is_v-center-md col-xs-12 col-md-6 push-md-6 p-0">
-          <h2 class="h6">CAROFILE IS LAUNCHING SOON</h2>
-          <h3 class="h4">
+    <div class="subscribe-row row bg-grey5 ct-light">
+      <div class="subscribe-row__ct container row-md-6 p-tablet c-boxv">
+        <div class="col-md-6 push-md-6 p-0">
+          <h2 class="h6 mb-lg">CAROFILE IS LAUNCHING SOON</h2>
+          <h3 class="h4 mb-lg">
             <span class="underline">
               Subscribe now to get notifications when we go live.
             </span>
           </h3>
           <form class="form-subscribe c-form-ln" method="post" action="/action">
-            <div class="row">
-              <div class="form-group col-xs-12 col-md-8 pv-0 pl-0 pl-xs">
-                <label class="sr-only" for="email">Email</label>
-                <input name="email" id="email" type="email" maxlength="120" placeholder="Email"> 
-              </div>
-              <div class="form-group col-xs-12 col-md-4 p-0">
-                <button type="submit" class="c-btn c-btn-md c-btn-f">Subscribe</button>
-              </div>
-            </div>
+            <label class="sr-only" for="email">Email</label>
+            <input class="form-subscribe__input" name="email" id="email" type="email" maxlength="120" placeholder="Email"> 
+            <button class="form-subscribe__bt c-btn c-btn-md c-btn-1" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
     </div><!-- .subscribe-row -->
 
-    <div class="manage-row row bg-1 ct-dark">
-      <div class="row-md-10 row-lg-9 row-xl-12 col-xs-12 col-md-6 col-lg-6 c-box-lg">
-        <h2 class="h2">   
+    <!-- 
+    ******************************************************
+    ******************************************************
+      Masked image (mask left)
+    ******************************************************
+    ******************************************************
+    -->
+    <div class="row">
+      <div class="masked-image masked-image--endfull bg-1">
+
+        <div class="masked-image__content c-box-lg">
+          <h2 class="h2 mb-lg">   
+            <span class="underline">
+              The simplest way to manage your car.<br><span class="w700">Supported by the most sophisticated technology.</span>
+            </span>
+          </h2>
+          <p>
+            With the Carofile app connected to your vehicle, you’ll get a simple, treamlined way to monitor your car’s health and arrange repairs and services with full clarity and accountability.
+          </p>
+          <p class="p-0">
+            But this simple interface is supported by one of the world’s most sophisticated marketplaces, bringing together information from motoring regulators, insurers, mechanics, and manufacturers – and your car itself.
+          </p>
+        </div>
+        
+        <div class="masked-image__mask masked-image__mask--l"></div>
+        
+        <img class="masked-image__img masked-image__img--r" src="assets/img/carofile/home/The-simplest-way.png" />
+      </div><!-- .masked-image -->
+    </div><!-- .row -->    
+    
+    <div class="cta-row row c-box-sm bg-grey12">
+      <div class="container textcenter p-0">
+        <h2 class="h3 m-0 w700">
           <span class="underline">
-            <strong>The simplest way to manage your car.</strong><br><span class="w400">Supported by the most sophisticated technology.</span>
+            All the services you need. All in one place.
           </span>
         </h2>
-        <p>
-          With the Carofile app connected to your vehicle, you’ll get a simple, treamlined way to monitor your car’s health and arrange repairs and services with full clarity and accountability.
-        </p>
-        <p>
-          But this simple interface is supported by one of the world’s most sophisticated marketplaces, bringing together information from motoring regulators, insurers, mechanics, and manufacturers – and your car itself.
-        </p>
-        
-      </div>
-      <img class="c-img is_hide-md" src="assets/img/home/manage-car-mobile.jpg" />
-    </div><!-- .manage-row -->
-
-    <div class="cta-row row pv-lg pl-sm textcenter bg-grey12 c-box">
-      <h2 class="h3 m-0">
-        <span class="underline">
-          All the services you need. All in one place.
-        </span>
-      </h2>
+      </div><!-- .cta-row -->
     </div><!-- .cta-row -->
 
     <div id="features-mosaic" class="row">
-      <div id="feature-diagnose" class="features-item c-curtain-ct col-xs-12 col-sm-6 col-lg-3 c-img-bg" style="background-image: url(assets/img/home/diagnose.jpg)">
+      <div id="feature-diagnose" class="toggle-box toggle-box--feature c-curtain-ct col-xs-12 col-sm-6 col-md-3 p-0 c-img-bg" style="background-image: url(assets/img/carofile/home/diagnose.jpg)">
         
-        <span class="bt-feature-toggle c-icon-lg c-sq-lg color-f is_top-right is_hide-lg" data-toggle-classes aria-controls="diagnose-curtain" aria-expanded="false"></span>
+        <div class="toggle-box__toggle c-icon-md c-sq-md color-f is_top-right is_hide-lg" data-toggle-classes aria-controls="diagnose-curtain" aria-expanded="false"></div>
         
-        <div class="is_v-center-xs c-box ct-light">
+        <div class="toggle-box__ct is_v-center-xs ct-light">
           <h3>
             <span class="underline">
               Diagnose car problems in plain English
@@ -146,11 +175,11 @@
           </h3>
         </div>
 
-        <div id="diagnose-curtain" class="feature-curtain p-xs c-curtain-right bg-grey8">
-          <div class="is_v-center-xs c-box">
+        <div id="diagnose-curtain" class="feature-curtain c-curtain-right bg-grey8">
+          <div class="feature-curtain__ct is_v-center-xs">
             <div class="mb-xs c-icon-xl i-compass" aria-hidden="true"></div>
 
-            <h4 class="h5 is_upper">Diagnose car problems in plain English</h4>
+            <h4 class="h6 is_upper w700">Diagnose car problems in plain English</h4>
             
             <span class="c-sep mv-xl"></span>
             
@@ -159,9 +188,142 @@
             </p>            
           </div>
         </div>
-      </div><!-- #feature-diagnose -->
+      </div>
+      
+      <div id="feature-other" class="toggle-box toggle-box--feature c-curtain-ct col-xs-12 col-sm-6 col-md-3 p-0 c-img-bg" style="background-image: url(assets/img/carofile/home/other.jpg)">
+          
+          <div class="toggle-box__toggle c-icon-md c-sq-md color-f is_top-right is_hide-lg" data-toggle-classes aria-controls="diagnose-curtain" aria-expanded="false"></div>
+          
+          <div class="toggle-box__ct is_v-center-xs">
+            <h3>
+              <span class="underline">
+                We need to close definitive icons..
+              </span>
+            </h3>
+          </div>
+
+          <div id="diagnose-curtain" class="feature-curtain c-curtain-right bg-grey8">
+            <div class="feature-curtain__ct is_v-center-xs">
+              <div class="mb-xs c-icon-xl i-compass" aria-hidden="true"></div>
+
+              <h4 class="h6 is_upper w700">Diagnose car problems in plain English</h4>
+              
+              <span class="c-sep mv-xl"></span>
+              
+              <p class="p-0">
+                Forget confusing warning lights. The Carofile app takes data directly  rom your car and turns it into practical information.
+              </p>            
+            </div>
+          </div>
+        </div>
+      </div>
     </div><!-- #features mosaic -->
-       
+
+    <!-- 
+    ******************************************************
+    ******************************************************
+      About
+    ******************************************************
+    ******************************************************
+    -->    
+    <h2 id="about-title" data-module-title class="utSectionTitle">About</h2>
+
+
+    <div id="about-opening" class="p-full bg-1 c-img-bg-fix" style="background-image: url(assets/img/about/about-splashsssssssssssssssss.jpg)">
+      <div class="p-full__ct">
+        <h1 class="mt-0">
+          <span class="underline">
+            <span class="w700">We are Carofile.</span><br>
+            And we’re transforming car ownership and maintenance.
+          </span>
+        </h1>
+        
+        <p class="f-lg pb-0">At Carofile, we bring together a talented team of engineers and developers with a passion for changing the way cars are owned, managed, and maintained.</p>
+      </div>
+    </div><!-- #about-opening -->
+
+    <div class="row">
+      <div class="masked-image bg-f">
+
+        <div class="masked-image__content masked-image__content--r c-box-lg">
+          <h2 class="h2 mb-lg">   
+            <span class="underline">
+              <span class="w400">The simplest way to manage your car.</span><br>Supported by the most sophisticated technology.
+            </span>
+          </h2>
+          <p>
+            Having worked across car-based technology for some of the world’s biggest motoring brands, we saw the issues with owning a car.
+          </p>
+          <p>
+            The way useful information on repairs was indecipherable from just a few dashboard lights. The way people felt when dealing with garages and mechanics. The sheer number of things to keep up with, with your MOT, insurance, tax and services all completely separate from one another.
+          </p>
+          <p class="f-lg p-0">
+            We knew there was a better way: to bring every aspect of a car’s health together in one place. Carofile was born.        
+          </p>
+        </div>
+        
+        <div class="masked-image__mask masked-image__mask--r masked-image__mask--r--white"></div>
+        
+        <img class="masked-image__img masked-image__img--l" src="assets/img/carofile/The-simplest-way.png" />
+      </div><!-- .masked-image -->
+    </div><!-- .row -->    
+
+    <div class="cta-row row c-box-sm bg-2">
+      <div class="container textcenter p-0">
+        <h2 class="h3 m-0">
+          <span class="underline">
+            <span class="w700">The Carofile Team.</span><br>
+              With more than 100 years’ collective experience.
+          </span>
+        </h2>
+      </div><!-- .cta-row -->
+    </div><!-- .cta-row -->
+
+    <div id="people-mosaic" class="row">
+      <div class="flex--center toggle-box toggle-box--person c-curtain-ct col-xs-12 col-sm-6 col-md-4 col-lg-3 p-0 bg-grey9">
+        
+        <div class="toggle-box__toggle c-icon-md c-sq-md color-0 is_top-right is_hide-lg" data-toggle-classes aria-controls="people-kabir" aria-expanded="false"></div>
+        
+        <div class="toggle-box__ct textcenter">
+          <h4 class="h6 is_upper w700">Kabir Ahmed</h4>
+          
+          <span class="c-sep mv-xl"></span>
+          
+          <p class="f-sm p-0">
+            Linkedin
+          </p>            
+        </div>
+
+        <div id="people-kabir" class="feature-curtain c-curtain-right bg-grey8 c-img-bg" style="background-image: url(assets/img/carofile/about/people/kabir.jpg)">
+        </div>
+      </div>
+    </div><!-- #features mosaic -->
+
+    <div class="cta-row row c-box-sm bg-f">
+      <div class="container textcenter p-0">
+        <h2 class="h3 m-0">
+          <span class="underline">
+            <span class="w700">The Carofile Blog.</span><br>
+              Insights and updates on our progress.
+          </span>
+        </h2>
+      </div><!-- .cta-row -->
+    </div><!-- .cta-row -->
+
+    <div id="blog-mosaic" class="row">
+      <div class="c-entry col-xs-12 col-sm-6 col-md-4 col-lg-3 p-0">
+        <div class="c-entry__img c-img-bg" style="background-image: url(assets/img/carofile/about/people/kabir.jpg)">
+        </div>
+        <div class="c-entry__ct flex--center">
+          <h3>
+            <span class="underline">
+              Track your parts right back to the engine
+            </span>
+          </h3>
+        </div>
+      </div>
+    </div><!-- #features mosaic -->
+
     <!-- 
     ******************************************************
     ******************************************************
@@ -170,49 +332,49 @@
     ******************************************************
     -->
     <footer id="footer" class="site-footer row bg-0 ct-light">
-      <div class="container p-0">
-        <div class="site-footer__col1 c-boxv col-xs-12 col-md-6 ct-light">
-          <h4 class="footer-logo">
-            <a class="footer-logo__link is_v-center-xs" href="/" rel="home">
-              <span class="site-title sr-only">Carofile</span>
-              <img alt="" src="assets/img/carofile-logo.png" />
-            </a>
-          </h4><!-- .footer-logo -->
+      <div class="site-footer__ct container">
+        <div class="row p-0">
+          <div class="site-footer__col1 col-xs-12 col-md-6 ct-light">
+            <h4>
+                <img class="footer-logo__img" alt="Carofile" src="assets/img/carofile/logo/carofile-logo.svg" />
+            </h4><!-- .footer-logo -->
 
-          <p class="f-sm">
-            Hitia que eatem ent delibus quibusdandi odigent, sandae voluptas atiis incto eum quibus dolutem re cuptatem dolupta verrovi ditaquiati lata dignis nonseni berum enduntiatio moditio.
-          </p>
-        </div><!-- site-footer__col1 -->
-        <div class="site-footer__col2 c-boxv col-xs-12 col-md-6 ct-light">
-          <h4 class="h6 mb-lg">SUBSCRIBE NOW TO STAY UP-TO-DATE AND TO HEAR ABOUT THE CAROFILE BETA</h4>
+            <p class="f-sm">
+              Hitia que eatem ent delibus quibusdandi odigent, sandae voluptas atiis incto eum quibus dolutem re cuptatem dolupta verrovi ditaquiati lata dignis nonseni berum enduntiatio moditio.
+            </p>
+          </div><!-- site-footer__col1 -->
+          <div class="site-footer__col2 col-xs-12 col-md-6 ct-light">
+            <h4 class="h6 mb-lg">SUBSCRIBE NOW TO STAY UP-TO-DATE AND TO HEAR ABOUT THE CAROFILE BETA</h4>
 
-          <form class="c-form-bg" method="post" action="/action">
-            <label class="sr-only" for="email">Email</label>
-            <input name="email" id="email" type="email" maxlength="120" placeholder="Email"/>
-            <button type="submit" class="c-btn c-btn-f">Subscribe</button>
-          </form>
-        </div><!-- site-footer__col2 -->  
-      </div>
-      <div class="container c-boxv mt-xl pb-xs">
-        <div class="row f-sm pb-0">
-          <div class="col-xs-6 p-0">
-            <a class="" href="/" rel="home">
-              © Carofile. 2017.
-            </a>
+            <form class="c-form-bg" method="post" action="/action">
+              <label class="sr-only" for="email">Email</label>
+              <input name="email" id="email" type="email" maxlength="120" placeholder="Email"/>
+              <button type="submit" class="c-btn c-btn-md c-btn-f">Subscribe</button>
+            </form>
+          </div><!-- site-footer__col2 -->  
+        </div>
+        
+        <div class="row f-sm mt-xl">
+          <div class="col-xs-6 pb-0 pl-0">
+            <p class="pb-0">
+              <a href="/" rel="home">
+                © Carofile. 2017.
+              </a>
+            </p>
           </div>
-          <div class="col-xs-6 p-0 textright">
+          <div class="col-xs-6 ps-0 textright">
             <ul class="c-l-inline ct-light">
-              <li>
+              <li class="ml-xs">
                 <a href="#" target="_blank" title="Twitter">
                   Twitter
                 </a>
               </li>
-              <li>
+              <li class="ml-xs">
                 <a href="#" target="_blank" title="Facebook">
                   Facebook
                 </a>
               </li>
-              <li>
+              <li class="ml-xs">
                 <a href="#" target="_blank" title="Google+">
                   Google+
                 </a>

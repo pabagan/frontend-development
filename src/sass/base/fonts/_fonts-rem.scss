@@ -46,7 +46,7 @@ body{
         line-height: map-get($sizes, line-height);
         // Utilizar si cada una tiene diferentes
         // pesos
-        //font-weight: map-get($sizes, font-weight);
+        font-weight: map-get($sizes, font-weight);
     }
 }
 
@@ -58,7 +58,6 @@ h5, .h5,
 h6, .h6
 {
     text-rendering: optimizeLegibility;
-    font-weight: $fw700;
     font-style: normal;   
 }
 

@@ -20,7 +20,7 @@ $container-sizes: (
     'md': 90%,
     'lg': 960px,
     'xl': 1160px,
-    'xxl': 1360px,
+    //'xxl': 1360px,
 );
 
 // 
@@ -40,13 +40,12 @@ $container-sizes: (
     position: relative;
     margin-left: auto !important;
     margin-right: auto !important;
-    @include clearfix;
 }
 
 // 
 // Col class
 // 
-[class*="#{$col-class}"] {
+[class*="#{$col-class}-"] {
     padding: $grid-item-padding;
     -webkit-box-flex: 0;
     position: relative;
@@ -56,7 +55,7 @@ $container-sizes: (
     max-width: 100%;
 }
 
-[class*="#{$col-class}"]-auto {
+[class*="#{$col-class}-auto"] {
   box-flex: 0;
   flex: 0 0 auto;
   width: auto;

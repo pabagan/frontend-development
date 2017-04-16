@@ -1,0 +1,59 @@
+/**--------------------------------------
+ * --------------------------------------
+ *
+ * Full height presentation module
+ * 
+ * --------------------------------------
+ * -------------------------------------- */
+$subscribe-class      : "form-subscribe";
+
+.subscribe-row {
+  &__ct{
+    text-align: center;
+    @include media-query('sm'){
+      background-image:  url(../img/carofile/mecanico-subscribe.png);
+      background-position: center center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+    @include media-query('md'){
+      text-align: left;
+      background-position: 0 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+
+.#{$subscribe-class} { 
+  &__input{
+    padding: 0px;
+  }
+  &__bt{
+    margin-bottom: 0;
+  }
+}
+
+@include media-query('sm'){
+  .#{$subscribe-class} { 
+    display: flex;   
+    justify-content: space-between;
+    &__input{
+      float: left;
+      width: calc(100% - 152px) !important;
+    }
+    &__bt{
+      margin: 0;
+      float: left;
+    }
+    //flex-wrap: wrap;
+    &__field{
+      float: left;
+    }
+  }
+}
+
+@include media-query('lg'){
+  
+}

@@ -5,31 +5,31 @@
  *
  * --------------------------------------
  * -------------------------------------- */
-$form-bg-class              : "c-form-border";
-$form-bg-font-size          : $p-sm;
-$form-bg-color              : $bodyFontColor;
+$form-border-class              : "c-form-border";
+$form-border-font-size          : $p-sm;
+$form-border-color              : $bodyFontColor;
 
 // labels
-$form-bg-label-fs           : $p-sm;
-$form-bg-label-color        : $colorf;
-$form-bg-label-margin       : 0 0 $space-xs;
+$form-border-label-fs           : $p-sm;
+$form-border-label-color        : $colorf;
+$form-border-label-margin       : 0 0 $space-xs;
 
 // inputs
-$form-bg-input-bg           : transparent;
-$form-bg-input-height       : $size-rem-sm;
-$form-bg-input-padding      : 1em 1.4em;
-$form-bg-input-radius       : $p-lg;
-$form-bg-placeholder-color  : $colorf;
-$form-bg-error-color        : red;
+$form-border-input-bg           : transparent;
+$form-border-input-height       : $size-rem-sm;
+$form-border-input-padding      : .9em 1.4em;
+$form-border-input-radius       : 40px;
+$form-border-placeholder-color  : $colorf;
+$form-border-error-color        : red;
 
 // 
 // Specials styles
 // 
   
 label {
-  color: $form-bg-label-color;
-  font-size: $form-bg-label-fs;
-  margin: $form-bg-label-margin;
+  color: $form-border-label-color;
+  font-size: $form-border-label-fs;
+  margin: $form-border-label-margin;
   
   // Hide jQuery validation text errors
   &.error { display:none !important }
@@ -38,10 +38,10 @@ label {
 textarea,
 input{
   border: 0;
-  font-size: $form-bg-font-size;
-  color: $form-bg-color;
-  background-color: $form-bg-input-bg;
-  @include border-radius($form-bg-input-radius);
+  font-size: $form-border-font-size;
+  color: $form-border-color;
+  background-color: $form-border-input-bg;
+  @include border-radius($form-border-input-radius);
 }
 // 100% width fields
 %input-full, // clase para comportamiento por defecto input 100% + padding
@@ -56,8 +56,8 @@ input[type="url"],
 textarea {
     width: 100%;
     display: block;
-    //height: $form-bg-input-height;
-    padding: $form-bg-input-padding;
+    //height: $form-border-input-height;
+    padding: $form-border-input-padding;
     line-height: 1;
     border: 2px solid $colorf;
 
@@ -69,12 +69,12 @@ textarea {
 // 
 textarea,
 input{
-  @include placeholder($form-bg-placeholder-color);
+  @include placeholder($form-border-placeholder-color);
 
   &.error{
     border: 1px solid red !important;
-    color: $form-bg-error-color;
-    @include placeholder($form-bg-error-color);
+    color: $form-border-error-color;
+    @include placeholder($form-border-error-color);
   }
 }
 

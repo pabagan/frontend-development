@@ -21,6 +21,7 @@ $ut-bar-width:260px;
 
 .utSectionTitle{
   padding: $padding-lg;
+  width: 100%;
   font-size: $h2-fs;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -38,7 +39,7 @@ $ut-bar-width:260px;
 }
 
 
-#utNavToggler{
+.utNavToggler{
   //@extend %gx-btn-reset;
   position: fixed;
   @include size($ut-bar-toggler-size, $ut-bar-toggler-size);
@@ -52,7 +53,7 @@ $ut-bar-width:260px;
       
   &[aria-expanded=true]{
     @include translate(-$ut-bar-width + 1,0);
-
+    border: 4px solid green !important;
     &:before {
         // I cross 4 linearicons
         //content:"\e870";
@@ -192,7 +193,7 @@ $ut-bar-width:260px;
 $screen-test: (
   'xs'  : 'screen-xs.png',
   'sm'  : 'screen-sm.png', // ipad vertical
-  'lg'  : 'screen-lg.jpg', // > 1280
+  'lg'  : 'screen-lg.png', // > 1280
 );
 
 .design-screens{
@@ -201,7 +202,7 @@ $screen-test: (
   top: 0;
   left: 0;
   z-index: 99999;
-  min-height: 4000px;
+  min-height: 5000px;
   width: 100%;
   background-image: center center;
   background-position: top center;
@@ -214,6 +215,11 @@ $screen-test: (
       background-image: url(../img/screens/#{$value});
     }
   }
+  
+  background-position: center 100px;
+  background-position: center 160px;
+  //background-position: center -2440px;
+  //background-position: center -1440px;
 
   &--hide{
     display: none;

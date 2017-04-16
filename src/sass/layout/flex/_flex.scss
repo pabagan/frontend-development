@@ -2,6 +2,13 @@
   &--center{
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  // align multipe items filling 
+  // parent width
+  &--align{
+    display: flex;
+    justify-content: space-between;
   }
 }
 

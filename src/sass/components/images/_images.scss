@@ -7,6 +7,7 @@
  * -------------------------------------- */
 $images-class: "c-img";
 
+%#{$images-class},
 .#{$images-class} {
     display: block;
     max-width: 100% !important;

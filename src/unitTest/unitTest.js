@@ -220,7 +220,6 @@
             // Create toogle button click
             hideSeccTitles.clickItem = function(){
                 $(document).on('click', '#'+btId, function(){
-                    $(this).toggleClass('is_on');
                     hideSeccTitles.hideTitles();
                 });
             };
@@ -257,7 +256,7 @@
 
             // Create html link element
             hideScreens.hideScreens = function(){
-                $('.design-screens').toggleClass('design-screens--hide is_on');
+                $('.design-screens').toggleClass('design-screens--hide');
                 hideScreens.stateToggle();
             };
 

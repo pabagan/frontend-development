@@ -1,78 +1,3 @@
-/**--------------------------------------
- * --------------------------------------
- *
- * 01. header fixed with toggle button
- * in all versions.
- *
- * --------------------------------------
- * -------------------------------------- */
-//
-// Header
-//
-
-// heights
-$appHeader-height           : $size-rem-md;
-$appHeader-bg               : $color1;
-
-// Logo
-// 
-// Select using <img> or CSS background 
-// at logo. Leave this blank '' to use <img>.
-$appLogo-margin             : 0 $space-sm; 
-$appLogo-fs                 : $h4-fs; 
-$appLogo-color              : $grey1; 
-$appLogo-height             : $appHeader-height; 
-$appLogo-img                : 'assets/img/shine-coaching-logo.svg'; 
-$appLogo-img                : ''; 
-$appLogo-img-no-svg         : 'assets/img/shine-coaching-logo.png'; 
-
-// Nav Toggle
-$appToggle-icon             : $i-menu-4;
-$appToggle-icon-expanded    : $i-cross;
-$appToggle-fs               : $h4-fs;
-$appToggle-position         : left;
-$appToggle-color            : #000000;
-$appToggle-bg               : transparent;
-
-// Nav Main
-$main-nav-font              : $main-font;
-$main-nav-fs                : $p-sm;
-$main-nav-lh                : $lh-sm;
-$main-nav-f-weight          : 400;
-$main-nav-l-spacing         : 0;
-$main-nav-i-padding         : $padding-sm $padding-xs;
-
-// Colors
-$main-nav-color             : $colorf;
-$main-nav-active-bg         : $color0;
-$main-nav-active-color      : $colorf;
-$main-nav-bg                : $color1;
-$main-nav-child-bg          : $grey1;
-$main-nav-child-color       : $colorf;
-$main-nav-child-padding     : $padding-xs $padding-xs;
-
-// define screen to toggle displayed nad
-$main-nav-breakpoint        : 1;
-$main-nav-breakpoint-at     : 'md';
-
-//
-// Nav Main after breakpoint
-//
-$main-nav2-fs               : 14.666px;
-$main-nav2-lh               : $appHeader-height;
-$main-nav2-f-weight         : 400;
-$main-nav2-l-spacing        : 0px;
-$main-nav2-i-padding        : 0 $size-rem-1;
-
-// Color
-$main-nav2-color            : $color0;
-$main-nav2-active-bg        : $color1;
-$main-nav2-active-color     : $colorf;
-$main-nav2-bg               : transparent;
-$main-nav2-child-bg         : $grey1;
-$main-nav2-child-lh         : 1.2em;
-$main-nav2-child-color      : $colorf;
-
 // 
 // App Header
 // 
@@ -99,9 +24,11 @@ $main-nav2-child-color      : $colorf;
 // 
 .app-logo {
   margin: $appLogo-margin;
-  display: block;
+  display: flex;
   float: left;
-
+  max-width: 240px;
+  align-items: center;
+  height: $appHeader-height;
   &__txt {
     font-size: $appLogo-fs;
     line-height: $appHeader-height;
@@ -111,7 +38,7 @@ $main-nav2-child-color      : $colorf;
 
   &__img {
     display: block;
-    height: $appHeader-height;
+    height: $appLogo-height;
   }
 }
 
@@ -225,6 +152,7 @@ $main-nav2-child-color      : $colorf;
       position: static;
       width: auto;
       float: right;
+      margin-right: $space-xs;
       overflow: visible;
       background-color: $main-nav2-bg;
       

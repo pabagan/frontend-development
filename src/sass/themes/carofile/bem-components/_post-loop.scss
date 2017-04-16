@@ -1,0 +1,17 @@
+// ---------------------------------------
+// ---------------------------------------
+//
+// Post Loops
+//
+// ---------------------------------------
+// ---------------------------------------
+.c-entry{
+    &__ct{
+        border: 4px solid green !important;
+        height: 360px;
+        padding: $padding-2;
+        @include media-query('sm'){
+          padding: $padding-px-sm;
+        }  
+    } 
+}

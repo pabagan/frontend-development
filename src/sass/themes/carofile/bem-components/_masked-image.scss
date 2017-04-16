@@ -1,0 +1,110 @@
+.masked-image{
+  position: relative;
+  @include clearfix();
+  overflow: hidden;
+  
+  &__mask{
+    display: none;
+  }
+
+  &__content{
+    width: 100%;
+    align-self: center;
+  }
+
+  &__img{
+    // could use this and delete others
+    // @extend %c-img;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include media-query('md') { 
+  .masked-image{
+    width: 100%;
+    display: flex;
+    
+    &__mask{
+      display: block;
+      //@include mid-right;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: $z4;
+      width: 60%;
+      //background-size: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-size: 100%;
+      // left
+      &--l{
+        left: 0;
+        background-position: right top;
+        background-image: url(../img/carofile/masks/mask-yellow-l.png);
+        
+        &--white{
+          background-image: url(../img/carofile/masks/mask-white-l.png);
+        }
+      }
+      // right
+      &--r{
+        right: 0;
+        background-position: left top;
+        background-image: url(../img/carofile/masks/mask-yellow-r.png);
+        
+        &--white{
+          background-image: url(../img/carofile/masks/mask-white-r.png);
+        }
+      }
+    }
+
+    &__content{
+      width: 50%;
+      position: relative;
+      z-index: $z5;
+
+      &--r{
+        margin-left: auto;
+      }
+    }
+
+    &__img{      
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: auto;
+      z-index: $z2;
+      
+      &--r{
+        right: 0;
+        left: 30%;
+      }
+
+      &--l{
+        left: 0;
+        right: 30%;
+      }
+    }
+  }
+}
+@include media-query('lg') { 
+  .masked-image{
+    &--endfull{
+      min-height: 100vh;
+    }
+    &__img{      
+      &--r{
+        right: -10%;
+        left: auto;
+      }
+
+      &--l{
+        left: -10%;
+        right: auto;
+      }
+    }
+  }
+}
